@@ -23,6 +23,10 @@ Caso contrário os arquivos php não funcionaram.
 <br>NotePad: https://notepad-plus-plus.org/
 <br>Sublime: https://www.sublimetext.com/
 
+# Vídeos sobre como usar o GIT
+
+https://www.youtube.com/watch?v=WVLhm1AMeYE&list=PLInBAd9OZCzzHBJjLFZzRl6DgUmOeG3H0
+
 # Conexão do postgre com o php
 
 <!--><?php
@@ -42,4 +46,5 @@ Tirar os comentários ( ; ) dos sequintes
 extension=pdo_pgsql
 <br>
 extension=pgsql
-  
+ 
+
