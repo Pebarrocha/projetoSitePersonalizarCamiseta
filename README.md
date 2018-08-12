@@ -14,6 +14,7 @@ Grupo: Felipe, Gustavo, Pedro, Renan
 
 Se estiver usando o xampp: Colocar os arquivos deste repositório na pasta HTDOCS dentro da pasta XAMPP: C:\xampp\htdocs
 Caso contrário os arquivos php não funcionaram.
+Para usar os arquivos, acessar http://localhost depois de ligar o apache e o mysql
 
 # Links Úteis
 
