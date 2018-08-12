@@ -1,5 +1,16 @@
+<!--
+ Autor: Pedro Barbosa Rocha
+ Data da última modificação: 11/08/2018
+
+Descrição: Formulário para cadastro dos produtos pré definidos que estarão
+a disposição para venda no site. Essa formulário está na pasta VIEW. Ele controla apenas o visual e as entradas
+digitadas pelo usuário na hora do cadastro.
+-->
+
 <?php
+//Chamando o controller para o envio dos dados
 require_once ('../controller/produtoPreDefinidoController.php');
+//Manda o 'incluir' para o método e entra no switch case
 Processo('incluir');
 ?>
 
@@ -16,23 +27,60 @@ Processo('incluir');
 
 		<h1> Cadastro de produtos pré-definidos </h1>
 
+		<!-- 
+			Criação dos formularios para recebimento das informações digitadas pelo usuário
+			O input do formulario (a entrada) é representada pelo seu "name", o valor do name do input será responsavel por enviar o valor do dado digitado pra o controller e depois para o banco de dados
+		-->			
 		<form action="#" name="form" id="form" method="post">
-			Sigla:
-			<input type="text" name="sigla" id="sigla"><br>
-			Nome: 
-			<input type="text" name="nome" id="nome"> <br>			
-			<input type="button" name="button" id="button" value="Cadastrar" onclick="submitForm()">
-			<input type="hidden" name="ok" id="ok">		
-			
-		</form>		
-
-			<script type="text/javascript">
-				function submitForm(){		
 		
+			Nome: 
+			<input type="text" name="nome" id="nome"> <br>
+
+			Descrição: <br>
+			<textarea name="descricao" id="descricao" rows="10" cols="30">
+				Digite a descrição de sua camiseta aqui!
+			</textarea><br>
+
+			Tamanho: <select name="tamanho" id="tamanho">
+				<option value="PP">PP</option>
+				<option value="P">P</option>	
+				<option value="M">M</option>		
+				<option value="G">G</option>
+				<option value="GG">GG</option>
+			</select><br>
+
+			Imagem: <input type="file" name="imagem"><br>
+			
+			Sexo: <select name="sexo" id="sexo">
+				<option value="masculino">Masculino</option>
+				<option value="feminino">Feminino</option>
+			</select><br>
+
+			Modelo: <select name="modelo" id="modelo">
+				<option value="tshirt">T-shirt</option>
+				<option value="polo">Polo Feminina</option>
+				<option value="polo">Polo Masculina</option>
+				<option value="babylook">Baby Look</option>
+				<option value="cropped">Cropped</option>
+			</select><br>			
+
+			<!--O primeiro button é visivel para o usuário. Quando ele é clicado ele aciona a função submitForm() do
+			java script, que disparará os inputs dos forms para a página controller
+				O segundo botão é invisivel, ele será ativado dentro da função, e o controller receberá ele para poder enfim liberar os inputs -->
+			<input type="button" name="button" id="button" value="Cadastrar" onclick="submitForm()">
+			<input type="hidden" name="ok" id="ok">	
+
+		</form>
+						
+			<!--Script (javascript) para submeter as informações resgatadas nos inputs 
+				Ele pega os ids 'ok' e 'form' e trabalha com eles. O elemento ok é passado a ser true, enquanto
+				o elemento de id 'form' é submetido-->
+			<script type="text/javascript">
+
+				function submitForm(){				
 					document.getElementById("ok").value = "true";					
 					document.getElementById("form").submit();
 					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
-
 			}		
 			</script>
 	</body>
