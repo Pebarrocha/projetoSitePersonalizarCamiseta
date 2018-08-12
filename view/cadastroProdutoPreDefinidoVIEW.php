@@ -17,10 +17,15 @@ Processo('incluir');
 <!DOCTYPE html>
 
 <html>
-	<head>
+	<head lang="pt-br">
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/estilo_cadastro_cliente.css">
+		<!--<link rel="stylesheet" type="text/css" href="css/estilo_cadastro_cliente.css">-->
 		<title>Cadastro de Camisetas Pré-Definidas</title>
+
+		<style type="text/css">
+			.msg-erro {color: red;}
+		</style>
+
 	</head>
 
 	<body>
@@ -33,15 +38,15 @@ Processo('incluir');
 		-->			
 		<form action="#" name="form" id="form" method="post">
 		
-			Nome: 
+			<label>Nome:</label> 
 			<input type="text" name="nome" id="nome"> <br>
 
-			Descrição: <br>
+			<label>Descrição:</label> <br>
 			<textarea name="descricao" id="descricao" rows="10" cols="30">
 				Digite a descrição de sua camiseta aqui!
 			</textarea><br>
 
-			Tamanho: <select name="tamanho" id="tamanho">
+			<label>Tamanho:</label> <select name="tamanho" id="tamanho">
 				<option value="PP">PP</option>
 				<option value="P">P</option>	
 				<option value="M">M</option>		
@@ -49,14 +54,14 @@ Processo('incluir');
 				<option value="GG">GG</option>
 			</select><br>
 
-			Imagem: <input type="file" name="imagem"><br>
+			<label>Imagem:</label> <input type="file" name="imagem"><br>
 			
-			Sexo: <select name="sexo" id="sexo">
+			<label>Sexo:</label> <select name="sexo" id="sexo">
 				<option value="masculino">Masculino</option>
 				<option value="feminino">Feminino</option>
 			</select><br>
 
-			Modelo: <select name="modelo" id="modelo">
+			<label>Modelo:</label> <select name="modelo" id="modelo">
 				<option value="tshirt">T-shirt</option>
 				<option value="polo">Polo Feminina</option>
 				<option value="polo">Polo Masculina</option>
@@ -72,12 +77,16 @@ Processo('incluir');
 
 		</form>
 						
-			<!--Script (javascript) para submeter as informações resgatadas nos inputs 
+			
+			<script type="text/javascript" src="../js/validacao.js"> </script>
+
+				<!--Script (javascript) para submeter as informações resgatadas nos inputs 
 				Ele pega os ids 'ok' e 'form' e trabalha com eles. O elemento ok é passado a ser true, enquanto
 				o elemento de id 'form' é submetido-->
 			<script type="text/javascript">
 
-				function submitForm(){				
+				function submitForm(){	
+					validaCadastro();			
 					document.getElementById("ok").value = "true";					
 					document.getElementById("form").submit();
 					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
