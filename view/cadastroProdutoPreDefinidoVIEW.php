@@ -19,7 +19,7 @@ Processo('incluir');
 <html>
 	<head lang="pt-br">
 		<meta charset="utf-8">
-		<!--<link rel="stylesheet" type="text/css" href="css/estilo_cadastro_cliente.css">-->
+		<link rel="stylesheet" type="text/css" href="css/predefinido.css?13082018">
 		<title>Cadastro de Camisetas Pré-Definidas</title>
 
 		<style type="text/css">
@@ -30,21 +30,21 @@ Processo('incluir');
 
 	<body>
 
-		<h1> Cadastro de produtos pré-definidos </h1>
+		
 
 		<!-- 
 			Criação dos formularios para recebimento das informações digitadas pelo usuário
 			O input do formulario (a entrada) é representada pelo seu "name", o valor do name do input será responsavel por enviar o valor do dado digitado pra o controller e depois para o banco de dados
 		-->			
+		<div>
+			<h1> Cadastro de produtos pré-definidos </h1>
 		<form action="#" name="form" id="form" method="post">
 		
 			<label>Nome:</label> 
-			<input type="text" name="nome" id="nome"> <br>
+			<input type="text" name="nome" id="nome" placeholder="Nome da camiseta aqui!"> <br>
 
 			<label>Descrição:</label> <br>
-			<textarea name="descricao" id="descricao" rows="10" cols="30">
-				Digite a descrição de sua camiseta aqui!
-			</textarea><br>
+			<textarea name="descricao" id="descricao" rows="10" cols="30" placeholder="Digite a descrição da camiseta aqui!"></textarea><br>
 
 			<label>Tamanho:</label> <select name="tamanho" id="tamanho">
 				<option value="PP">PP</option>
@@ -55,7 +55,7 @@ Processo('incluir');
 			</select><br>
 
 			<label>Imagem:</label> <input type="file" name="imagem"><br>
-			
+			<br>
 			<label>Sexo:</label> <select name="sexo" id="sexo">
 				<option value="masculino">Masculino</option>
 				<option value="feminino">Feminino</option>
@@ -69,11 +69,15 @@ Processo('incluir');
 				<option value="cropped">Cropped</option>
 			</select><br>			
 
+			<label>Preço:</label>
+				<input type="text" name="preco" id="preco" placeholder="Digite o preço da camiseta">
+
 			<!--O primeiro button é visivel para o usuário. Quando ele é clicado ele aciona a função submitForm() do
 			java script, que disparará os inputs dos forms para a página controller
 				O segundo botão é invisivel, ele será ativado dentro da função, e o controller receberá ele para poder enfim liberar os inputs -->
 			<input type="button" name="button" id="button" value="Cadastrar" onclick="submitForm()">
 			<input type="hidden" name="ok" id="ok">	
+		</div>
 
 		</form>
 						
