@@ -1,0 +1,19 @@
+h1{
+	color: pink;	
+}
+
+body{
+	background-color: purple;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main{
+	
+	background-color: blue;
+	border-style: dashed;
+	margin-left: center;
+	margin-right: center;
+
+}
