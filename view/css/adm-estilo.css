@@ -1,0 +1,32 @@
+
+html{
+background-color: #FFFFFF;
+
+}
+
+body {
+
+	background-color: #FFCCBC;
+	border-radius: 10px;
+	width: 900px;
+
+ 	margin-right: auto;
+ 	margin-left: auto;
+ 	text-align: center;
+
+}
+
+a:link,a:visited{
+	background-color:  #FE4365;
+	color: white;
+	padding: 2px 10px;
+	margin: 2px;
+	border-radius: 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;	
+}
+
+a:hover,a:active{
+	background-color: red;
+}
