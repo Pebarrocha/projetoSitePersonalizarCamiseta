@@ -8,7 +8,7 @@
 	<head>
 
 	<body>
-		<h1> Seja bem vindo a pádgina de administração </h1>
+		<h1> Seja bem vindo a página de administração </h1>
 		
 		<a href="#">Cadastrar Estampa</a>
 		<a href="#">Cadastrar Camiseta Pré-Definida</a>
