@@ -29,9 +29,10 @@ function Processo($processo){
 				$tamanho = ($_POST['tamanho']);
 				$sexo = ($_POST['sexo']);
 				$modelo = ($_POST['modelo']);
+				$preco = ($_POST['preco']);
 
 				$pDAO = new cadastroDeProdutoPreDefinidoDAO();
-				$pDAO->incluirProdutoPreDefinido($nome,$descricao,$tamanho,$sexo,$modelo);		
+				$pDAO->incluirProdutoPreDefinido($nome,$descricao,$tamanho,$sexo,$modelo,$preco);		
 				echo '<script>alert("Cadastrado com sucesso !");</script>';
 				//echo '<script>window.location="../VIEW/cadastroProdutoPreDefinidoVIEW.php";</script>';
 			}

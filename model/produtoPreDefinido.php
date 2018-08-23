@@ -14,12 +14,12 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 
 		try{
 		
-		require_once 'conexao.php';
+		require_once 'conexaomysql.php';
 		
 		$sql = "insert into predefinida (nome,descricao,tamanho,sexo,modelo) values ('$nome','$descricao','$tamanho','$sexo','$modelo')";
 		
 		//$sql = "insert into estado (sigla,nome)values('$sigla','$nome')";
-		$result = pg_query($conexao, $sql);
+		$result = mysqli_query($conexao, $sql);
 			
 		/*if(!$result){ 	 	
 	 	 echo pg_last_error($conexao);
