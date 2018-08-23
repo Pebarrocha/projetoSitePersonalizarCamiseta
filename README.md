@@ -19,7 +19,6 @@ Para usar os arquivos, acessar http://localhost depois de ligar o apache e o mys
 # Links Úteis
 
 <br>XAMPP: https://www.apachefriends.org/pt_br/index.html
-<br>POSTGRE: https://www.postgresql.org/
 <br>Editores de Texto: 
 <br>NotePad: https://notepad-plus-plus.org/
 <br>Sublime: https://www.sublimetext.com/
