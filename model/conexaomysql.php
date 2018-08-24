@@ -3,8 +3,10 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname ="bdcamiseta";
+$port = "3306"
 
 // Create connection
+// // mysqli_connect(host,username,password,dbname,port,socket);
 $conexao = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
