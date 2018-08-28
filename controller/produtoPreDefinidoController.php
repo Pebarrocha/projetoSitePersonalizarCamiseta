@@ -6,7 +6,10 @@ Descrição: Controller que receberá os inputs dos formulários e enviará para
 
 -->
 
+
+
 <?php
+
 
 require_once '../model/produtoPreDefinido.php';						
 //require_once '../DAO/cadastroDeProdutoPreDefinidoDAO.php';	
@@ -24,12 +27,21 @@ function Processo($processo){
 			 */
 			if (isset($_POST['ok']) && !empty($_POST['ok'])){
 				//$sigla = ($_POST['sigla']);
+				/*
 				$nome = ($_POST['nome']);		
 				$descricao = ($_POST['descricao']);	
 				$tamanho = ($_POST['tamanho']);
 				$sexo = ($_POST['sexo']);
 				$modelo = ($_POST['modelo']);
 				$preco = ($_POST['preco']);
+				//$preco = str_replace(",",".", $preco);
+				*/
+				foreach($_POST as $nome_campo => $valor){ 
+				   $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
+				   //echo $comando;
+				   eval($comando); 
+				   $nome_campo = str_replace(",",".", $nome_campo);
+				}			
 
 				$pDAO = new cadastroDeProdutoPreDefinidoDAO();
 				$pDAO->incluirProdutoPreDefinido($nome,$descricao,$tamanho,$sexo,$modelo,$preco);		
