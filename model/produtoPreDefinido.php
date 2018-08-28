@@ -10,13 +10,14 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 
 	Class cadastroDeProdutoPreDefinidoDAO{		
 
-		public function incluirProdutoPreDefinido($nome,$descricao,$tamanho,$sexo,$modelo){	
+		public function incluirProdutoPreDefinido($nome,$descricao,$tamanho,$sexo,$modelo,$preco){	
 
 		try{
 		
 		require_once 'conexaomysql.php';
 		
-		$sql = "insert into predefinida (nome,descricao,tamanho,sexo,modelo) values ('$nome','$descricao','$tamanho','$sexo','$modelo')";
+		$sql = "insert into camisetapredefinida (nome,descricao,tamanho,sexo,modelo,preco) values ('$nome','$descricao','$tamanho','$sexo',
+		'$modelo','$preco')";
 		
 		//$sql = "insert into estado (sigla,nome)values('$sigla','$nome')";
 		$result = mysqli_query($conexao, $sql);
