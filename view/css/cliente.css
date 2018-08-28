@@ -1,0 +1,115 @@
+html{
+    
+    background-color: #FC9D9A;
+
+}
+
+h1{
+    text-align: center;
+}
+
+body {
+    
+    width: 900;
+    margin-right: 400px;    
+    margin-left: 400px;
+    padding: 10px;
+    text-align: justify;
+
+}
+
+input[type=text], select{
+
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text2], select{
+
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=text3], select{
+
+    width: 20%;
+    padding: 10px;
+    margin: 2px 2px 2px -8px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text3a], select{
+
+    width: 20%;
+    padding: 10px;
+    margin: 2px 1px 2px -8px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text4], select{
+
+    width: 15%;
+    padding: 10px;
+    margin: 2px 2px 2px -8px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text4a], select{
+
+    width: 5%;
+    padding: 10px;
+    margin: 5px 2px 5px -8px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+textarea{
+    resize:none;
+    width: 100%;
+}
+
+
+input[type=button] {
+    width: 50%;
+    background-color: #FE4365;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #FC9D9A;
+}
+
+div {
+    font-family: "Lucida Console", Times, serif;
+    border-radius: 5px;
+    background-color: #F9CDAD;
+    padding: 20px;
+}
