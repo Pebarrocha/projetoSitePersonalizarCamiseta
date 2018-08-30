@@ -1,19 +1,64 @@
-h1{
-	color: pink;	
-}
+
+* { margin: 0; padding: 0; }
+
 
 body{
-	background-color: purple;
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.main{
-	
-	background-color: blue;
-	border-style: dashed;
-	margin-left: center;
-	margin-right: center;
+/* Estilo do cabeçalho*/
 
+header{
+
+margin-bottom: 5px;
+background-color: #666;
+padding: 30px;
+text-align: center;
+font-size: 35px;
+color:white;
+
+}
+
+/*Estilo da barra de navegação   */
+
+nav{
+	margin-bottom: 5px;
+	background-color: #666;
+	padding: 0.1px;
+	text-align: center;
+	font-size: 14px;
+	color:white;
+	
+}
+
+
+#produtos {
+	margin-bottom: 5px;
+	background-color: #666;
+	padding: 0.1px;
+	text-align: center;
+	font-size: 14px;
+	color:white;
+}
+
+article{
+	
+	word-break: break-all;
+	display: inline-block;
+	margin: 5px;
+	background-color: white;
+	border: 5px solid black;
+	width: 200px;
+	height: 250px;
+	text-align: justify;
+	font-size: 14px;
+	color:black;
+
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
 }

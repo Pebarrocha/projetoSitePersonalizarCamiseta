@@ -9,28 +9,35 @@
 	</head>
 
 	<body>
-		<h1> Seja Bem vindo ao site de camisetas </h1>
-		<div class ="main">
-			<h2> Faça seu login </h2>
-			<form action="#" name="main" id="main-form"> 
-			<label>Login</label><br>
-			<label>E-mail:</label>
-			<input type="text" name="main-email" id="main-email"><br>
-			<label>Senha:</label>
-			<input type="password" name="main-password" id="main-password">
-			<input type="button" name="main-submit" id="main-submit" value="Logar"><br>
-			<a href="#">Não sou cadastrado</a>
-			</form>
-		</div>
-		
-		<div class ='main'>
-			<h1>Conheça os nossos produtos</h1>
-				<div class ="produto"> 
+		<header>
+			<p>Cabeçalho (Imagem do site)</p>
+		</header>
 
+		<nav>
+			<p>Barra de navegação</p>
+		</nav>
 
-				</div>
+					
 
-		</div>
+		<section id="produtos">
+			<article>
+				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+			</article>
+
+			<article>
+				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+			</article>
+
+			<article>
+				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+			</article>
+
+		</section>
+
+		<fotter>
+			<p>Rodapé</p>
+		</fotter>
+
 
 	</body>
 	
