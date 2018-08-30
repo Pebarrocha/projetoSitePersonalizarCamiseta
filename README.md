@@ -28,4 +28,4 @@ Para usar os arquivos, acessar http://localhost depois de ligar o apache e o mys
 https://www.youtube.com/watch?v=WVLhm1AMeYE&list=PLInBAd9OZCzzHBJjLFZzRl6DgUmOeG3H0
 
 # Instruções para postar
-se for postar algo primeiro <commit> , se nao tiver o pool ai você usa o push.
+se for postar algo primeiro <commit> , depois da um push, e se nao tiver o push da um pull e depois da um push
