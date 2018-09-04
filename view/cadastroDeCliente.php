@@ -27,7 +27,10 @@ Processo('incluir');
 	</head>
 
 	<body>		
-
+<header>
+    <h1>What Does WWF Do?</h1>
+    <p>WWF's mission:</p>
+  </header>
 		<!-- 
 			Criação dos formularios para recebimento das informações digitadas pelo usuário
 			O input do formulario (a entrada) é representada pelo seu "name", o valor do name do input será responsavel por enviar o valor do dado digitado pra o controller e depois para o banco de dados
@@ -36,25 +39,25 @@ Processo('incluir');
 				<h1> CADASTRO DE CLIENTE</h1>
 			<form action="#" name="form" id="form" method="post"><br><br>
 			
-				<label>Nome completo:</label> 
+				<label>NOME COMPLETO:</label> 
 				<input type="text2" name="nome" id="nome" placeholder="Nome completo...">
 
-				<label>Rua:</label> 
+				<label>RUA:</label> 
 				<input type="text2" name="rua" id="rua">
 <p style="display: inline;">
 				<label>Nº:</label> 
 				<input type="text4" name="numero" id="numero">
 
-				<label>Bairro:</label> 
+				<label>BAIRRO:</label> 
 				<input type= "text4a" name="bairro" id="bairro">
 
-				<label>Cidade:</label> 
+				<label>CIDADE:</label> 
 				<input type="text3" name="numero" id="numero">
 
 				<label>CEP:</label> 
 				<input type= "text3a" name="bairro" id="bairro"><br><br>
 </p>				
-				<label>Complemento:</label> <br>
+				<label>COMPLEMENTO:</label> <br>
 				<textarea name="descricao" id="descricao" rows="10" cols="30" placeholder="Digite a descrição da camiseta aqui!"></textarea><br>
 
 				<!--O primeiro button é visivel para o usuário. Quando ele é clicado ele aciona a função submitForm() do
@@ -81,6 +84,26 @@ Processo('incluir');
 					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
 			}		
 			</script>
+
+
+	<footer>
+		
+
+<p>Posted by: Hege Refsnes</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a>.</p>
+
+
+		
+	</footer>
+
+
+
+
+
+
+
+
 	</body>
 	
 

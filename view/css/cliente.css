@@ -1,6 +1,6 @@
 html{
     
-    background-color: #FC9D9A;
+    background-color: #036564;
 
 }
 
@@ -94,8 +94,8 @@ textarea{
 
 input[type=button] {
     width: 50%;
-    background-color: #FE4365;
-    color: white;
+    background-color: #CDB380;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -104,12 +104,13 @@ input[type=button] {
 }
 
 input[type=button]:hover {
-    background-color: #FC9D9A;
+    background-color: #CDB380;
 }
 
 div {
     font-family: "Lucida Console", Times, serif;
+    color: white;
     border-radius: 5px;
-    background-color: #F9CDAD;
+    background-color: #031634;
     padding: 20px;
 }
