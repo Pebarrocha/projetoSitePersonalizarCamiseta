@@ -41,7 +41,6 @@ Processo('incluir');
 			border-bottom:3px solid #EDEDED;
 			padding: 2px 10px;
 			float:left;
-
 		}
  
 		#menu ul li a:hover {
@@ -82,7 +81,7 @@ Processo('incluir');
 
 				<label>RUA:</label> 
 				<input type="text2" name="rua" id="rua">
-	<p style="display: inline;">
+<p style="display: inline;">
 				<label>Nº:</label> 
 				<input type="text4" name="numero" id="numero">
 
