@@ -6,11 +6,73 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.navegacao ul{
+text-align: center;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333; 
+}
+
+/*
+.navegacao li {
+	float:left;
+	text-align: center;
+	position: sticky;
+}
+*/
+
+.navegacao .pesquisa .botao{
+  float: left;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navegacao {
+	 overflow: hidden;
+ 	 background-color: #e9e9e9;
+}
+
+.navegacao a{
+	float: left;
+	display: block;
+	color:white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+.navegacao a:hover{
+	background-color: #111;	
+}
+
+.navegacao .pesquisa{
+	float:right;
+}
+
+.navegacao input[type=text]{
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+
+
+}
+
+
 /* Estilo do cabeçalho*/
 
 header{
 
-margin-bottom: 5px;
+
 background-color: #666;
 padding: 30px;
 text-align: center;
@@ -22,17 +84,12 @@ color:white;
 /*Estilo da barra de navegação   */
 
 nav{
-	margin-bottom: 5px;
-	background-color: #666;
-	padding: 0.1px;
-	text-align: center;
-	font-size: 14px;
-	color:white;
+
 	
 }
 
 
-#produtos {
+.produtos {
 	margin-bottom: 5px;
 	background-color: #666;
 	padding: 0.1px;
@@ -41,7 +98,7 @@ nav{
 	color:white;
 }
 
-article{
+.produtos article{
 	
 	word-break: break-all;
 	display: inline-block;
@@ -56,9 +113,11 @@ article{
 
 }
 
+/*
 @media (max-width: 600px) {
     nav, article {
         width: 100%;
         height: auto;
     }
 }
+*/
