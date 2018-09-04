@@ -107,7 +107,7 @@ input[type=button]:hover {
     background-color: #CDB380;
 }
 
-div {
+#corpo{
     font-family: "Lucida Console", Times, serif;
     color: white;
     border-radius: 5px;
