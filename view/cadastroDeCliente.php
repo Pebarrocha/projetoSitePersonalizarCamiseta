@@ -17,61 +17,37 @@ Processo('incluir');
 <html>
 	<head lang="pt-br">
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/cliente.css?28082018">
+		<link rel="stylesheet" type="text/css" href="css/cliente.css">
 		<title>Cadastro de clientes</title>
 
 		<style type="text/css">
-			.msg-erro {color: red;}
-		#menu ul {
-			padding:50px;
-			margin:0px;
-			float: left;
-			width: 100%;
-			background-color:#EDEDED;
-			list-style:none;
-			font:80% Tahoma;
-		}
- 
-		#menu ul li { display: inline; }
- 
-		#menu ul li a {
-			background-color:#EDEDED;
-			color: #333;
-			text-decoration: none;
-			border-bottom:3px solid #EDEDED;
-			padding: 2px 10px;
-			float:left;
-		}
- 
-		#menu ul li a:hover {
-			background-color:#D6D6D6;
-			color: #6D6D6D;
-			border-bottom:3px solid #EA0000;
-		}
+		
 		</style>
-
 	</head>
 
-	<body>		
 
-<header>
-    <div id="menu">
-		<ul>
-			<li><a href="">HOME</a></li>
-			<li><a href="">SOBRE</a></li>
-			<li><a href="">ARTIGOS</a></li>
-			<li><a href="">ESTUDOS</a></li>
-			<li><a href="">DIRETÓRIO</a></li>
-			<li><a href="">CURSO</a></li>
-			<li><a href="">LINKS</a></li>
-			<li><a href="">CONTATO</a></li>
-		</ul>
-	</div>
-  </header>
-		<!-- 
-			Criação dos formularios para recebimento das informações digitadas pelo usuário
-			O input do formulario (a entrada) é representada pelo seu "name", o valor do name do input será responsavel por enviar o valor do dado digitado pra o controller e depois para o banco de dados
-		-->			
+
+<body>		
+
+	<img class="teste" src="a.jpg">
+
+	
+<nav class="navegacao">
+			<ul>
+				<li><a href="#">Camisetas Masculinas</a>
+				<li><a href="#">Camisetas Femininas</a>	
+				<li><a href="#">Contato</a>	
+				<li><a href="#">Sobre</a>		
+				<form id="pesquisa" class="pesquisa">
+					<input type="button" class="botao" value="Pesquisar">
+					<input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui!"> 
+			    </form>			
+			</ul>
+
+		</nav>
+
+
+
 		<div id=corpo>
 				<h1> CADASTRO DE CLIENTE</h1>
 			<form action="#" name="form" id="form" method="post"><br><br>
@@ -81,7 +57,9 @@ Processo('incluir');
 
 				<label>RUA:</label> 
 				<input type="text2" name="rua" id="rua">
-<p style="display: inline;">
+
+		
+		<p style="display: inline;">
 				<label>Nº:</label> 
 				<input type="text4" name="numero" id="numero">
 
@@ -93,20 +71,20 @@ Processo('incluir');
 
 				<label>CEP:</label> 
 				<input type= "text3a" name="bairro" id="bairro"><br><br>
-</p>				
+		</p>				
+		
+
 				<label>COMPLEMENTO:</label> <br>
 				<textarea name="descricao" id="descricao" rows="10" cols="30" placeholder="Digite a descrição da camiseta aqui!"></textarea><br>
 
-				<!--O primeiro button é visivel para o usuário. Quando ele é clicado ele aciona a função submitForm() do
-				java script, que disparará os inputs dos forms para a página controller
-					O segundo botão é invisivel, ele será ativado dentro da função, e o controller receberá ele para poder enfim liberar os inputs -->
-				<input type="button" name="button" id="button" value="Cadastrar" onclick="submitForm()">
+				<input type="button2" name="button" id="button" value="CADASTRAR" onclick="submitForm()">
 				<input type="hidden" name="ok" id="ok">	
-		</div>
+		
 
 		</form>
 						
-			
+			</div> 
+
 			<script type="text/javascript" src="../js/validacao.js"> </script>
 
 				<!--Script (javascript) para submeter as informações resgatadas nos inputs 
@@ -123,26 +101,12 @@ Processo('incluir');
 			</script>
 
 
-	<footer>
-		
-
+<footer>
 <p>Posted by: Hege Refsnes</p>
   <p>Contact information: <a href="mailto:someone@example.com">
   someone@example.com</a>.</p>
-
-
-
-	</footer>
-
-
-
-
-
-
+</footer>
 
 
 	</body>
-	
-
-
 </html>
