@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 
+<?php
+
+require_once '../model/conexaomysql.php';
+
+// faço a consulta
+$sql = 'SELECT * FROM camisetapredefinida';
+
+//executo a consulta
+$dados = mysqli_query($conexao,$sql);
+
+//transformo em um array
+$linha = mysqli_fetch_assoc($dados);
+
+//vejo o total de dados que retornaram
+$total = mysqli_num_rows($dados);
+
+//Pegando os nomes dos campos
+//$num_fields = mysqli_num_fields($sql);//Obtém o número de campos do resultado
+
+
+
+?>
+
+
+
 <html>
 	<head lang="pt-br">
 		<title>Site de personalização de camisetas </title>
 		<meta charset="pt-br">
-		<link rel ="stylesheet" type="text/css" href="css/main-estilo.css">
+		<link rel ="stylesheet" type="text/css" href="css/main-estilo.css?09062018">
 		
-		<style>
-		.mySlides {display:none;}
-		</style>
+		
 	</head>
 
 	<body>
@@ -33,22 +56,7 @@
 		<header>
 			<p>Cabeçalho (Imagem do site)</p>
 		</header>
-		
-	<div class="slider-holder">
-        <span id="slider-image-1"></span>
-        <span id="slider-image-2"></span>
-     	 <span id="slider-image-3"></span>
-        <div class="image-holder">
-            <img src="imagens/camiseta1.jpg" class="slider-image" />
-            <img src="imagens/camiseta2.jpg" class="slider-image" />
-
-        </div>
-        <div class="button-holder">
-            <a href="#slider-image-1" class="slider-change"></a>
-            <a href="#slider-image-2" class="slider-change"></a>
-        
-        </div>
-    </div>
+	
 		
 		<nav class="navegacao">
 			<ul>
@@ -63,29 +71,71 @@
 
 					
 
-		<section class="produtos">
-			<article>
-				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
-			</article>
+		<section class="produtos">		
+			
+			<?php
+				echo 
+					"<table border=1>
+					<tr>
+					<th>Código</th>
+					<th>Nome</th>
+					<th>Descricao</th>
+					<th>Tamanho</th>
+					<th>Imagem</th>
+					<th>Sexo</th>
+					<th>Modelo</th>
+					<th>Foto Camiseta</th>
+					<th>Preco</th>
+					</tr>";
 
-			<article>
-				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
-			</article>
-
-			<article>
-				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
-			</article>
-
-		</section>
-
-
-
-	</body>
-	
+					while($row = mysqli_fetch_array($dados)){
+						
+						echo "<tr>";
+						echo "<td>" . $row['codCamisetaPreDefinida'] . "</td>";
+						echo "<td>" . $row['nome'] . "</td>";
+						echo "<td>" . $row['descricao'] . "</td>";
+						echo "<td>" . $row['tamanho'] . "</td>";
+						echo "<td>" . $row['imagem'] . "</td>";
+						echo "<td>" . $row['sexo'] . "</td>";
+						echo "<td>" . $row['modelo'] . "</td>";
+						echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";
+						echo "<td>" . $row['preco'] . "</td>";		
+						echo "</tr>";			
+					}
+					echo "</table>";
+			?>
 			
 
 
+			<!--
+			<article>
+				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+				<br>
+				<a href='#'>Camiseta do Batman</a>
+				<p> 10x de R$180</p>
+			</article>
 
+			<article>
+				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+				<br>
+				<a href='#'>Camiseta da Xuxa</a>
+					<p> 10x de R$180</p>
+			</article>
+
+			<article>
+				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
+				<br>
+				<a href='#'>Camiseta da Annita</a>
+					<p> 10x de R$180</p>
+			</article>
+			-->
+
+		</section>
+	</body>
 </html>
 
+<?php 
 
+mysqli_free_result($dados);
+
+?>
