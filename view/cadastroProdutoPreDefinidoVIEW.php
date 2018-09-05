@@ -36,7 +36,7 @@ Processo('incluir');
 		-->			
 		<div>
 				<h1> Cadastro de produtos pré-definidos </h1>
-			<form action="#" name="form" id="form" method="post">
+			<form enctype="multipart/form-data" action="#" name="form" id="form" method="post">
 			
 				<label>Nome:</label> 
 				<input type="text" name="nome" id="nome" placeholder="Nome da camiseta aqui!"> <br>
@@ -51,9 +51,13 @@ Processo('incluir');
 					<option value="G">G</option>
 					<option value="GG">GG</option>
 				</select><br>
-
-				<label>Imagem:</label> <input type="file" name="imagem"><br>
-				<br>
+				<label>Imagem: <input type="text" name="imagem" value="imagens/nomedaimagem.jpg">
+				<!-- 
+				<label>Imagem:</label>
+				 <input type="hidden" name="MAX_FILE_SIZE" value="99999999"/>
+				 <input type="file" name="imagem"><br>
+				 -->
+				 <br>
 				<label>Sexo:</label> <select name="sexo" id="sexo">
 					<option value="masculino">Masculino</option>
 					<option value="feminino">Feminino</option>
@@ -96,6 +100,4 @@ Processo('incluir');
 			</script>
 	</body>
 	
-
-
 </html>

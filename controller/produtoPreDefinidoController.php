@@ -42,9 +42,19 @@ function Processo($processo){
 				   eval($comando); 
 				   $nome_campo = str_replace(",",".", $nome_campo);
 				}			
+					//$imagem = $_FILES['imagem']['tmp_name'];
+					/*
+					$tamanho = $_FILES['imagem']['size'];
+					$tipo = $_FILES['imagem']['type'];
+					$nome = $_FILES['imagem']['name'];
+					*/
+					//$fp = fopen($imagem, "rb");
+					//$conteudo = fread($fp, $tamanho);
+					//$conteudo = addslashes($conteudo);
+					//fclose($fp);
 
 				$pDAO = new cadastroDeProdutoPreDefinidoDAO();
-				$pDAO->incluirProdutoPreDefinido($nome,$descricao,$tamanho,$sexo,$modelo,$preco);		
+				$pDAO->incluirProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco);		
 				echo '<script>alert("Cadastrado com sucesso !");</script>';
 				//echo '<script>window.location="../VIEW/cadastroProdutoPreDefinidoVIEW.php";</script>';
 			}

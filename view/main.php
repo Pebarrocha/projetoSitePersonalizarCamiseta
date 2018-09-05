@@ -4,8 +4,9 @@
 
 require_once '../model/conexaomysql.php';
 
+
 // faço a consulta
-$sql = 'SELECT * FROM camisetapredefinida';
+$sql = 'SELECT nome,descricao,imagem,preco FROM camisetapredefinida';
 
 //executo a consulta
 $dados = mysqli_query($conexao,$sql);
@@ -18,9 +19,7 @@ $total = mysqli_num_rows($dados);
 
 //Pegando os nomes dos campos
 //$num_fields = mysqli_num_fields($sql);//Obtém o número de campos do resultado
-
-
-
+//
 ?>
 
 
@@ -74,6 +73,7 @@ $total = mysqli_num_rows($dados);
 		<section class="produtos">		
 			
 			<?php
+			/*
 				echo 
 					"<table border=1>
 					<tr>
@@ -103,33 +103,23 @@ $total = mysqli_num_rows($dados);
 						echo "</tr>";			
 					}
 					echo "</table>";
+					*/
+			?>		
+			<?php
+				while ($row = mysqli_fetch_array($dados)){
+				echo "<article>";				
+					echo "<a href='#'>" . $row['nome'] . "</a>";
+					echo "<br>";
+					echo "<br>";
+					echo '<img src="'.$row['imagem'].'" width="90%"/>';
+					echo "<br>";
+					echo "<p>" . $row['descricao'] . "</p>";
+					echo "<br>";
+					echo "<p> Preço: R$ " . $row['preco'] . "</p>";
+					
+				echo "</article>";
+				}
 			?>
-			
-
-
-			<!--
-			<article>
-				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
-				<br>
-				<a href='#'>Camiseta do Batman</a>
-				<p> 10x de R$180</p>
-			</article>
-
-			<article>
-				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
-				<br>
-				<a href='#'>Camiseta da Xuxa</a>
-					<p> 10x de R$180</p>
-			</article>
-
-			<article>
-				TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste
-				<br>
-				<a href='#'>Camiseta da Annita</a>
-					<p> 10x de R$180</p>
-			</article>
-			-->
-
 		</section>
 	</body>
 </html>
