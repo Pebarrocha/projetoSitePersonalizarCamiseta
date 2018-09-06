@@ -16,6 +16,8 @@ Processo('consultar');
 	</head>
 
 	<body>
+			
+
 		<form name="form-consulta" action="#" id="form-consulta" method="post">
 			<input type="button" name="button" id="button" value="Consultar" onclick="submitForm()">
 			<input type="hidden" name="btn-consulta" id="btn-consulta">
@@ -49,7 +51,10 @@ Processo('consultar');
 								echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";
 				 				echo "<td>" . $row['preco'] . "</td>";		
 		?>
-			<td><form><input type="button" value="Editar"><input type="button" value="Excluir"></form> </td>					
+			<td><form>
+				<a href="alterarProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida'] ?>"><input type="button">Editar</a>
+				<input type="button" value="Excluir">
+			</form> </td>					
 		<?php
 			echo "</tr>";			
 							}
