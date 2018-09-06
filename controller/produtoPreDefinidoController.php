@@ -65,7 +65,7 @@ function Processo($processo){
 			global $rs;
 
 			if (isset($_POST['btn-consulta']) && !empty($_POST['btn-consulta'])){
-				echo '<script> alert("entrou aqui!") </script>';
+				echo '<script> alert("entrou consultar Controller!") </script>';
 
 				$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida";
 
@@ -77,24 +77,26 @@ function Processo($processo){
 		break;
 
 		case 'alterar';
-
-			global $rs;
 			
-			echo '<script> alert("entrou aqui!") </script>';
+			global $rs;
+
+			
+			
 			$sql = 'SELECT nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco
 					FROM camisetapredefinida 
-					WHERE id="'.$_GET['id'].'"';
+					WHERE codCamisetaPreDefinida="' . $_GET["id"] . '"';
 			$cDAO = new produtoPreDefinidoMODEL();
 			$rs = $cDAO->consultarProdutoPreDefinido($sql);
 		
-			if (isset($_POST['btn-alterar']) && !empty($_post['btn-consulta'])){
-				
+			if (isset($_POST['btn-alterar']) && !empty($_post['btn-alterar'])){
+				echo '<script> alert("entrou no botão alterar!") </script>';
 				foreach($_POST as $nome_campo => $valor){ 
 				   $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
 				   //echo $comando;
 				   eval($comando); 
 				   $nome_campo = str_replace(",",".", $nome_campo);
 				}		
+				
 				$aDAO = new produtoPreDefinidoMODEL();
 				$aDAO->alterarProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$FotoCamiseta_codFotoCamiseta,$preco);
 
