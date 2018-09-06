@@ -35,10 +35,17 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 
 	public function consultarProdutoPreDefinido($sql){
 		require_once 'conexaomysql.php';
-		echo '<script> alert("entrou aqui na classe!") </script>';		
+		echo '<script> alert("ENTROU NO CONSULTAR!") </script>';
 		$result = mysqli_query($conexao,$sql);	
 
 		return $result;	
+	}
+
+	public function alterarProdutoPreDefinido($nome, $descricao, $tamanho,$imagem,$sexo,$modelo,$preco){
+
+		$sql = 'update camisetapredefinida set nome="' .$nome.  ' ", descricao="'. $descricao . '", tamanho = " '. $tamanho .' ",
+				imagem = "'. $imagem .'", sexo=" '. $sexo .' ", modelo = "'.$modelo.'", preco="'.$preco.'"';
+		$result = mysqli_query($conexao,$sql);		
 	}	
 }
 
