@@ -21,37 +21,40 @@ Processo('consultar');
 			<input type="hidden" name="btn-consulta" id="btn-consulta">
 		</form>
 		<?php
-			
-				echo 
-					"<table border=1>
+			echo 
+				"<table border=1>
 					<tr>
-					<th>Código</th>
-					<th>Nome</th>
-					<th>Descricao</th>
-					<th>Tamanho</th>
-					<th>Imagem</th>
-					<th>Sexo</th>
-					<th>Modelo</th>
-					<th>Foto Camiseta</th>
-					<th>Preco</th>
+						<th>Código</th>
+						<th>Nome</th>
+						<th>Descricao</th>
+						<th>Tamanho</th>
+						<th>Imagem</th>
+						<th>Sexo</th>
+						<th>Modelo</th>
+						<th>Foto Camiseta</th>
+						<th>Preco</th>
+						<th>Opcao</th>
 					</tr>";
-					if (isset($rs)){
-						while($row = mysqli_fetch_array($rs)){
-							
-							echo "<tr>";
-							echo "<td>" . $row['codCamisetaPreDefinida'] . "</td>";
-							echo "<td>" . $row['nome'] . "</td>";
-							echo "<td>" . $row['descricao'] . "</td>";
-							echo "<td>" . $row['tamanho'] . "</td>";
-							echo "<td>" . $row['imagem'] . "</td>";
-							echo "<td>" . $row['sexo'] . "</td>";
-							echo "<td>" . $row['modelo'] . "</td>";
-							echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";
-							echo "<td>" . $row['preco'] . "</td>";		
-							echo "</tr>";			
+						if (isset($rs)){
+							while($row = mysqli_fetch_array($rs)){
+								
+								echo "<tr>";
+								echo "<td>" . $row['codCamisetaPreDefinida'] . "</td>";
+								echo "<td>" . $row['nome'] . "</td>";
+								echo "<td>" . $row['descricao'] . "</td>";
+								echo "<td>" . $row['tamanho'] . "</td>";
+								echo "<td>" . $row['imagem'] . "</td>";
+								echo "<td>" . $row['sexo'] . "</td>";
+								echo "<td>" . $row['modelo'] . "</td>";
+								echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";
+				 				echo "<td>" . $row['preco'] . "</td>";		
+		?>
+			<td><form><input type="button" value="Editar"><input type="button" value="Excluir"></form> </td>					
+		<?php
+			echo "</tr>";			
+							}
+				echo "</table>";
 						}
-						echo "</table>";
-					}
 			?>
 
 			<script type="text/javascript">
