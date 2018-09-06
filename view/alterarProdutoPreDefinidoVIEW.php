@@ -28,17 +28,22 @@ Processo('alterar');
 
 		<div>
 				<h1> Cadastro de produtos pré-definidos </h1>
-
+			
 			<?php 
-			if(isset($row)){
-			while ($row = mysqli_fetch_array($rs)) { ?>
+			if(isset($rs)){
+				echo '<script> alert("entrou no if") </script>';
+			while ($row = mysqli_fetch_array($rs)) { 
+				echo '<script> alert("VOLTOU PRA VIEW") </script>';
+				?>
+			
 			<form action="#" name="form-alterar" id="form-alterar" method="post">
 			
+				<script> alert("Entrou PORRA");</script>
 				<label>Nome:</label> 
 				<input type="text" name="nome" id="nome" placeholder="Nome da camiseta aqui!" value="<?php echo $row['nome']; ?>"> <br>
 
 				<label>Descrição:</label> <br>
-				<textarea name="descricao" id="descricao" rows="10" cols="30" placeholder="Digite a descrição da camiseta aqui!" value = "<?php echo $row['descricao']; ?>"></textarea><br>
+				<textarea name="descricao" id="descricao" rows="10" cols="30" placeholder="Digite a descrição da camiseta aqui!" value = ""><?php echo $row['descricao']; ?></textarea><br>
 
 				<label>Tamanho:</label> <select name="tamanho" id="tamanho" value="<?php echo $row['tamanho']; ?>">
 					<option value="PP">PP</option>
@@ -77,6 +82,7 @@ Processo('alterar');
 		}?>
 			
 			<script type="text/javascript" src="../js/validacao.js"> </script>
+			
 			<script type="text/javascript">
 
 				function submitForm(){	
