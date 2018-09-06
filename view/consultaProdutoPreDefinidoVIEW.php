@@ -35,23 +35,23 @@ Processo('consultar');
 					<th>Foto Camiseta</th>
 					<th>Preco</th>
 					</tr>";
-
-					while($row = mysqli_fetch_array($result)){
-						
-						echo "<tr>";
-						echo "<td>" . $row['codCamisetaPreDefinida'] . "</td>";
-						echo "<td>" . $row['nome'] . "</td>";
-						echo "<td>" . $row['descricao'] . "</td>";
-						echo "<td>" . $row['tamanho'] . "</td>";
-						echo "<td>" . $row['imagem'] . "</td>";
-						echo "<td>" . $row['sexo'] . "</td>";
-						echo "<td>" . $row['modelo'] . "</td>";
-						echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";
-						echo "<td>" . $row['preco'] . "</td>";		
-						echo "</tr>";			
+					if (isset($rs)){
+						while($row = mysqli_fetch_array($rs)){
+							
+							echo "<tr>";
+							echo "<td>" . $row['codCamisetaPreDefinida'] . "</td>";
+							echo "<td>" . $row['nome'] . "</td>";
+							echo "<td>" . $row['descricao'] . "</td>";
+							echo "<td>" . $row['tamanho'] . "</td>";
+							echo "<td>" . $row['imagem'] . "</td>";
+							echo "<td>" . $row['sexo'] . "</td>";
+							echo "<td>" . $row['modelo'] . "</td>";
+							echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";
+							echo "<td>" . $row['preco'] . "</td>";		
+							echo "</tr>";			
+						}
+						echo "</table>";
 					}
-					echo "</table>";
-					
 			?>
 
 			<script type="text/javascript">
