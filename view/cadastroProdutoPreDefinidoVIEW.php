@@ -74,13 +74,14 @@ Processo('incluir');
 				<label>Preço:</label>
 					<input type="text" name="preco" id="preco" placeholder="Digite o preço da camiseta">
 
+				<input type="button" value="Consultar" onclick="">
 				<!--O primeiro button é visivel para o usuário. Quando ele é clicado ele aciona a função submitForm() do
 				java script, que disparará os inputs dos forms para a página controller
 					O segundo botão é invisivel, ele será ativado dentro da função, e o controller receberá ele para poder enfim liberar os inputs -->
 				<input type="button" name="button" id="button" value="Cadastrar" onclick="submitForm()">
 				<input type="hidden" name="ok" id="ok">	
 		</div>
-
+					
 		</form>
 						
 			

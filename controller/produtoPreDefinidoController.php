@@ -11,7 +11,7 @@ Descrição: Controller que receberá os inputs dos formulários e enviará para
 <?php
 
 
-require_once '../model/produtoPreDefinido.php';						
+require_once '../model/produtoPreDefinidoMODEL.php';						
 //require_once '../DAO/cadastroDeProdutoPreDefinidoDAO.php';	
 
 function Processo($processo){
@@ -53,10 +53,20 @@ function Processo($processo){
 					//$conteudo = addslashes($conteudo);
 					//fclose($fp);
 
-				$pDAO = new cadastroDeProdutoPreDefinidoDAO();
+				$pDAO = new produtoPreDefinidoMODEL();
 				$pDAO->incluirProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco);		
 				echo '<script>alert("Cadastrado com sucesso !");</script>';
 				//echo '<script>window.location="../VIEW/cadastroProdutoPreDefinidoVIEW.php";</script>';
+			}
+		break;
+
+		case 'consultar';
+			
+			if (isset($_POST['btn-consulta']) && !empty($_POST['btn-consulta'])){
+				echo '<script> alert("entrou aqui!") </script>';
+				$cDAO = new produtoPreDefinidoMODEL();
+				$cDAO->consultarProdutoPreDefinido();
+				echo '<script>alert("Consultado com sucesso!";</script>';
 			}
 		break;
 
