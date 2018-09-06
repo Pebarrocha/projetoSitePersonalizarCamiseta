@@ -76,6 +76,32 @@ function Processo($processo){
 			}
 		break;
 
+		case 'alterar';
+
+			global $rs;
+			
+			echo '<script> alert("entrou aqui!") </script>';
+			$sql = 'SELECT nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco
+					FROM camisetapredefinida 
+					WHERE id="'.$_GET['id'].'"';
+			$cDAO = new produtoPreDefinidoMODEL();
+			$rs = $cDAO->consultarProdutoPreDefinido($sql);
+		
+			if (isset($_POST['btn-alterar']) && !empty($_post['btn-consulta'])){
+				
+				foreach($_POST as $nome_campo => $valor){ 
+				   $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
+				   //echo $comando;
+				   eval($comando); 
+				   $nome_campo = str_replace(",",".", $nome_campo);
+				}		
+				$aDAO = new produtoPreDefinidoMODEL();
+				$aDAO->alterarProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$FotoCamiseta_codFotoCamiseta,$preco);
+
+			}
+
+		break;
+
 	}
 	
 	}
