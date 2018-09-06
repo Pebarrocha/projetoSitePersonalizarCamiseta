@@ -62,10 +62,16 @@ function Processo($processo){
 
 		case 'consultar';
 			
+			global $rs;
+
 			if (isset($_POST['btn-consulta']) && !empty($_POST['btn-consulta'])){
 				echo '<script> alert("entrou aqui!") </script>';
+
+				$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida";
+
 				$cDAO = new produtoPreDefinidoMODEL();
-				$cDAO->consultarProdutoPreDefinido();
+				$rs = $cDAO->consultarProdutoPreDefinido($sql);
+				
 				echo '<script>alert("Consultado com sucesso!";</script>';
 			}
 		break;
