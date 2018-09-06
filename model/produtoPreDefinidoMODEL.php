@@ -33,14 +33,12 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 		
 		}
 
-	public function consultarProdutoPreDefinido(){
+	public function consultarProdutoPreDefinido($sql){
 		require_once 'conexaomysql.php';
-		echo '<script> alert("entrou aqui na classe!") </script>';
-		$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida";
-		global $result;
-		$result = mysqli_query($conexao,$sql);
-		global $row;
-		
+		echo '<script> alert("entrou aqui na classe!") </script>';		
+		$result = mysqli_query($conexao,$sql);	
+
+		return $result;	
 	}	
 }
 
