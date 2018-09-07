@@ -72,7 +72,7 @@ Processo('alterar');
 				<input type="text" name="preco" id="preco" placeholder="Digite o preço da camiseta" value="<?php echo $row['preco']; ?>">
 				
 				<input type="button" name="button" id="button" value="Alterar" onclick="submitForm()">
-				<input type="hidden" name="btn-alterar" id="btn-alterar">	
+				<input type="hidden" name="btnalterar" id="btnalterar">	
 		</div>
 					
 		</form>
@@ -87,7 +87,7 @@ Processo('alterar');
 					alert("VAI SE FODER");
 					validaCadastro();			
 					
-					document.getElementById("btn-alterar").value = "true";					
+					document.getElementById("btnalterar").value = "true";					
 					document.getElementById("form-alterar").submit();
 					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
 			}		

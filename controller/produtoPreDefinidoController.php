@@ -78,10 +78,7 @@ function Processo($processo){
 
 		case 'alterar':
 			
-			global $rs;
-	
-			echo '<script> alert("FILHO DA PUTA") </script>';
-			
+			global $rs;			
 		
 			$sql = 'SELECT nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco
 					FROM camisetapredefinida 
@@ -89,21 +86,21 @@ function Processo($processo){
 			$aDAO = new produtoPreDefinidoMODEL();
 			$rs = $aDAO->consultarProdutoPreDefinido($sql);
 					
-			if (isset($_POST['btn-alterar']) && !empty($_POST['btn-alterar'])){
-				echo '<script> alert("entrou no botão alterar!") </script>';
-				/*
-				foreach($_POST as $nome_campo => $valor){ 
-				   $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
-				   //echo $comando;
-				   eval($comando); 
-				   $nome_campo = str_replace(",",".", $nome_campo);
-				}	
-				*/
+			if (isset($_POST['btnalterar']) && !empty($_POST['btnalterar'])){
 				
-				$aDAO->alterarProdutoPreDefinido($_POST['nome'],$_POST['descricao'],$_POST['tamanho'],$_POST['imagem'],$_POST['sexo'],$_POST['modelo'],$_POST['preco'],$_GET['id']);
-				// echo '<script>window.location="consultaProdutoPreDefinidoVIEW.php";</script>';
-				//$aDAO->alterarProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$FotoCamiseta_codFotoCamiseta,$preco);
-
+				
+				foreach($_POST as $nome_campo => $valor){ 
+				   $comand = "\$" . $nome_campo . "='" . $valor . "';"; 
+				   //echo $comand;
+				   eval($comand); 
+				   $nome_campo = str_replace(",",".", $nome_campo);
+				}		
+				
+				$_POST['preco'] = str_replace(",",".", $_POST['preco']);
+				//$aDAO->alterarProdutoPreDefinido($_POST['nome'],$_POST['descricao'],$_POST['tamanho'],$_POST['imagem'],$_POST['sexo'],$_POST['modelo'],$_POST['preco'],$_GET['id']);
+				
+				$aDAO->alterarProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco);
+				echo '<script>window.location="consultaProdutoPreDefinidoVIEW.php";</script>';
 			}
 
 		break;
