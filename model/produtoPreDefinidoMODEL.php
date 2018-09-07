@@ -42,11 +42,15 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 	}
 
 	public function alterarProdutoPreDefinido($nome, $descricao, $tamanho,$imagem,$sexo,$modelo,$preco){
-		echo '<script> alert("ENTROU NO ALTERAR! MODEL") </script>';
-		$sql = 'update camisetapredefinida set nome="' .$nome.  ' ", descricao="'. $descricao . '", tamanho = " '. $tamanho .' ",
-				imagem = "'. $imagem .'", sexo=" '. $sexo .' ", modelo = "'.$modelo.'", preco="'.$preco.'"';
-		$result = mysqli_query($conexao,$sql);		
-	}	
-}
+		try{
+		require_once 'conexaomysql.php';
 
+		$sql = 'update camisetapredefinida set nome="' .$nome.  ' ", descricao="'. $descricao . '", tamanho = " '. $tamanho .' ",
+				imagem = "'. $imagem .'", sexo=" '. $sexo .' ", modelo = "'.$modelo.'", preco="'.$preco.'" WHERE codCamisetaPreDefinida="' . $_GET["id"] . '"';
+		$result = mysqli_query($conexao,$sql);		
+		}catch(Exception $e){
+				echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";
+			}
+	}
+}
 ?>

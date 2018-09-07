@@ -31,9 +31,9 @@ Processo('alterar');
 			
 			<?php 
 			if(isset($rs)){
-				echo '<script> alert("entrou no if") </script>';
+				
 			while ($row = mysqli_fetch_array($rs)) { 
-				echo '<script> alert("VOLTOU PRA VIEW") </script>';
+				
 				?>
 			
 			<form action="#" name="form-alterar" id="form-alterar" method="post">
@@ -69,9 +69,7 @@ Processo('alterar');
 				</select><br>			
 
 				<label>Preço:</label>
-					<input type="text" name="preco" id="preco" placeholder="Digite o preço da camiseta" value="<?php echo $row['preco']; ?>">
-
-				<input type="button" value="Consultar" onclick="">
+				<input type="text" name="preco" id="preco" placeholder="Digite o preço da camiseta" value="<?php echo $row['preco']; ?>">
 				
 				<input type="button" name="button" id="button" value="Alterar" onclick="submitForm()">
 				<input type="hidden" name="btn-alterar" id="btn-alterar">	
@@ -86,8 +84,10 @@ Processo('alterar');
 			<script type="text/javascript">
 
 				function submitForm(){	
+					alert("VAI SE FODER");
 					validaCadastro();			
-					document.getElementById("btn-alterar").value = "btn-alterar";					
+					
+					document.getElementById("btn-alterar").value = "true";					
 					document.getElementById("form-alterar").submit();
 					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
 			}		

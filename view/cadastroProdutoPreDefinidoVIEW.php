@@ -45,6 +45,7 @@ Processo('incluir');
 				<textarea name="descricao" id="descricao" rows="10" cols="30" placeholder="Digite a descrição da camiseta aqui!"></textarea><br>
 
 				<label>Tamanho:</label> <select name="tamanho" id="tamanho">
+					<option value="esq">Escolha um valor</option>
 					<option value="PP">PP</option>
 					<option value="P">P</option>	
 					<option value="M">M</option>		

@@ -52,8 +52,10 @@ Processo('consultar');
 				 				echo "<td>" . $row['preco'] . "</td>";		
 		?>
 			<td><form>
-				<a href="alterarProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida'] ?>"><input type="button">Editar</a>
-				<input type="button" value="Excluir">
+				<a href="alterarProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida'] ?>"><input type="button" name="button" value="Alterar" onclick="submitForm()"></a>
+
+				<input type="hidden" name="btn-consulta" id="btn-consulta">
+				
 			</form> </td>					
 		<?php
 			echo "</tr>";			
@@ -64,6 +66,7 @@ Processo('consultar');
 
 			<script type="text/javascript">
 				function submitForm(){
+				
 					document.getElementById("btn-consulta").value = "true";
 					document.getElementById("form-consulta").submit();
 				}
