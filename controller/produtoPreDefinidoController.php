@@ -88,8 +88,7 @@ function Processo($processo){
 					WHERE codCamisetaPreDefinida="' . $_GET["id"] . '"';
 			$aDAO = new produtoPreDefinidoMODEL();
 			$rs = $aDAO->consultarProdutoPreDefinido($sql);
-		
-		
+					
 			if (isset($_POST['btn-alterar']) && !empty($_POST['btn-alterar'])){
 				echo '<script> alert("entrou no botão alterar!") </script>';
 				/*

@@ -7,7 +7,7 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 -->
 
 <?php				
-
+	
 	Class produtoPreDefinidoMODEL{		
 
 		public function incluirProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco){	
@@ -37,13 +37,13 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 		require_once 'conexaomysql.php';
 		echo '<script> alert("ENTROU NO CONSULTAR! MODEL") </script>';
 		$result = mysqli_query($conexao,$sql);	
-
-		return $result;	
+		
+		return $result;			
 	}
 
 	public function alterarProdutoPreDefinido($nome, $descricao, $tamanho,$imagem,$sexo,$modelo,$preco){
 		try{
-		require_once 'conexaomysql.php';
+		require 'conexaomysql.php';
 
 		$sql = 'update camisetapredefinida set nome="' .$nome.  ' ", descricao="'. $descricao . '", tamanho = " '. $tamanho .' ",
 				imagem = "'. $imagem .'", sexo=" '. $sexo .' ", modelo = "'.$modelo.'", preco="'.$preco.'" WHERE codCamisetaPreDefinida="' . $_GET["id"] . '"';
