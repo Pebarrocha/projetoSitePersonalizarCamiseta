@@ -19,8 +19,16 @@ Processo('consultar');
 			
 
 		<form name="form-consulta" action="#" id="form-consulta" method="post">
+			<input type="radio" name="tipo" value="nome">Nome
+			<input type="radio" name="tipo" value="descricao">Descricao
+			<input type="radio" name="tipo" value="tamanho">Tamanho
+			<input type="radio" name="tipo" value="sexo">Sexo
+			<input type="radio" name="tipo" value="modelo">Modelo
+			<input type="radio" name="tipo" value="preco">Preço<br>
+
+			<input type="text" name="edconsulta" id="edconsulta" placeholder="Digite uma palavra para consultar">
 			<input type="button" name="button" id="button" value="Consultar" onclick="submitForm()">
-			<input type="hidden" name="btn-consulta" id="btn-consulta">
+			<input type="hidden" name="btnconsulta" id="btnconsulta">
 		</form>
 		<?php
 			echo 
@@ -53,8 +61,7 @@ Processo('consultar');
 		?>
 			<td><form>
 				<a href="alterarProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida'] ?>"><input type="button" name="button" value="Alterar" onclick="submitForm()"></a>
-
-				<input type="hidden" name="btn-consulta" id="btn-consulta">
+				<input type="hidden" name="btnconsulta" id="btnconsulta">
 				
 			</form> </td>					
 		<?php
@@ -67,7 +74,7 @@ Processo('consultar');
 			<script type="text/javascript">
 				function submitForm(){
 				
-					document.getElementById("btn-consulta").value = "true";
+					document.getElementById("btnconsulta").value = "true";
 					document.getElementById("form-consulta").submit();
 				}
 			</script>

@@ -6,8 +6,6 @@ Descrição: Controller que receberá os inputs dos formulários e enviará para
 
 -->
 
-
-
 <?php
 
 
@@ -26,15 +24,9 @@ function Processo($processo){
 				que estavam nas inputs dos formulários HTML. Depois irá criar um objeto da classe cadastroDeProdutoPreDefinidoDAO com todas as váriaveis, e irá ativar a função no MODEL
 			 */
 			if (isset($_POST['ok']) && !empty($_POST['ok'])){
-				//$sigla = ($_POST['sigla']);
+				
 				/*
-				$nome = ($_POST['nome']);		
-				$descricao = ($_POST['descricao']);	
-				$tamanho = ($_POST['tamanho']);
-				$sexo = ($_POST['sexo']);
-				$modelo = ($_POST['modelo']);
-				$preco = ($_POST['preco']);
-				//$preco = str_replace(",",".", $preco);
+				$nome = ($_POST['nome']);						
 				*/
 				foreach($_POST as $nome_campo => $valor){ 
 				   $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
@@ -56,7 +48,7 @@ function Processo($processo){
 				$pDAO = new produtoPreDefinidoMODEL();
 				$pDAO->incluirProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco);		
 				echo '<script>alert("Cadastrado com sucesso !");</script>';
-				//echo '<script>window.location="../VIEW/cadastroProdutoPreDefinidoVIEW.php";</script>';
+				echo '<script>window.location="../VIEW/cadastroProdutoPreDefinidoVIEW.php";</script>';
 			}
 		break;
 
@@ -64,14 +56,25 @@ function Processo($processo){
 			
 			global $rs;
 
-			if (isset($_POST['btn-consulta']) && !empty($_POST['btn-consulta'])){
-				echo '<script> alert("entrou consultar Controller!") </script>';
+			if (isset($_POST['btnconsulta']) && !empty($_POST['btnconsulta'])){
+				
+				foreach($_POST as $nome_campo => $valor){ 
+				   $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
+				   
+				   eval($comando); 
+				   $nome_campo = str_replace(",",".", $nome_campo);
+				}		
 
-				$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida";
+				$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida WHERE $tipo = '$edconsulta' ";
+				//$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida WHERE '$tipo' = ''$edconsulta''";
+				//$sql = "SELECT codCamisetaPredefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida";
+				//$sql = 'SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida
+						//WHERE "'. $tipo .'" = ""'. $edconsulta .'"" ';
 
 				$cDAO = new produtoPreDefinidoMODEL();
+
 				$rs = $cDAO->consultarProdutoPreDefinido($sql);
-				
+
 				echo '<script>alert("Consultado com sucesso!";</script>';
 			}
 		break;
@@ -96,7 +99,7 @@ function Processo($processo){
 				   $nome_campo = str_replace(",",".", $nome_campo);
 				}		
 				
-				$_POST['preco'] = str_replace(",",".", $_POST['preco']);
+				//$_POST['preco'] = str_replace(",",".", $_POST['preco']);
 				//$aDAO->alterarProdutoPreDefinido($_POST['nome'],$_POST['descricao'],$_POST['tamanho'],$_POST['imagem'],$_POST['sexo'],$_POST['modelo'],$_POST['preco'],$_GET['id']);
 				
 				$aDAO->alterarProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco);
