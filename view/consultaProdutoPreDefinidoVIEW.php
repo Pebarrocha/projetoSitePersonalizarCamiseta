@@ -3,8 +3,6 @@
  Data da última modificação: 07/09/2018
 -->
 
-
-
 <?php
 
 require_once ('../controller/produtoPreDefinidoController.php');
@@ -67,10 +65,7 @@ echo "<td>" . $row['preco'] . "</td>";
 ?>
 <td><form>
 <a href="alterarProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida']; ?>"><input type="button" name="button" value="Alterar"></a>
-<!--<input type="hidden" name="btnconsulta" id="btnconsulta">-->
- 
 <a href="consultaProdutoPreDefinidoVIEW.php?btnexcluir=true&id=<?php echo $row['codCamisetaPreDefinida']; ?>"><input type="button" name="button" value="Excluir"></a>
-<!--<input type="hidden" name="btnexcluir" id="btnexcluir">-->
 </form></td>					
 <?php
 echo "</tr>";			
@@ -80,13 +75,6 @@ echo "</table>";
 ?>
 <script type="text/javascript">
 
-/*
-function exclusaoForm(){
-alert("Entrou na PORRA");
-document.getElementById("btnexcluir").value = "true";	
-document.getElementById("form-consulta").submit();
-}
-*/
 function submitForm(){
 
 document.getElementById("btnconsulta").value = "true";
