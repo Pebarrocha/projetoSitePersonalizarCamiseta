@@ -66,11 +66,11 @@ echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";
 echo "<td>" . $row['preco'] . "</td>";		
 ?>
 <td><form>
-<a href="alterarProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida'] ?>"><input type="button" name="button" value="Alterar" onclick="submitForm()"></a>
-<input type="hidden" name="btnconsulta" id="btnconsulta">
-
-<a href="consultaProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida'] ?>"><input type="button" name="button" value="Excluir" onclick="exclusaoForm()"></a>
-<input type="hidden" name="btnexcluir" id="btnexcluir">
+<a href="alterarProdutoPreDefinidoVIEW.php?id=<?php echo $row['codCamisetaPreDefinida']; ?>"><input type="button" name="button" value="Alterar"></a>
+<!--<input type="hidden" name="btnconsulta" id="btnconsulta">-->
+ 
+<a href="consultaProdutoPreDefinidoVIEW.php?btnexcluir=true&id=<?php echo $row['codCamisetaPreDefinida']; ?>"><input type="button" name="button" value="Excluir"></a>
+<!--<input type="hidden" name="btnexcluir" id="btnexcluir">-->
 </form></td>					
 <?php
 echo "</tr>";			
@@ -80,16 +80,19 @@ echo "</table>";
 ?>
 <script type="text/javascript">
 
+/*
 function exclusaoForm(){
-alert("Entrou na exclusão");
+alert("Entrou na PORRA");
 document.getElementById("btnexcluir").value = "true";	
 document.getElementById("form-consulta").submit();
 }
-
+*/
 function submitForm(){
+
 document.getElementById("btnconsulta").value = "true";
 document.getElementById("form-consulta").submit();
 }
+
 </script>
 </body>
 </html>

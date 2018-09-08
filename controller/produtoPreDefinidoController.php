@@ -77,15 +77,14 @@ function Processo($processo){
 
 				echo '<script>alert("Consultado com sucesso!";</script>';
 			}
-			$eco = $_POST['btnexcluir'];
-			echo $eco;
-			echo '<script>alert("Entrou no botao excluir"); </script>';
-			if(isset($_POST['btnexcluir']) && !empty($_POST['btnexcluir'])){
+			
+			if(isset($_GET['btnexcluir']) && !empty($_GET['btnexcluir'])){
 				echo '<script>alert("Entrou no botao excluir"); </script>';
 				$id = $_GET['id'];
 				$sql = "delete from camisetapredefinida WHERE codCamisetaPreDefinida = $id";
 				$eDAO = new produtoPreDefinidoMODEL();
 				$eDAO->deletarProdutoPreDefinido($sql);
+				echo '<script>window.location="consultaProdutoPreDefinidoVIEW.php";</script>';
 			}
 
 
