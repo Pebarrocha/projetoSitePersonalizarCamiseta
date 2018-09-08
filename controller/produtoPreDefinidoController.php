@@ -1,6 +1,6 @@
 <!--
  Autor: Pedro Barbosa Rocha
- Data da última modificação: 11/08/2018
+ Data da última modificação: 07/09/2018
 
 Descrição: Controller que receberá os inputs dos formulários e enviará para o model.
 
@@ -77,6 +77,18 @@ function Processo($processo){
 
 				echo '<script>alert("Consultado com sucesso!";</script>';
 			}
+			$eco = $_POST['btnexcluir'];
+			echo $eco;
+			echo '<script>alert("Entrou no botao excluir"); </script>';
+			if(isset($_POST['btnexcluir']) && !empty($_POST['btnexcluir'])){
+				echo '<script>alert("Entrou no botao excluir"); </script>';
+				$id = $_GET['id'];
+				$sql = "delete from camisetapredefinida WHERE codCamisetaPreDefinida = $id";
+				$eDAO = new produtoPreDefinidoMODEL();
+				$eDAO->deletarProdutoPreDefinido($sql);
+			}
+
+
 		break;
 
 		case 'alterar':
@@ -106,7 +118,13 @@ function Processo($processo){
 				echo '<script>window.location="consultaProdutoPreDefinidoVIEW.php";</script>';
 			}
 
+			
+
+			
+
 		break;
+
+		
 
 	}
 	

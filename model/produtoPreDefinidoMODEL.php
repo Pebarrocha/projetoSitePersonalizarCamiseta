@@ -1,6 +1,6 @@
 <!--
  Autor: Pedro Barbosa Rocha
- Data da última modificação: 11/08/2018
+ Data da última modificação: 07/09/2018
 
 Descrição: Classe para incluir o produto pré definido no banco de dados.
 Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta no banco que será inserir os dados no banco.
@@ -51,6 +51,18 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 		}catch(Exception $e){
 				echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";
 			}
+	}
+
+	public function deletarProdutoPreDefinido($sql){
+		try{
+			require_once 'conexaomysql.php';
+			$result = mysqli_query($conexao,$sql);
+			echo '<script> alert("Conteudo Excluido com sucesso") </script>';
+		}catch(Exception $e){
+			echo 'Excecão capturada. MODEL Excluir: ', $e->getMessage(), "\n";
+		}
+
+
 	}
 }
 ?>
