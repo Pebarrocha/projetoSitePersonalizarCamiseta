@@ -24,10 +24,6 @@ Se o botão hidden 'ok' for true ele entrara no if, e uma variavel receberá tod
 que estavam nas inputs dos formulários HTML. Depois irá criar um objeto da classe cadastroDeProdutoPreDefinidoDAO com todas as váriaveis, e irá ativar a função no MODEL
  */
 if (isset($_POST['ok']) && !empty($_POST['ok'])){
-			
-/*
-$nome = ($_POST['nome']);						
-*/
 foreach($_POST as $nome_campo => $valor){ 
 $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
 //echo $comando;
@@ -60,9 +56,8 @@ echo '<script>alert("Consultado com sucesso!";</script>';
 if(isset($_GET['btnexcluir']) && !empty($_GET['btnexcluir'])){
 echo '<script>alert("Entrou no botao excluir"); </script>';
 $id = $_GET['id'];
-$sql = "delete from camisetapredefinida WHERE codCamisetaPreDefinida = $id";
 $eDAO = new produtoPreDefinidoMODEL();
-$eDAO->deletarProdutoPreDefinido($sql);
+$eDAO->deletarProdutoPreDefinido($id);
 echo '<script>window.location="consultaProdutoPreDefinidoVIEW.php";</script>';
 }
 break;

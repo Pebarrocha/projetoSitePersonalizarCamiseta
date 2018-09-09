@@ -40,9 +40,10 @@ echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";
 }
 }
 
-public function deletarProdutoPreDefinido($sql){
+public function deletarProdutoPreDefinido($id){
 try{
 require_once 'conexaomysql.php';
+$sql = "delete from camisetapredefinida WHERE codCamisetaPreDefinida = $id";
 $result = mysqli_query($conexao,$sql);
 echo '<script> alert("Conteudo Excluido com sucesso") </script>';
 }catch(Exception $e){
