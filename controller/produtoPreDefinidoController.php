@@ -40,17 +40,26 @@ break;
 
 case 'consultar':
 global $rs;
+
 if (isset($_POST['btnconsulta']) && !empty($_POST['btnconsulta'])){
 foreach($_POST as $nome_campo => $valor){ 
 $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
+echo $comando;
 eval($comando); 
 $nome_campo = str_replace(",",".", $nome_campo);
 }		
 
+if(isset($tipo) != null || $edconsulta != null){
 $sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida WHERE $tipo = '$edconsulta' ";
 $cDAO = new produtoPreDefinidoMODEL();
 $rs = $cDAO->consultarProdutoPreDefinido($sql);
-echo '<script>alert("Consultado com sucesso!";</script>';
+
+}else{
+$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida";
+$cDAO = new produtoPreDefinidoMODEL();
+$rs = $cDAO->consultarProdutoPreDefinido($sql);
+
+}
 }
 			
 if(isset($_GET['btnexcluir']) && !empty($_GET['btnexcluir'])){
