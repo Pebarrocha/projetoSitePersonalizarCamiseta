@@ -22,6 +22,8 @@ $result = mysqli_query($conexao, $sql);
 echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";
 }
 }
+
+
 public function consultarProdutoPreDefinido($sql){
 require_once 'conexaomysql.php';
 echo '<script> alert("ENTROU NO CONSULTAR! MODEL") </script>';

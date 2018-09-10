@@ -1,4 +1,14 @@
+
+
 <!DOCTYPE html>
+
+<!-- DATA DA ULTIMA MODIFICAÇÃO: 09/09/2018
+-->
+
+<?php
+//require_once('../model/mainCONTROLLER.php')
+//Processo('consultar');
+?>
 
 <?php
 
@@ -20,6 +30,7 @@ $total = mysqli_num_rows($dados);
 //Pegando os nomes dos campos
 //$num_fields = mysqli_num_fields($sql);//Obtém o número de campos do resultado
 //
+
 ?>
 
 <html>
@@ -53,12 +64,19 @@ $total = mysqli_num_rows($dados);
 
 
 <nav class="navegacao">
+<form id="formmain">
 <ul>
-<li><a href="#">Camisetas Masculinas</a>
-<li><a href="#">Camisetas Femininas</a>
+<!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
+<li><a id = "sexo" name="sexo" value="masculino" href="#" onclick="submitPesquisa()">Camisetas Masculinas
+<input type="hidden" id="btnconsulta" name="btnconsulta" ></a>
+<!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
+<li><a id = "sexo" name="sexo" value="feminino" href="#" onclick="submitPesquisa()">Camisetas Femininas
+<input type="hidden" id="btnconsulta" name="btnconsulta"></a>
+
 <li><a href="#">Contato</a>
 <li><a href="#">Sobre</a>
 </ul>
+</form>
 </nav>
 
 <section class="produtos">
@@ -81,6 +99,17 @@ echo "</article>";
 </section>
 </body>
 </html>
+
+<script>
+function submitPesquisa(){
+alert("entru aki");
+// FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA 
+  document.getElementById('btnconsulta').value() = true;
+  document.getElementById('formmain').submit();
+}
+
+</script>
+
 <?php
 mysqli_free_result($dados);
 ?>
