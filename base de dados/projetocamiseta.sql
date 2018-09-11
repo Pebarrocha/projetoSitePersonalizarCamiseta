@@ -11,23 +11,56 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+
+-- Copiando estrutura do banco de dados para projetocamiseta
+CREATE DATABASE IF NOT EXISTS `projetocamiseta` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `projetocamiseta`;
+
 -- Copiando estrutura para tabela projetocamiseta.camisetapredefinida
 CREATE TABLE IF NOT EXISTS `camisetapredefinida` (
   `codCamisetaPreDefinida` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   `descricao` varchar(45) NOT NULL,
   `tamanho` varchar(45) NOT NULL,
-  `imagem` varchar(45) NOT NULL,
-  `sexo` tinyint(4) NOT NULL,
+  `imagem` varchar(128) DEFAULT NULL,
+  `sexo` varchar(50) NOT NULL,
   `modelo` varchar(45) NOT NULL,
-  `FotoCamiseta_codFotoCamiseta` int(11) NOT NULL,
+  `FotoCamiseta_codFotoCamiseta` int(11) DEFAULT NULL,
+  `preco` decimal(6,2) DEFAULT NULL,
   PRIMARY KEY (`codCamisetaPreDefinida`),
   KEY `fk_CamisetaPreDefinida_FotoCamiseta1_idx` (`FotoCamiseta_codFotoCamiseta`),
   CONSTRAINT `fk_CamisetaPreDefinida_FotoCamiseta1` FOREIGN KEY (`FotoCamiseta_codFotoCamiseta`) REFERENCES `fotocamiseta` (`codFotoCamiseta`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela projetocamiseta.camisetapredefinida: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela projetocamiseta.camisetapredefinida: ~28 rows (aproximadamente)
 /*!40000 ALTER TABLE `camisetapredefinida` DISABLE KEYS */;
+INSERT INTO `camisetapredefinida` (`codCamisetaPreDefinida`, `nome`, `descricao`, `tamanho`, `imagem`, `sexo`, `modelo`, `FotoCamiseta_codFotoCamiseta`, `preco`) VALUES
+	(7, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', '0', 'modelo', NULL, NULL),
+	(9, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(10, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(11, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(12, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(13, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(14, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(15, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(16, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(17, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(18, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(19, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(20, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 9.99),
+	(21, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 24.90),
+	(22, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 99.99),
+	(23, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 1000.90),
+	(24, 'nome', 'desccamisetapredefinidaricao', 'tamanho', '', 'sexo', 'modelo', NULL, 1000.90),
+	(27, 'Camiseta do Adriano', 'Camiseta do Adriano Imperador', 'PP', '', 'masculino', 'tshirt', NULL, 25.00),
+	(28, '', 'Camiseta do Adriano Imperador', '', '', 'masculino', 'tshirt', NULL, 25.00),
+	(29, '', 'Camiseta imperadora', '', '', 'masculino', 'tshirt', NULL, 10.00),
+	(30, '2wci2aw.jpg', 'Imperatriz', '12461', 'C:xampp	mpphp5259.tmp', 'feminino', 'polo', NULL, 90.00),
+	(31, 'Imperatriz Chapeconhence', 'Camiseta da imperatriz', 'P', 'C:xampp	mpphpE3EF.tmp', 'masculino', 'tshirt', NULL, 10.00),
+	(33, 'Camiseta', 'Camisetra', 'G', 'imagens/camiseta3.jpg', 'masculino', 'tshirt', NULL, 90.90),
+	(34, 'Marcelo Rezemde ', 'Eawe', ' PP ', 'imagens/nomedaimagem.jpg', ' masculino ', 'tshirt', NULL, 5.90),
+	(35, 'Camiseta Sininho  ', 'Camiseta da sininho ', ' GG ', 'imagens/sininho.jpg', ' feminino ', 'polo', NULL, 9.90),
+	(36, 'Sininho', 'Camiseta da sininho', 'GG', 'imagens/sininho.jpg', 'feminino', 'cropped', NULL, 2.90);
 /*!40000 ALTER TABLE `camisetapredefinida` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela projetocamiseta.carrinhodecompras
