@@ -1,16 +1,17 @@
 
+<?php
+require_once('../controller/mainCONTROLLER.php');
+Processo('consultar');
+?>
 
 <!DOCTYPE html>
 
 <!-- DATA DA ULTIMA MODIFICAÇÃO: 09/09/2018
 -->
 
-<?php
-//require_once('../model/mainCONTROLLER.php')
-//Processo('consultar');
-?>
 
 <?php
+/*
 
 require_once '../model/conexaomysql.php';
 
@@ -19,18 +20,18 @@ require_once '../model/conexaomysql.php';
 $sql = 'SELECT nome,descricao,imagem,preco FROM camisetapredefinida';
 
 //executo a consulta
-$dados = mysqli_query($conexao,$sql);
+$rs = mysqli_query($conexao,$sql);
 
 //transformo em um array
-$linha = mysqli_fetch_assoc($dados);
+$linha = mysqli_fetch_assoc($rs);
 
 //vejo o total de dados que retornaram
-$total = mysqli_num_rows($dados);
+$total = mysqli_num_rows($rs);
 
 //Pegando os nomes dos campos
 //$num_fields = mysqli_num_fields($sql);//Obtém o número de campos do resultado
 //
-
+*/
 ?>
 
 <html>
@@ -67,11 +68,11 @@ $total = mysqli_num_rows($dados);
 <form id="formmain">
 <ul>
 <!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
-<li><a id = "sexo" name="sexo" value="masculino" href="#" onclick="submitPesquisa()">Camisetas Masculinas
-<input type="hidden" id="btnconsulta" name="btnconsulta" ></a>
+<li><a id = "sexo" name="masculino" value="masculino" onclick="submitPesquisaMasculina()">Camisetas Masculinas
+<input type="hidden" id="btnconsultamasculina" name="btnconsultamasculina" ></a>
 <!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
-<li><a id = "sexo" name="sexo" value="feminino" href="#" onclick="submitPesquisa()">Camisetas Femininas
-<input type="hidden" id="btnconsulta" name="btnconsulta"></a>
+<li><a id = "sexo" name="feminino" value="feminino" onclick="submitPesquisaFeminina()">Camisetas Femininas
+<input type="hidden" id="btnconsultafeminina" name="btnconsultafeminina"></a>
 
 <li><a href="#">Contato</a>
 <li><a href="#">Sobre</a>
@@ -80,15 +81,13 @@ $total = mysqli_num_rows($dados);
 </nav>
 
 <section class="produtos">
-
-
 <?php
-while ($row = mysqli_fetch_array($dados)){
+while ($row = mysqli_fetch_array($rs)){
 echo "<article>";
 echo "<a href='#'>" . $row['nome'] . "</a>";
 echo "<br>";
 echo "<br>";
-echo '<img src="'.$row['imagem'].'" width="90%"/>';
+echo '<img src="'.$row['imagem'].'" width="85%"/>';
 echo "<br>";
 echo "<p>" . $row['descricao'] . "</p>";
 echo "<br>";
@@ -101,15 +100,20 @@ echo "</article>";
 </html>
 
 <script>
-function submitPesquisa(){
-alert("entru aki");
+function submitPesquisaMasculina(){
+alert("entrou masculino aki");
 // FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA 
-  document.getElementById('btnconsulta').value() = true;
+  document.getElementById("btnconsultamasculina").value = "true";
   document.getElementById('formmain').submit();
 }
-
+function submitPesquisaFeminina(){
+alert("entrou feminino aki");
+// FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA 
+  document.getElementById('btnconsultafeminina').value = "true";
+  document.getElementById('formmain').submit();
+}
 </script>
 
 <?php
-mysqli_free_result($dados);
+mysqli_free_result(isset($rs));
 ?>
