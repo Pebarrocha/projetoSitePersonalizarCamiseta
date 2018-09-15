@@ -34,13 +34,14 @@ Processo('incluir');
 	
 <nav class="navegacao">
 			<ul>
-				<li><a href="#">Camisetas Masculinas</a>
-				<li><a href="#">Camisetas Femininas</a>	
-				<li><a href="#">Contato</a>	
-				<li><a href="#">Sobre</a>		
+				<li><a href="#">INÍCIO</a>
+				<li><a href="#">CAMISETAS MASCULINAS</a>
+				<li><a href="#">CAMISETAS FEMININAS</a>	
+				<li><a href="#">CONTATO</a>	
+				<li><a href="#">SOBRE</a>		
 				<form id="pesquisa" class="pesquisa">
-					<input type="button" class="botao" value="Pesquisar">
-					<input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui!"> 
+					<input type="button54" value="BUSCAR">
+					<input type="text" name="pesquisa" id="pesquisa" placeholder="Buscar produto..."> 
 			    </form>			
 			</ul>
 
@@ -59,7 +60,7 @@ Processo('incluir');
 				<input type="text2" name="rua" id="rua">
 
 		
-		<p style="display: inline;">
+		<!--<p style="display: inline;">-->
 				<label>Nº:</label> 
 				<input type="text4" name="numero" id="numero">
 
@@ -102,9 +103,11 @@ Processo('incluir');
 
 
 <footer>
-<p>Posted by: Hege Refsnes</p>
-  <p>Contact information: <a href="mailto:someone@example.com">
-  someone@example.com</a>.</p>
+	<div id=fim>
+
+
+
+</div>
 </footer>
 
 
