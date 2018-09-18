@@ -7,7 +7,7 @@ digitadas pelo usuário na hora do cadastro.-->
 
 <?php
 //Chamando o controller para o envio dos dados
-require_once ('../controller/produtoPreDefinidoController.php');
+require_once ('../controller/cadastroClienteController.php');
 //Manda o 'incluir' para o método e entra no switch case
 Processo('incluir');
 ?>
@@ -24,7 +24,6 @@ Processo('incluir');
 		
 		</style>
 	</head>
-
 
 
 <body>		
@@ -48,7 +47,6 @@ Processo('incluir');
 		</nav>
 
 
-
 		<div id=corpo>
 				<h1> CADASTRO DE CLIENTE</h1>
 			<form action="#" name="form" id="form" method="post"><br><br>
@@ -60,19 +58,19 @@ Processo('incluir');
 				<input type="text2" name="rua" id="rua">
 
 		
-		<!--<p style="display: inline;">-->
-				<label>Nº:</label> 
+		<p style="display: inline;">
+				<div class=divisor><label>Nº:</label> 
 				<input type="text4" name="numero" id="numero">
 
 				<label>BAIRRO:</label> 
-				<input type= "text4a" name="bairro" id="bairro">
+				<input type= "text4a" name="bairro" id="bairro"></div><br>
 
 				<label>CIDADE:</label> 
 				<input type="text3" name="numero" id="numero">
 
 				<label>CEP:</label> 
-				<input type= "text3a" name="bairro" id="bairro"><br><br>
-		</p>				
+				<input type= "text3a" name="cep" id="cep">
+		</p>				<br><br>
 		
 
 				<label>COMPLEMENTO:</label> <br>
