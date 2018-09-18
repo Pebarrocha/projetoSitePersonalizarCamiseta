@@ -51,7 +51,7 @@ background-color: #2D4A6A;
     display: block;
     color:white;
     text-align: center;
-    padding: 14px 16px 15px;
+    padding: 14px 16px 10px;
     text-decoration: none;
     font-size: 17px;
     margin: 0px 0px 0px 10px;
@@ -80,10 +80,10 @@ background-color: #2D4A6A;
     border: none;
     border-radius: 5px;
     font-size: medium;
-    width: 10%;
+    width: 18%;
     background-color: #031634;
     color: white;
-    padding: 11px 20px;
+    padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -105,7 +105,7 @@ background-color: #666;
 
 .teste{
     width: 100%;
-    height: 100%;
+    height: 40%;
     padding: 0px;
     margin: 0px;
 }
@@ -115,11 +115,6 @@ nav{
 
     
 }
-
-
-
-
-
 
 input[type=text2], select{
 
@@ -137,7 +132,7 @@ input[type=text3], select{
 
     width: 50%;
     padding: 10px;
-    margin: 2px 2px 2px -8px;
+    margin: 2px 2px 2px -2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -148,7 +143,7 @@ input[type=text3a], select{
 
     width: 30%;
     padding: 10px;
-    margin: 2px 1px 2px -8px;
+    margin: 2px 1px 2px -3px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -159,7 +154,7 @@ input[type=text4], select{
 
     width: 15%;
     padding: 10px;
-    margin: 2px 2px 2px -8px;
+    margin: 2px 15px 2px -2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -170,7 +165,7 @@ input[type=text4a], select{
 
     width: 55%;
     padding: 10px;
-    margin: 5px 2px 5px -8px;
+    margin: 5px 2px 5px -3px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -183,6 +178,7 @@ textarea{
     width: 100%;
     padding: 10px;
     border-radius: 5px;
+    margin: 10px  0px 0px 0px;
     border: none;
 }
 
@@ -198,6 +194,88 @@ input[type=button2] {
     cursor: pointer;
     text-align: center;
 }
+
+input[type=cpf], select{
+
+    width: 40%;
+    padding: 10px;
+    margin: 2px 2px 2px 5px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=rg], select{
+
+    width: 40%;
+    padding: 10px;
+    margin: 2px 2px 2px 2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select{
+
+    width: 40%;
+    padding: 10px;
+    margin: 2px 25px 2px 5px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select{
+
+    width: 30%;
+    padding: 10px;
+    margin: 2px 2px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=celular], select{
+
+    width: 20%;
+    padding: 10px ;
+    margin: 2px 25px 2px 5px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=fixo], select{
+
+    width: 30%;
+    padding: 10px;
+    margin: 2px 2px 2px -1px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+
+input[type=rua], select{
+
+    width: 80%;
+    padding: 10px;
+    margin: 2px 2px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
 
 input[type=button2]:hover {
     background-color: #CDB380;

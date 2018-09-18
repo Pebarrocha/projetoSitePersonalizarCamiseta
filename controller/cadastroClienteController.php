@@ -8,29 +8,28 @@ Descrição: Controller que receberá os inputs dos formulários e enviará para
 
 <?php
 
-
 require_once '../model/cadastroClienteModel.php';						
 	
-
 function Processo($processo){
 		
+
+echo "ok";
 switch ($processo){
 		
 case 'incluir':	
-
-
+//echo "<script>alert('entrou controllser');</script>";
 if (isset($_POST['ok']) && !empty($_POST['ok'])){
 foreach($_POST as $nome_campo => $valor){ 
 $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
-//echo $comando;
+echo $comando;
 eval($comando); 
 $nome_campo = str_replace(",",".", $nome_campo);
 }			
 
 $pDAO = new cadastroClienteModel();
-$pDAO->cadastrarCliente($nome,$rua,$numero,$bairro,$cidade,$cep,$descricao);		
+$pDAO->cadastrarCliente($nome,$cpf, $rg, $celular, $fixo,$rua,$numero,$bairro,$cidade,$cep,$descricao, $email, $senha, $senha2);		
 echo '<script>alert("Cadastrado com sucesso !");</script>';
-echo '<script>window.location="../VIEW/cadastroDeCliente.php";</script>';
+//echo '<script>window.location="../VIEW/cadastroDeCliente.php";</script>';
 }
 break;
 
@@ -84,6 +83,6 @@ $aDAO->alterarProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo
 echo '<script>window.location="consultaProdutoPreDefinidoVIEW.php";</script>';
 }
 break;**/
-//}
-//}
+}
+}
 ?>

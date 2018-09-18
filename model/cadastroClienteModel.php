@@ -10,11 +10,11 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 	
 Class cadastroClienteModel{		
 
-public function cadastrarCliente($nome,$rua,$numero,$bairro,$cidade,$cep,$descricao){	
+public function cadastrarCliente($nome,$cpf, $rg, $celular, $fixo,$rua,$numero,$bairro,$cidade,$cep,$descricao, $email, $senha, $senha2){	
 
 try{
 require_once 'conexaomysql.php';
-$sql = "insert into cliente (nome,rua, numero, bairro, cidade, cep, descricao) values ('$nome','$rua','$numero','$bairro','$cidade', '$cep', '$descricao')";
+$sql = "insert into cliente (nome, cpf, rg, celular, fixo, rua, numero, bairro, cidade, cep, descricao, email, senha) values ('$nome','$cpf', '$rg', '$celular', '$fixo', '$rua','$numero','$bairro','$cidade', '$cep', '$descricao', '$email', '$senha')";
 
 $result = mysqli_query($conexao, $sql);
 }catch(Exception $e){
@@ -51,5 +51,5 @@ echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";
 //echo 'Excecão capturada. MODEL Excluir: ', $e->getMessage(), "\n";
 //}
 //}
-//}
+}
 //?>
