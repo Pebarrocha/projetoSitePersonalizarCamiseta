@@ -10,11 +10,11 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 	
 Class cadastroClienteModel{		
 
-public function cadastrarClientes($nome,$rua,$numero,$bairro,$cidade,$cep,$descricao){	
+public function cadastrarCliente($nome,$rua,$numero,$bairro,$cidade,$cep,$descricao){	
 
 try{
 require_once 'conexaomysql.php';
-$sql = "insert into clientes (nome,rua, numero, bairro, cidade, cep, descricao) values ('$nome','$rua','$numero','$bairro','$cidade', '$cep', '$descricao')";
+$sql = "insert into cliente (nome,rua, numero, bairro, cidade, cep, descricao) values ('$nome','$rua','$numero','$bairro','$cidade', '$cep', '$descricao')";
 
 $result = mysqli_query($conexao, $sql);
 }catch(Exception $e){
