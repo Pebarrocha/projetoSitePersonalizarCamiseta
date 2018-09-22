@@ -34,7 +34,7 @@ Processo('incluir');
 	
 <nav class="navegacao">
 			<ul>
-				<li><a href="#">INÍCIO</a>
+				<li><a href="main.php">INÍCIO</a>
 				<li><a href="#">CAMISETAS MASCULINAS</a>
 				<li><a href="#">CAMISETAS FEMININAS</a>	
 				<li><a href="#">CONTATO</a>	
@@ -117,7 +117,6 @@ Processo('incluir');
 			<script type="text/javascript">
 
 				function submitForm(){	
-					alert("OK");
 					validaCadastro();	
 					alert("Teste view");		
 					document.getElementById("ok").value = "true";					

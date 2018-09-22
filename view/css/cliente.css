@@ -70,7 +70,7 @@ background-color: #2D4A6A;
     width: 300px;
     border: none;
     border-radius: 5px;
-    margin-top: 6px;
+    margin-top: 4px;
     margin-right: 16px;
     font-size: 17px;
 }
@@ -80,14 +80,15 @@ background-color: #2D4A6A;
     border: none;
     border-radius: 5px;
     font-size: medium;
-    width: 18%;
+    width: 12%;
     background-color: #031634;
     color: white;
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
+    margin-top: 1px;
     
 }
 

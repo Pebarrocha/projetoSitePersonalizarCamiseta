@@ -31,7 +31,7 @@ function validaCadastro(evt){
 	var senha = document.getElementById('senha').value;
 	var senha2= document.getElementById('senha2').value;	
 	var numErros=0;
-	alert("ok");
+	
 
 
 	if(nome == ""){
@@ -105,7 +105,6 @@ function validaCadastro(evt){
 	}
 
 	if(numErros > 0){
-		alert("Submit interrompido");
 		evt.preventDefault();
 	}
 	

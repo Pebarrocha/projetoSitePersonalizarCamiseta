@@ -13,7 +13,6 @@ require_once '../model/cadastroClienteModel.php';
 function Processo($processo){
 		
 
-echo "ok";
 switch ($processo){
 		
 case 'incluir':	
