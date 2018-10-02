@@ -129,6 +129,16 @@ input[type=text2], select{
     border-radius: 4px;
     box-sizing: border-box;
 }
+input[type=consulta], select{
+
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 
 input[type=text3], select{
@@ -176,6 +186,7 @@ input[type=text4a], select{
 }
 
 
+
 textarea{
     resize:none;
     width: 100%;
@@ -198,6 +209,23 @@ input[type=button2] {
     text-align: center;
 }
 
+input[type=button76] {
+    width: 10%;
+    background-color: #CC9933;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0px 0px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=radio] {
+    
+    margin: 8px 0px 0px 10px;
+    
+}
 input[type=cpf], select{
 
     width: 40%;
