@@ -15,8 +15,7 @@ echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";
 }
 }
 
-
-    public function consultarCliente($sql){
+public function consultarCliente($sql){
         require_once 'conexaomysql.php';
 //        echo '<script> alert("ENTROU NO CONSULTAR! MODEL") </script>';
         $result = mysqli_query($conexao,$sql);

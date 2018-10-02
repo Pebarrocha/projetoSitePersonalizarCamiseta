@@ -38,7 +38,7 @@ $nome_campo = str_replace(",",".", $nome_campo);
 }		
 
 if(isset($tipo) != null || $edconsulta != null){
-$sql = "SELECT nome, cpf, rg, celular, fixo, rua, numero, bairro, cidade, cep, descricao, email, senha FROM cliente WHERE $tipo = '$edconsulta' ";
+$sql = "SELECT nome, cpf, rg, celular, fixo, rua, numero, bairro, cidade, cep, descricao, email, senha FROM cliente WHERE nome LIKE '$edconsulta' '%' ";
 $cDAO = new cadastroClienteModel();
 $rs = $cDAO->consultarCliente($sql);
 
