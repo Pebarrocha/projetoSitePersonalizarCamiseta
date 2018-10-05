@@ -1,11 +1,6 @@
-<!--
-Descrição: Formulário para alterar produtos pré definidos que estarão
-a disposição para venda no site. Essa formulário está na pasta VIEW. Ele controla apenas o visual.
--->
-
 <?php
 
-require_once ('../controller/cadastroClienteController.php');
+require_once ('../controller/clienteController.php');
 
 Processo('alterar');
 ?>
@@ -16,43 +11,85 @@ Processo('alterar');
 <head lang="pt-br">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/cliente.css">
-    <title>Alteração de Cliente</title>
+    <title>ALTERAÇÃO DE CLIENTE</title>
 
 </head>
 <body>
 
 <nav class="navegacao">
     <ul>
-        <li><a href="cadastroDeCliente.php">Cadastrar Cliente</a>
+        <li><a href="cadastroClienteVIEW.php">Cadastrar Cliente</a>
         <li><a href="consultaClienteVIEW.php">Pesquisar Cliente</a>
     </ul>
 </nav>
 
 <div id="normal">
-    <h1> Cadastro de Cliente </h1>
+    <h1>Cadastro de Cliente</h1>
     <?php
     if(isset($rs)){
     while ($row = mysqli_fetch_array($rs)) {
     ?>
     <form action="#" name="form-alterar" id="form-alterar" method="post">
 
-        <label>Nome:</label>
-        <input type="text" name="nome" id="nome" placeholder="Nome do Funcionario" checked value="<?php echo $row['nome']; ?>"> <br>
-        <label>CPF:</label> <br>
-        <input type="text" name="cpf" id="cpf"  placeholder="CPF do Funcionario" value="<?php echo $row['cpf']; ?>"> <br>
+        <label>NOME:</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome do Funcionario" value="<?php echo $row['nome']; ?>"> <br>
 
-        <label>senha:</label>
-        <input type="text" name="senha" id="senha" placeholder="Senha" value="<?php echo $row['senha']; ?>"> <br>
+        <label>CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="cpf do Funcionario" value="<?php echo $row['cpf']; ?>"> <br>
+        
 
-        <input type="button76" name="button" id="button" value="Alterar" onclick="submitForm()">
+        <label>RG:</label>
+        <input type="text" name="rg" id="rg" placeholder="rg do Funcionario" value="<?php echo $row['rg']; ?>"> <br>
+        
+
+        <label>CELULAR:</label>
+        <input type="text" name="celular" id="celular" placeholder="celular do Funcionario" value="<?php echo $row['celular']; ?>"> <br>
+        
+
+        <label>FIXO:</label>
+        <input type="text" name="fixo" id="fixo" placeholder="fixo do Funcionario" value="<?php echo $row['fixo']; ?>"> <br>
+        
+
+        <label>RUA:</label>
+        <input type="text" name="rua" id="rua" placeholder="rua do Funcionario" value="<?php echo $row['rua']; ?>"> <br>
+        
+
+        <label>Nº:</label>
+        <input type="text" name="numero" id="numero" placeholder="numero do Funcionario" value="<?php echo $row['numero']; ?>"> <br>
+        
+
+        <label>BAIRRO:</label>
+        <input type="text" name="bairro" id="bairro" placeholder="bairro do Funcionario" value="<?php echo $row['bairro']; ?>"> <br>
+        
+
+        <label>CIDADE:</label>
+        <input type="text" name="cidade" id="cidade" placeholder="cidade do Funcionario" value="<?php echo $row['cidade']; ?>"> <br>
+        
+
+        <label>CEP:</label>
+        <input type="text" name="cep" id="cep" placeholder="cep do Funcionario" value="<?php echo $row['cep']; ?>"> <br>
+
+        <label>DESCRIÇÃO:</label>
+        <input type="text" name="descricao" id="descricao" placeholder="descricao do Funcionario" value="<?php echo $row['descricao']; ?>"> <br>
+
+        <label>EMAIL:</label>
+        <input type="text" name="email" id="email" placeholder="email do Funcionario" value="<?php echo $row['email']; ?>"> <br>
+
+        <label>SENHA:</label>
+        <input type="text" name="senha" id="senha" placeholder="senha do Funcionario" value="<?php echo $row['senha']; ?>"> <br>
+
+
+        <input type="button" name="button" id="button" value="Alterar" onclick="submitForm()">
         <input type="hidden" name="btnalterar" id="btnalterar">
+
 </div>
 </form>
+
 <?php }
 }?>
-<script type="text/javascript" src="../js/validarCadFuncionario.js"> </script>
+<script type="text/javascript" src="../js/validarCliente.js"> </script>
 <script type="text/javascript">
-        function submitForm(){
+    function submitForm(){
         validaCadastro();
         document.getElementById("btnalterar").value = "true";
         document.getElementById("form-alterar").submit();

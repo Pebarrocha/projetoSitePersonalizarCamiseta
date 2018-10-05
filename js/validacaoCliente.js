@@ -1,10 +1,9 @@
-/*
+
 Autor: Felipe Santiago Procópio	
 Data da última modificação: 18/08/2018
 
 Descriçao: Javascript para validação dos campos do formulário
 
- */
 
 var form = document.getElementById("form");
 
@@ -111,3 +110,5 @@ function validaCadastro(evt){
 	
 
 }
+
+ 

@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../controller/cadastroClienteController.php');
+require_once ('../controller/clienteController.php');
 Processo('consultar');
 
 
@@ -10,7 +10,7 @@ Processo('consultar');
 
 <html lang="PT-BR">
 <head>
-    <title> Consulta de Cliente </title>
+    <title> Consulta de Cliente</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/cliente.css"/>
 </head>
@@ -18,21 +18,21 @@ Processo('consultar');
 
 <nav class="navegacao">
     <ul>
-        <li><a href="cadastroDeCliente.php">Cadastrar Cliente</a>
+        <li><a href="cadastroClienteVIEW.php">Cadastrar Cliente</a>
         <li><a href="consultaClienteVIEW.php">Pesquisar Cliente</a>
     </ul>
 </nav>
 
 <div id="radio">
 <form name="form-consulta" action="#" id="form-consulta" method="post">
-    <br><input type="radio" name="tipo" value="nome"> Nome
-    <input type="radio" name="tipo" value="cpf"> CPF
+    <input type="radio" name="tipo" value="nome">Nome
+    <input type="radio" name="tipo" value="cpf">CPF
 <!--    <input type="radio" name="tipo" value="tudo" checked>Todo o banco<br>-->
 </div>
 <div id="normal">
-    <input type="consulta" name="edconsulta" id="edconsulta" placeholder="Digite uma palavra para consultar">
+    <input type="text" name="edconsulta" id="edconsulta" placeholder="Digite uma palavra para consultar">
 
-    <input type="button76" name="button" id="button" value="Consultar" onclick="submitForm()">
+    <input type="button" name="button" id="button" value="Consultar" onclick="submitForm()">
     <input type="hidden" name="btnconsulta" id="btnconsulta">
 </form>
 </div>
@@ -49,16 +49,16 @@ echo
 <th>Nome</th>
 <th>CPF</th>
 <th>RG</th>
-<th>CELULAR</th>
-<th>FIXO</th>
-<th>RUA</th>
-<th>NUMERO</th>
-<th>BAIRRO</th>
-<th>CIDADE</th>
-<th>CEP</th>
-<th>DESCRICAO</th>
-<th>EMAIL</th>
-<th>SENHA</th>
+<th>Celular</th>
+<th>Fixo</th>
+<th>Rua</th>
+<th>Nº</th>
+<th>Bairro</th>
+<th>Cidade</th>
+<th>Cep</th>
+<th>Descrição</th>
+<th>Email</th>
+<th>Senha</th>
 </tr>";
 
     while($row = mysqli_fetch_array($rs)){
@@ -78,6 +78,7 @@ echo
         echo "<td>" . $row['descricao'] . "</td>";
         echo "<td>" . $row['email'] . "</td>";
         echo "<td>" . $row['senha'] . "</td>";
+        
         ?>
         <td><form>
                 <a href="alterarClienteVIEW.php?id=<?php echo $row['codCliente']; ?>">

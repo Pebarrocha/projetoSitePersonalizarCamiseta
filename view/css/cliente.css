@@ -18,6 +18,11 @@ h1{
     position: sticky;
 }
 */
+#pesq{
+    position:relative;
+    left:-80%;
+    float: left;
+}
 
 .navegacao ul{
 text-align: center;
@@ -28,12 +33,6 @@ overflow: hidden;
 background-color: #333; 
 }
 
-#pesq{
-    position:relative;
-    left:-80%;
-    float: left;
-
-}
 .navegacao .pesquisa .login{
   border-radius: 3px;
   float: right;
@@ -43,9 +42,7 @@ background-color: #333;
   font-size: 17px;
   border: none;
   cursor: pointer;
-
 }
-
 
 .navegacao .pesquisa .botao{
   border-radius: 5px;
@@ -55,8 +52,7 @@ background-color: #333;
   background: #ddd;
   font-size: 17px;
   border: none;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 
 .navegacao {
@@ -78,8 +74,8 @@ background-color: #333;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-
 }
+
 .navegacao a:hover{
     background-color: #111; 
 }
@@ -143,10 +139,22 @@ input[type=consulta], select{
 
 input[type=text3], select{
 
-    width: 50%;
+    width: 240px;
     padding: 10px;
     margin: 2px 2px 2px -2px;
     display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=alterar], select{
+
+    width: 30%;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 6px;
+    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -272,7 +280,7 @@ input[type=password], select{
 
 input[type=celular], select{
 
-    width: 20%;
+    width: 120px;
     padding: 10px ;
     margin: 2px 25px 2px 5px;
     display: inline;
@@ -283,7 +291,7 @@ input[type=celular], select{
 
 input[type=fixo], select{
 
-    width: 30%;
+    width: 25%;
     padding: 10px;
     margin: 2px 2px 2px -1px;
     display: inline;
@@ -291,8 +299,6 @@ input[type=fixo], select{
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-
 
 
 input[type=rua], select{

@@ -8,7 +8,7 @@ digitadas pelo usuário na hora do cadastro.-->
 <?php
 
 //Chamando o controller para o envio dos dados
-require_once ('../controller/cadastroClienteController.php');
+require_once ('../controller/clienteController.php');
 //Manda o 'incluir' para o método e entra no switch case
 Processo('logar');
 ?>
@@ -81,7 +81,7 @@ Processo('logar');
 				<label>SENHA:</label> 
 				<input type="password" name="senha" id="senha" placeholder="Senha"><br><br>
 
-				<div id=label> <p> <a href="recuperacao.php" style="color:white">ESQUECI MINHA SENHA</a>  | <a href="CadastroDecliente.php" style="color:white">CADASTRAR-SE</a></p></div><br><br>
+				<div id=label> <p> <a href="recuperacao.php" style="color:white">ESQUECI MINHA SENHA</a>  | <a href="cadastroClienteVIEW.php" style="color:white">CADASTRAR-SE</a></p></div><br><br>
 
 				<input type="button2" name="button" id="button" value="ENTRAR" onclick="submitForm()">
 				<input type="hidden" name="ok" id="ok">	

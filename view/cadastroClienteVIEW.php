@@ -8,7 +8,7 @@ digitadas pelo usuário na hora do cadastro.-->
 <?php
 
 //Chamando o controller para o envio dos dados
-require_once ('../controller/cadastroClienteController.php');
+require_once ('../controller/clienteController.php');
 //Manda o 'incluir' para o método e entra no switch case
 Processo('incluir');
 ?>
@@ -24,17 +24,6 @@ Processo('incluir');
 		<style type="text/css">
 		
 		</style>
-		
-		<script>
-        function somenteNumeros(num) {
-            var er = /[^0-9.]/;
-            er.lastIndex = 0;
-            var campo = num;
-            if (er.test(campo.value)) {
-                campo.value = "";
-            }
-        }
-    	</script>
 
 	</head>
 
@@ -131,11 +120,9 @@ Processo('incluir');
 
 				<input type="button2" name="button" id="button" value="CADASTRAR" onclick="submitForm()">
 				<input type="hidden" name="ok" id="ok">	
-		
-
 		</form>
-						
 			</div> 
+
 
 			<script type="text/javascript" src="../js/validacaoCliente.js"> </script>
 
