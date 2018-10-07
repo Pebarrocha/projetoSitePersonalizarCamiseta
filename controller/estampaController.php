@@ -4,26 +4,28 @@
 
 
 require_once '../model/funcionarioMODEL.php';
-
+//require_once '../DAO/cadastroDeProdutoPreDefinidoDAO.php';
 
 function Processo($processo){
 
     switch ($processo){
 
         case 'incluir':
+//if(isset($_POST['delete_id']) && !empty($_POST['delete_id']))
 
+            alert ("incluir estampa controler");
             if (isset($_POST['ok']) && !empty($_POST['ok'])){
                 foreach($_POST as $nome_campo => $valor){
                     $comando = "\$" . $nome_campo . "='" . $valor . "';";
-
+//echo $comando;
                     eval($comando);
                     $nome_campo = str_replace(",",".", $nome_campo);
                 }
 
-                $pDAO = new FuncionarioMODEL();
-                $pDAO->incluirFuncionario($nome,$cpf,$senha);
+                $pDAO = new EstampaMODEL();
+                $pDAO->incluirEstampa($nome,$img);
                 echo '<script>alert("Cadastrado com sucesso !");</script>';
-                echo '<script>window.location="../VIEW/cadastroFuncionarioVIEW.php";</script>';
+                echo '<script>window.location="../VIEW/cadastroDeEstampaVIEW.php";</script>';
             }
             break;
 
@@ -39,16 +41,16 @@ function Processo($processo){
                 }
 
 
-                    if(isset($tipo) != null || $edconsulta != null){
-                    $sql = "SELECT * FROM funcionario WHERE $tipo = '$edconsulta' ";
-                    $cDAO = new FuncionarioMODEL();
-                    $rs = $cDAO->consultarFuncionario($sql);
+                if(isset($tipo) != null || $edconsulta != null){
+                    $sql = "SELECT * FROM estampacamiseta WHERE $tipo = '$edconsulta' ";
+                    $cDAO = new EstampaMODEL();
+                    $rs = $cDAO->consultarEstampa($sql);
 
 
                 }else{
-                    $sql = "SELECT * FROM funcionario";
-                    $cDAO = new FuncionarioMODEL();
-                    $rs = $cDAO->consultarFuncionario($sql);
+                    $sql = "SELECT * FROM estampacamiseta";
+                    $cDAO = new EstampaMODEL();
+                    $rs = $cDAO->consultarEstampa($sql);
 
                 }
             }
@@ -56,25 +58,25 @@ function Processo($processo){
             if(isset($_GET['btnexcluir']) && !empty($_GET['btnexcluir'])){
 //                echo '<script>alert("Entrou no botao excluir"); </script>';
                 $id = $_GET['id'];
-                $eDAO = new FuncionarioMODEL();
-                $eDAO->deletarFuncionario($id);
-                echo '<script>window.location="consultaFuncionarioVIEW.php";</script>';
+                $eDAO = new EstampaMODEL();
+                $eDAO->deletarEstampa($id);
+                echo '<script>window.location="consultaEstampaVIEW.php";</script>';
             }
             break;
 
         case 'alterar':
             global $rs;
-            $sql = 'SELECT nome,cpf,senha
-FROM funcionario WHERE codFuncionario="' . $_GET["id"] . '"';
-            $aDAO = new FuncionarioMODEL();
-            $rs = $aDAO->consultarFuncionario($sql);
+            $sql = 'SELECT nomeEstampa,imagemEstampa
+FROM estampacamiseta WHERE codEstampaCamiseta="' . $_GET["id"] . '"';
+            $aDAO = new EstampaMODEL();
+            $rs = $aDAO->consultarEstampa($sql);
             if (isset($_POST['btnalterar']) && !empty($_POST['btnalterar'])){
                 foreach($_POST as $nome_campo => $valor){
                     $comand = "\$" . $nome_campo . "='" . $valor . "';";
                     eval($comand);
                     $nome_campo = str_replace(",",".", $nome_campo);
                 }
-                $aDAO->alterarFuncionario($nome,$cpf,$senha);
+                $aDAO->alterarEstampa($nome,$img);
 
                 echo '<script>window.location="consultaFuncionarioVIEW.php";</script>';
             }

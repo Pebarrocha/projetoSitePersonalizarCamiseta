@@ -1,11 +1,3 @@
-<!--
- ALTERAR PRODUTO PRE DEFINIDO VIEW
- Autor: Pedro Barbosa Rocha
- Data da última modificação: 07/09/2018
-
-Descrição: Formulário para alterar produtos pré definidos que estarão
-a disposição para venda no site. Essa formulário está na pasta VIEW. Ele controla apenas o visual.
--->
 
 <?php
 
@@ -39,7 +31,6 @@ Processo('alterar');
     while ($row = mysqli_fetch_array($rs)) {
     ?>
     <form action="#" name="form-alterar" id="form-alterar" method="post">
-<!--       <script> alert("Entrou PORRA");</script>-->
         <label>Nome:</label>
         <input type="text" name="nome" id="nome" placeholder="Nome do Funcionario" value="<?php echo $row['nome']; ?>"> <br>
         <label>CPF:</label> <br>

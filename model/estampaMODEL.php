@@ -1,14 +1,15 @@
 
 <?php
 
-Class FuncionarioMODEL{
+Class estampaMODEL{
 
-    public function incluirFuncionario($nome,$cpf,$senha){
+    public function incluirEstampa($nome, $img){
 
         try{
+            $base64 = base64_encode($img);
             require_once 'conexaomysql.php';
-            $sql = "insert into funcionario (nome,cpf,senha) values ('$nome','$cpf','$senha')";
-
+            $sql = "insert into estampacamiseta (nomeEstampa,imagemEstampa) values ('$nome','$img')";
+            echo ("incuir");
             $result = mysqli_query($conexao, $sql);
         }catch(Exception $e){
             echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";
@@ -16,16 +17,18 @@ Class FuncionarioMODEL{
     }
 
 
-    public function consultarFuncionario($sql){
+    public function consultarEstampa($sql){
         require_once 'conexaomysql.php';
+//        echo '<script> alert("ENTROU NO CONSULTAR! MODEL") </script>';
         $result = mysqli_query($conexao,$sql);
         return $result;
     }
 
-    public function alterarFuncionario($nome, $cpf, $senha){
+    public function alterarEstampao($nome, $img){
         try{
+            $base64 = base64_encode($img);
             require 'conexaomysql.php';
-            $sql = 'update funcionario set nome="' .$nome.  ' ", cpf="'. $cpf . '", senha = " '. $senha .' " WHERE codFuncionario="' . $_GET["id"] . '"';
+            $sql = 'update estampacamiseta set nomeEstampa="' .$nome.  ' ", imagemEstampa="'. $base64 . '"';
 
             $result = mysqli_query($conexao,$sql);
 
@@ -34,10 +37,10 @@ Class FuncionarioMODEL{
         }
     }
 
-    public function deletarFuncionario($id){
+    public function deletarEstampa($id){
         try{
             require_once 'conexaomysql.php';
-            $sql = "delete from funcionario WHERE codFuncionario = $id";
+            $sql = "delete from estampacamiseta WHERE codEstampaCamiseta = $id";
             $result = mysqli_query($conexao,$sql);
             echo '<script> alert("Conteudo Excluido com sucesso") </script>';
         }catch(Exception $e){

@@ -1,7 +1,3 @@
-<!--
- Autor: Pedro Barbosa Rocha
- Data da última modificação: 07/09/2018
--->
 
 <?php
 
