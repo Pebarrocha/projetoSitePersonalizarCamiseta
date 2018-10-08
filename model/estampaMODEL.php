@@ -6,7 +6,6 @@ Class estampaMODEL{
     public function incluirEstampa($nome, $img){
 
         try{
-            $base64 = base64_encode($img);
             require_once 'conexaomysql.php';
             $sql = "insert into estampacamiseta (nomeEstampa,imagemEstampa) values ('$nome','$img')";
             echo ("incuir");
@@ -19,16 +18,14 @@ Class estampaMODEL{
 
     public function consultarEstampa($sql){
         require_once 'conexaomysql.php';
-//        echo '<script> alert("ENTROU NO CONSULTAR! MODEL") </script>';
         $result = mysqli_query($conexao,$sql);
         return $result;
     }
 
-    public function alterarEstampao($nome, $img){
+    public function alterarEstampa($nome, $img){
         try{
-            $base64 = base64_encode($img);
             require 'conexaomysql.php';
-            $sql = 'update estampacamiseta set nomeEstampa="' .$nome.  ' ", imagemEstampa="'. $base64 . '"';
+            $sql = 'update estampacamiseta set nomeEstampa="' .$nome.  ' ", imagemEstampa="'. $img . '" WHERE codEstampaCamiseta="' . $_GET["id"] . '"';
 
             $result = mysqli_query($conexao,$sql);
 

@@ -15,7 +15,7 @@
 <html>
 <head lang="pt-br">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/cliente.css">
+    <link rel="stylesheet" type="text/css" href="css/estampa.css">
     <title>Cadastro de Estampa</title>
 
     <style type="text/css">
@@ -28,8 +28,8 @@
 
 <nav class="navegacao">
     <ul>
-        <li><a href="x">Cadastrar </a>
-        <li><a href="x">Pesquisar</a>
+        <li><a href="cadastroEstampaVIEW.php">Cadastrar Estampa</a>
+        <li><a href="consultaEstampaVIEW.php">Pesquisar Estampa</a>
 
     </ul>
 
@@ -42,11 +42,11 @@
         <label>Nome:</label>
         <input type="text" required name="nome" id="nome" placeholder="Nome da estampa"> <br>
 
-        <label>Estampa</label>
-        <input type="file" required name="img"> <br>
+        <label>Estampa:</label>
+        <input type="text" required name="img" id="img"> <br>
 
 
-        <input type="submit" name="button" id="button" value="Cadastrar" onclick="validaCadastro(e)" >
+        <input type="button" name="button" id="button" value="Cadastrar" onclick="validaCadastro()" >
         <input type="hidden" name="ok" id="ok">
 </div>
 
@@ -57,7 +57,7 @@
     function submitForm(){
         validaCadastro();
 
-//        var img = document.getElementById("img").value();
+        // var imag = document.getElementById("img").value();
         document.getElementById("ok").value = "true";
         document.getElementById("form").submit();
         //document.forms['form'].action = "../controller/produtoPreDefinidoController.php";

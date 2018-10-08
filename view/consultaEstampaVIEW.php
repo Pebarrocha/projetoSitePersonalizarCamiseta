@@ -1,7 +1,7 @@
 
 <?php
 
-require_once ('../controller/funcionarioController.php');
+require_once ('../controller/estampaController.php');
 Processo('consultar');
 
 
@@ -11,7 +11,7 @@ Processo('consultar');
 
 <html lang="PT-BR">
 <head>
-    <title> Consulta de Funcionário </title>
+    <title> Consulta de Estampa </title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/estampa.css"/>
 </head>
@@ -19,20 +19,21 @@ Processo('consultar');
 
 <nav class="navegacao">
     <ul>
-        <li><a href="cadastroFuncionarioVIEW.php">Cadastrar Funcionário</a>
-        <li><a href="consultaFuncionarioVIEW.php">Pesquisar Funcionário</a>
+        <li><a href="cadastroEstampaVIEW.php">Cadastrar Estampa</a>
+        <li><a href="consultaEstampaVIEW.php">Pesquisar Estampa</a>
     </ul>
 </nav>
 
 <div id="radio">
-    <h1> CONSULTA DE FUNCIONÁRIO </h1><BR><BR>
+    <h1> CONSULTA DE ESTAMPA </h1><BR><BR>
 <form name="form-consulta" action="#" id="form-consulta" method="post">
     <input type="radio" name="tipo" value="nome">Nome
-    <input type="radio" name="tipo" value="cpf">CPF
+    <input type="radio" name="todos" value="todos">Todos
+
 <!--    <input type="radio" name="tipo" value="tudo" checked>Todo o banco<br>-->
 </div>
 <div id="normal">
-    <input type="text" name="edconsulta" id="edconsulta" placeholder="Digite uma palavra para consultar">
+    <input type="text" name="edconsulta" id="edconsulta" placeholder="Digite o nome da estampa">
 
     <input type="button" name="button" id="button" value="Consultar" onclick="submitForm()">
     <input type="hidden" name="btnconsulta" id="btnconsulta">
@@ -49,24 +50,20 @@ echo
 <tr>
 <th>Código</th>
 <th>Nome</th>
-<th>CPF</th>
-<th>Senha</th>
+<th>IMG</th>
 </tr>";
 
     while($row = mysqli_fetch_array($rs)){
 
         echo "<tr>";
-        echo "<td>" . $row['codFuncionario'] . "</td>";
-        echo "<td>" . $row['nome'] . "</td>";
-        echo "<td>" . $row['cpf'] . "</td>";
-        echo "<td>" . $row['senha'] . "</td>";
-
+        echo "<td>" . $row['codEstampaCamiseta'] . "</td>";
+        echo "<td>" . $row['nomeEstampa'] . "</td>";
+        echo "<td>" . $row['imagemEstampa'] . "</td>";
         ?>
         <td><form>
-                <a href="alterarFuncionarioVIEW.php?id=<?php echo $row['codFuncionario']; ?>">
-                    <input type="button" name="button" value="Alterar"></a><br>
-                <a href="consultaFuncionarioVIEW.php?btnexcluir=true&id=<?php echo $row['codFuncionario']; ?>">
-                    <input type="button" name="button" value="Excluir"></a>
+                <a href="alterarEstampaVIEW.php?id=<?php echo $row['codEstampaCamiseta']; ?>">
+                    <input type="button" name="button" value="Alterar"></a>
+                <a href="consultaEstampaVIEW.php? btnexcluir=true&id=<?php echo $row['codEstampaCamiseta']; ?>"><input type="button" name="button" value="Excluir"></a>
             </form></td>
         <?php
         echo "</tr>";

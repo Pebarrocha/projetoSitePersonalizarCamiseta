@@ -9,7 +9,7 @@
 <html>
 <head lang="pt-br">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/cadastroFuncinario.css">
+    <link rel="stylesheet" type="text/css" href="css/estampa.css">
     <title>Cadastro de Funcionário</title>
 
     <style type="text/css">
@@ -33,7 +33,7 @@
 <nav class="navegacao">
     <ul>
         <li><a href="cadastroDeFuncionario.php">Cadastrar </a>
-        <li><a href="x">Pesquisar</a>
+        <li><a href="consultaFuncionarioVIEW.php">Pesquisar</a>
 
     </ul>
 
@@ -44,18 +44,18 @@
     <h1> CADASTRO DE FUNCIONÁRIO </h1>
     <form action="#" name="form" id="form" method="post">
 
-        <label>Nome:</label>
-        <input type="text" required name="nome" id="nome" placeholder="Nome do Funcionário"> <br>
+        <label>Nome:</label><br>
+        <input type="text" required name="nome" id="nome" placeholder="Nome do Funcionário"> <br><br>
 
-        <label>CPF:</label> <br>
+        <label>CPF:</label><br>
         <input type="text" name="cpf" id="cpf" placeholder="CPF do Funcionário" onkeyup="somenteNumeros(this)" /> <br>
+        <br>
 
+        <label>Senha:</label><br>
+        <input type="text" name="senha" id="senha" placeholder="Senha do Funcionário a ser cadastrodo"> <br><br>
 
-        <label>Senha:</label> <br>
-        <input type="text" name="senha" id="senha" placeholder="Senha do Funcionário a ser cadastrodo"> <br>
-
-
-        <input type="button" name="button" id="button" value="Cadastrar" onclick="validaCadastro(e)" >
+        <br>
+        <input type="button" name="button" id="button" value="Cadastrar" onclick="submitForm()">
         <input type="hidden" name="ok" id="ok">
 </div>
 
@@ -67,6 +67,8 @@
 <script type="text/javascript">
 
     function submitForm(){
+
+        alert("esta a qui");
         validaCadastro();
         document.getElementById("ok").value = "true";
         document.getElementById("form").submit();

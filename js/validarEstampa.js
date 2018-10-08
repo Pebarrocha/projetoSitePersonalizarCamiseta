@@ -14,11 +14,17 @@ function validaCadastro(evt){
     var img = document.getElementById('img').value;
 
     var numErros = 0;
-
     if(nome == ""){
         alert("digite um nome valido");
         numErros++;
     }
-
+    if(img == ""){
+        alert("Sem estampa");
+        numErros++;
+    }
+    if (numErros > 0){
+        alert("Submit Interrompido");
+        evt.preventDefault();
+    }
 
 }

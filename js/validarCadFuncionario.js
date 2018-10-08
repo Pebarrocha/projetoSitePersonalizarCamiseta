@@ -17,17 +17,20 @@ function validaCadastro(evt){
     var Resto;
 
     var numErros = 0;
-
+    alert("esta a qui");
     if(nome == ""){
         alert("digite um nome valido");
         numErros++;
+
     }
     Soma = 0;
-    if (cpf == "00000000000") {
+    if (cpf ==  ""){
+        alert('Digite um cpf');
+        numErros++;
+    }else    if (cpf == "00000000000") {
         alert("digite um CPF valido");
         numErros++;
-    }
-
+    }else{
     for (i = 1; i <= 9; i++) Soma = Soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
     Resto = (Soma * 10) % 11;
 
@@ -35,7 +38,7 @@ function validaCadastro(evt){
     if (Resto != parseInt(cpf.substring(9, 10))) {
         alert("digite um CPF valido");
         numErros++;
-    }
+    }else {
 
     Soma = 0;
     for (i = 1; i <= 10; i++) Soma = Soma + parseInt(cpf.substring(i - 1, i)) * (12 - i);
@@ -47,14 +50,11 @@ function validaCadastro(evt){
 
         numErros++;
     }
-
-    if (cpf ==  ""){
-        alert('Digite uma descrição');
-        numErros++;
+    }
     }
 
     if (senha == ""){
-        alert('Escolha um tamanho');
+        alert('Senha em branco');
         numErros++;
     }
 
