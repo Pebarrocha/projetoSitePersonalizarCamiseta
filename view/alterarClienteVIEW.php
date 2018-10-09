@@ -78,8 +78,10 @@ Processo('alterar');
         <label>SENHA:</label>
         <input type="text" name="senha" id="senha" placeholder="senha do Funcionario" value="<?php echo $row['senha']; ?>"> <br>
 
+        <label>SENHA:</label>
+        <input type="text" name="senha2" id="senha2" placeholder="senha do Funcionario" value="<?php echo $row['senha']; ?>"> <br>
 
-        <input type="button" name="button" id="button" value="Alterar" onclick="submitForm()">
+        <input type="button2" name="button" id="button" value="Alterar" onclick="submitForm()">
         <input type="hidden" name="btnalterar" id="btnalterar">
 
 </div>
@@ -87,10 +89,11 @@ Processo('alterar');
 
 <?php }
 }?>
-<script type="text/javascript" src="../js/validarCliente.js"> </script>
+<script type="text/javascript" src="../js/validacaoCliente.js"> </script>
 <script type="text/javascript">
     function submitForm(){
         validaCadastro();
+        alert("aqui");
         document.getElementById("btnalterar").value = "true";
         document.getElementById("form-alterar").submit();
     }

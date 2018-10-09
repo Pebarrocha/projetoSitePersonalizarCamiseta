@@ -1,8 +1,8 @@
 
-Autor: Felipe Santiago Procópio	
-Data da última modificação: 18/08/2018
-
-Descriçao: Javascript para validação dos campos do formulário
+// Autor: Felipe Santiago Procópio
+// Data da última modificação: 18/08/2018
+//
+// Descriçao: Javascript para validação dos campos do formulário
 
 
 var form = document.getElementById("form");
@@ -28,7 +28,7 @@ function validaCadastro(evt){
 	var descricao = document.getElementById('descricao').value;
 	var email = document.getElementById('email').value;
 	var senha = document.getElementById('senha').value;
-	var senha2= document.getElementById('senha2').value;	
+	var senha2= document.getElementById('senha2').value;
 	var numErros=0;
 	
 

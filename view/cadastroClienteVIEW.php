@@ -1,9 +1,9 @@
-<!--Autor: Felipe Santiago Procópio
- Data da última modificação: 28/08/2018
-
-Descrição: Formulário para cadastro de cliente que efetuarão compras no site. 
-Esse formulário está na pasta VIEW. Ele controla apenas o visual e as entradas
-digitadas pelo usuário na hora do cadastro.-->
+<!--Autor: Felipe Santiago Procópio-->
+<!-- Data da última modificação: 28/08/2018-->
+<!---->
+<!--Descrição: Formulário para cadastro de cliente que efetuarão compras no site. -->
+<!--Esse formulário está na pasta VIEW. Ele controla apenas o visual e as entradas-->
+<!--digitadas pelo usuário na hora do cadastro.-->
 
 <?php
 
