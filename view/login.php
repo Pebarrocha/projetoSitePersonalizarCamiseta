@@ -1,16 +1,38 @@
-<!--Autor: Felipe Santiago Procópio
- Data da última modificação: 28/08/2018
-
-Descrição: Formulário para cadastro de cliente que efetuarão compras no site. 
-Esse formulário está na pasta VIEW. Ele controla apenas o visual e as entradas
-digitadas pelo usuário na hora do cadastro.-->
-
 <?php
 
 //Chamando o controller para o envio dos dados
 require_once ('../controller/clienteController.php');
 //Manda o 'incluir' para o método e entra no switch case
-Processo('logar');
+
+
+session_start();
+
+if(isset($_POST['button'])):
+
+	$erros = array();
+	$email = mysqli_escape_string($conexao, $_POST['email']);
+	$senha = mysqli_escape_string($conexao, $_POST['senha']);
+
+	if(empty($login) or empty($senha)):
+		$erros[] = "<li> O campo LOGIN/SENHA precisa ser preenchido <li>";
+
+else:
+
+$sql = "SELECT login FROM clientes WHERE login = '$login'";
+$resultado = mysqli_query($connect, $sql);
+
+
+	if(mysqli_num_rows($resultado) > 0):
+
+
+
+		else:
+			$erros[] = "<li> Usuário inexistente </li>";
+		endif;
+endif;
+endif;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +41,9 @@ Processo('logar');
 	<head lang="pt-br">
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
-		<title>Cadastro de clientes</title>
+		<title>Login</title>
 
 		<style type="text/css">
-
-
-        
     </script>
 		
 		</style>
@@ -73,8 +92,16 @@ Processo('logar');
 
 		<div id=corpo>
 				<h1> LOGIN</h1>
-				<form action="#" name="form" id="form" method="post"><br><br>
-			
+				<?php
+				if(!empty($erros)):
+
+					foreach($erros as $erro):
+					echo $erro;
+				endforeach;
+			endif; 
+				?>
+
+				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="form" id="form" method="post"><br><br>
 				<label>EMAIL:</label> 
 				<input type="text2" name="email" id="email" placeholder="Digite seu E-MAIL..."><br><br>
 
@@ -83,39 +110,17 @@ Processo('logar');
 
 				<div id=label> <p> <a href="recuperacao.php" style="color:white">ESQUECI MINHA SENHA</a>  | <a href="cadastroClienteVIEW.php" style="color:white">CADASTRAR-SE</a></p></div><br><br>
 
-				<input type="button2" name="button" id="button" value="ENTRAR" onclick="submitForm()">
+				<input type="submit" name="button" id="button" value="ENTRAR" onclick="submitForm()">
 				<input type="hidden" name="ok" id="ok">	
 		
-
-		</form>
-						
-			</div> 
-
-			<script type="text/javascript" src="../js/validacaoLogin.js"> </script>
-
-				<!--Script (javascript) para submeter as informações resgatadas nos inputs 
-				Ele pega os ids 'ok' e 'form' e trabalha com eles. O elemento ok é passado a ser true, enquanto
-				o elemento de id 'form' é submetido-->
-			<script type="text/javascript">
-
-				function submitForm(){	
-					validaCadastro();	
-					alert("ok");		
-					document.getElementById("ok").value = "true";					
-					document.getElementById("form").submit();
-					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
-			}		
-			</script>
-
+		</form>					
+			</div>
 
 <footer>
 	<div id=fim>
 
-
-
 </div>
 </footer>
-
 
 	</body>
 </html>

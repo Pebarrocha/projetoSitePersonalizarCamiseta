@@ -148,6 +148,19 @@ input[type=text3], select{
     box-sizing: border-box;
 }
 
+input[type=preco], select{
+
+    width: 240px;
+    padding: 10px;
+    margin: 2px 2px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
 input[type=alterar], select{
 
     width: 30%;
