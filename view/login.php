@@ -1,9 +1,6 @@
 <?php
 
-//Chamando o controller para o envio dos dados
-require_once ('../controller/clienteController.php');
-//Manda o 'incluir' para o método e entra no switch case
-
+require_once ('../model/conexaomysql.php');
 
 session_start();
 
@@ -18,14 +15,24 @@ if(isset($_POST['button'])):
 
 else:
 
-$sql = "SELECT login FROM clientes WHERE login = '$login'";
-$resultado = mysqli_query($connect, $sql);
+$sql = "SELECT email FROM clientes WHERE email = '$email'";
+$resultado = mysqli_query($conexao, $sql);
 
 
 	if(mysqli_num_rows($resultado) > 0):
 
+		$sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+		$resultado = mysqli_query($conexao, $sql);
 
+		if(mysqli_num_rows($resultado)==1):
 
+			$dados = mysqli_fetch_array($resultado);
+			$_SESSION['logado'] = true;
+			$_SESSION['id_usuario'] = $dados['id'];
+			header('Location: admVIEW.php');
+		else:
+			$erros[] = "<li> Usuário e Senha não conferem </li>";
+		endif;
 		else:
 			$erros[] = "<li> Usuário inexistente </li>";
 		endif;
@@ -76,11 +83,11 @@ endif;
 	<nav class="navegacao">
 	<form id="formmain">
 <ul>
-<!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
+
 <li><a href="main.php">Início</a>
 <li><a id = "sexo" name="masculino" value="masculino" onclick="submitPesquisaMasculina()">Camisetas Masculinas
 <input type="hidden" id="btnconsultamasculina" name="btnconsultamasculina" ></a>
-<!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
+
 <li><a id = "sexo" name="feminino" value="feminino" onclick="submitPesquisaFeminina()">Camisetas Femininas
 <input type="hidden" id="btnconsultafeminina" name="btnconsultafeminina"></a>
 
@@ -99,8 +106,8 @@ endif;
 					echo $erro;
 				endforeach;
 			endif; 
-				?>
-
+?>
+<hr>
 				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="form" id="form" method="post"><br><br>
 				<label>EMAIL:</label> 
 				<input type="text2" name="email" id="email" placeholder="Digite seu E-MAIL..."><br><br>
