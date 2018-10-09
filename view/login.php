@@ -10,18 +10,19 @@ if(isset($_POST['btn_entrar'])):
 	$email = mysqli_escape_string($conexao, $_POST['email']);
 	$senha = mysqli_escape_string($conexao, $_POST['senha']);
 
-	if(empty($login) or empty($senha)):
+	if(empty($email) or empty($senha)):
 		$erros[] = "<li> O campo LOGIN/SENHA precisa ser preenchido <li>";
-
+	echo "vazio";
 else:
 
-$sql = "SELECT email FROM clientes WHERE email = '$email'";
+$sql = "SELECT email FROM cliente WHERE email = '$email'";
 $resultado = mysqli_query($conexao, $sql);
+echo "entrou";
 
 
 	if(mysqli_num_rows($resultado) > 0):
 
-		$sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+		$sql = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
 		$resultado = mysqli_query($conexao, $sql);
 
 		if(mysqli_num_rows($resultado)==1):
@@ -38,8 +39,6 @@ $resultado = mysqli_query($conexao, $sql);
 		endif;
 endif;
 endif;
-
-
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +56,7 @@ endif;
 	</head>
 
 <header>
-
+<!--
 <nav class="navegacao" >
 <ul>
 <form class="pesquisa">
@@ -72,12 +71,12 @@ endif;
 </div>
 </form>
 </ul>
-</nav>
+</nav>-->
 </header>
 
 
 <body>		
-
+<!--
 	<img class="teste" src="a.jpg">
 
 	<nav class="navegacao">
@@ -95,7 +94,7 @@ endif;
 <li><a href="#">Sobre</a>
 </ul>
 </form>
-</nav>
+</nav> -->
 
 		<div id=corpo>
 				<h1> LOGIN</h1>
@@ -116,7 +115,7 @@ endif;
 				<input type="password" name="senha" id="senha" placeholder="Senha"><br><br>
 
 				<!--<div id=label> <p> <a href="recuperacao.php" style="color:white">ESQUECI MINHA SENHA</a>  | <a href="cadastroClienteVIEW.php" style="color:white">CADASTRAR-SE</a></p></div><br><br>-->
-				<button type="submit" name="button" id="btn-entrar"> ENTRAR</button> 
+				<button type="submit" name="btn-entrar" id="btn-entrar"> ENTRAR</button> 
 				</form>					
 			</div>
 
