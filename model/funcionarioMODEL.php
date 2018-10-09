@@ -26,7 +26,6 @@ Class FuncionarioMODEL{
         try{
             require 'conexaomysql.php';
             $sql = 'update funcionario set nome="' .$nome.  ' ", cpf="'. $cpf . '", senha = " '. $senha .' " WHERE codFuncionario="' . $_GET["id"] . '"';
-
             $result = mysqli_query($conexao,$sql);
 
         }catch(Exception $e){

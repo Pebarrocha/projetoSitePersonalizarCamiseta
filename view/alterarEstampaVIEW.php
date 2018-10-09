@@ -29,16 +29,16 @@ Processo('alterar');
     <?php
     if(isset($rs)){
     while ($row = mysqli_fetch_array($rs)) {
+    $varImg = $row['imagemEstampa'];
     ?>
     <form action="#" name="form-alterar" id="form-alterar" method="post">
         <label>Nome:</label>
         <input type="text" name="nome" id="nome" value="<?php echo $row['nomeEstampa']; ?>"> <br>
 
-        <label>Imagen:</label> <br>
-        <input type="text" name="img" id="img" value="<?php echo $row['imagemEstampa']; ?>"> <br>
+        <input type="hidden" name="img" id="img" value="1">
 
 
-        <input type="button" name="button" id="button" value="Alterar" onclick="submitForm()">
+        <input type="submit" width="30%" name="button" id="button" value="Alterar" onclick="submitForm()">
         <input type="hidden" name="btnalterar" id="btnalterar">
 </div>
 </form>

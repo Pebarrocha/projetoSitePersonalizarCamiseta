@@ -12,6 +12,16 @@ Processo('incluir');
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/estampa.css">
     <title>Cadastro de Camisetas Pré-Definidas</title>
+    <script>
+        function somenteNumeros(num) {
+            var er = /[^0-9.]/;
+            er.lastIndex = 0;
+            var campo = num;
+            if (er.test(campo.value)) {
+                campo.value = "";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -28,7 +38,7 @@ Processo('incluir');
         <label>Nome:</label>
         <input type="text" name="nome" id="nome" placeholder="Nome do Funcionário"> <br><br>
         <label>CPF:</label> <br>
-        <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="11" size="11"> <br><br>
+        <input type="text" name="cpf" id="cpf" placeholder="CPF" onkeyup=" somenteNumeros(this)" maxlength="11" size="11"> <br><br>
         <label>Senha:</label>
         <input type="password" name="senha" id="senha" placeholder="Senha"> <br><br>
 

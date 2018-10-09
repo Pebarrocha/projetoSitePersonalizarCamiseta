@@ -27,8 +27,10 @@ Processo('consultar');
 <div id="radio">
     <h1> CONSULTA DE FUNCIONÁRIO </h1><BR><BR>
 <form name="form-consulta" action="#" id="form-consulta" method="post">
-    <input type="radio" name="tipo" value="nome">Nome
+    <input type="radio" name="tipo" value="nome" checked>Nome
     <input type="radio" name="tipo" value="cpf">CPF
+<!--    <input type="radio" name="tipo" value="todos" checked>Todos-->
+
 <!--    <input type="radio" name="tipo" value="tudo" checked>Todo o banco<br>-->
 </div>
 <div id="normal">

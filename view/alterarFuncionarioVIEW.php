@@ -13,7 +13,16 @@ Processo('alterar');
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/estampa.css">
     <title>Alteração de Funcionário</title>
-
+    <script>
+        function somenteNumeros(num) {
+            var er = /[^0-9.]/;
+            er.lastIndex = 0;
+            var campo = num;
+            if (er.test(campo.value)) {
+                campo.value = "";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -34,7 +43,7 @@ Processo('alterar');
         <label>Nome:</label>
         <input type="text" name="nome" id="nome" placeholder="Nome do Funcionario" value="<?php echo $row['nome']; ?>"> <br>
         <label>CPF:</label> <br>
-        <input type="text" name="cpf" id="cpf"  placeholder="CPF do Funcionario" value="<?php echo $row['cpf']; ?>"> <br>
+        <input type="text" name="cpf" id="cpf"  placeholder="CPF do Funcionario" onkeyup="somenteNumeros(this)" maxlength="11" size="11" value="<?php echo $row['cpf']; ?>"> <br>
 
         <label>senha:</label>
         <input type="text" name="senha" id="senha" placeholder="Senha" value="<?php echo $row['senha']; ?>"> <br>

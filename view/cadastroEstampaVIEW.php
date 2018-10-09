@@ -12,6 +12,7 @@ Processo('incluir');
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/estampa.css">
     <title>Cadastro de Estampa</title>
+
 </head>
 <body>
 

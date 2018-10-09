@@ -24,15 +24,17 @@ Processo('consultar');
     </ul>
 </nav>
 
-<div id="radio">
-    <h1> CONSULTA DE ESTAMPA </h1><BR><BR>
+
+
 <form name="form-consulta" action="#" id="form-consulta" method="post">
-    <input type="radio" name="tipo" value="nome">Nome
-    <input type="radio" name="todos" value="todos">Todos
+<!--    <input type="radio" name="todos" value="todos" checked>Todos-->
+    <input type="hidden" name="tipo" value="nomeEstampa" checked>
+
 
 <!--    <input type="radio" name="tipo" value="tudo" checked>Todo o banco<br>-->
-</div>
+
 <div id="normal">
+    <h1> CONSULTA DE ESTAMPA </h1><BR><BR>
     <input type="text" name="edconsulta" id="edconsulta" placeholder="Digite o nome da estampa">
 
     <input type="button" name="button" id="button" value="Consultar" onclick="submitForm()">
@@ -46,23 +48,25 @@ Processo('consultar');
 if (isset($rs)){
 
 echo
-"<table border=1>
+"
+<table border=1>
 <tr>
-<th>Código</th>
-<th>Nome</th>
-<th>IMG</th>
+<th bgcolor=\"#CCCCCC\"> Código</th>
+<th bgcolor=\"#CCCCCC\">Nome</th>
+<th bgcolor=\"#CCCCCC\">IMG</th>
 </tr>";
 
     while($row = mysqli_fetch_array($rs)){
-
+        $varImg = $row['imagemEstampa'];
+//        echo "<img border=0 height='63px' src='data:image/jpeg;base64,$varImg'>";
         echo "<tr>";
         echo "<td>" . $row['codEstampaCamiseta'] . "</td>";
         echo "<td>" . $row['nomeEstampa'] . "</td>";
-        echo "<td>" . $row['imagemEstampa'] . "</td>";
+        echo "<td> <img border=0 height='63px' src='data:image/jpeg;base64,$varImg'> </td>";
         ?>
-        <td><form>
+        <td bgcolor="#CCCCCC" ><form>
                 <a href="alterarEstampaVIEW.php?id=<?php echo $row['codEstampaCamiseta']; ?>">
-                    <input type="button" name="button" value="Alterar"></a>
+                    <input type="button"  name="button" value="Alterar"></a><br>
                 <a href="consultaEstampaVIEW.php? btnexcluir=true&id=<?php echo $row['codEstampaCamiseta']; ?>"><input type="button" name="button" value="Excluir"></a>
             </form></td>
         <?php
@@ -83,3 +87,4 @@ echo
 </script>
 </body>
 </html>
+

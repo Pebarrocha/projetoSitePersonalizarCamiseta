@@ -42,8 +42,8 @@ function Processo($processo){
                 }
 
 
-                if(isset($tipo) == "nome" || $edconsulta != null){
-                    $sql = "SELECT * FROM estampacamiseta WHERE $tipo = '$edconsulta' ";
+                if(isset($tipo) != null || $edconsulta != null){
+                    $sql = "SELECT * FROM estampacamiseta WHERE $tipo LIKE '%' '$edconsulta' '%' ";
                     $cDAO = new EstampaMODEL();
                     $rs = $cDAO->consultarEstampa($sql);
 

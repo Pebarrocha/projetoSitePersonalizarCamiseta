@@ -39,13 +39,15 @@ function Processo($processo){
                 }
 
 
-                    if(isset($tipo) != null || $edconsulta != null){
-                    $sql = "SELECT * FROM funcionario WHERE $tipo = '$edconsulta' ";
-                    $cDAO = new FuncionarioMODEL();
-                    $rs = $cDAO->consultarFuncionario($sql);
-
-
-                }else{
+                    if(isset($tipo) == "nome"|| $edconsulta != null ) {
+                        $sql = "SELECT * FROM funcionario WHERE $tipo LIKE '%' '$edconsulta' '%' ";
+                        $cDAO = new FuncionarioMODEL();
+                        $rs = $cDAO->consultarFuncionario($sql);
+                    } elseif(isset($tipo) == "cpf"|| $edconsulta != null ){
+                            $sql = "SELECT * FROM funcionario WHERE $tipo LIKE '%' '$edconsulta' '%' ";
+                            $cDAO = new FuncionarioMODEL();
+                            $rs = $cDAO->consultarFuncionario($sql);
+                    }elseif (isset($tipo) == "todos"|| $edconsulta != null ){
                     $sql = "SELECT * FROM funcionario";
                     $cDAO = new FuncionarioMODEL();
                     $rs = $cDAO->consultarFuncionario($sql);
