@@ -51,7 +51,7 @@ echo
 "
 <table border=1>
 <tr>
-<th bgcolor=\"#CCCCCC\"> Código</th>
+<th bgcolor=\"#CCCCCC\">Código</th>
 <th bgcolor=\"#CCCCCC\">Nome</th>
 <th bgcolor=\"#CCCCCC\">IMG</th>
 </tr>";
@@ -62,7 +62,7 @@ echo
         echo "<tr>";
         echo "<td>" . $row['codEstampaCamiseta'] . "</td>";
         echo "<td>" . $row['nomeEstampa'] . "</td>";
-        echo "<td> <img border=0 height='63px' src='data:image/jpeg;base64,$varImg'> </td>";
+        echo "<td>  <img border=0 height='63px' src='data:image/jpeg;base64,$varImg'> </td>";
         ?>
         <td bgcolor="#CCCCCC" ><form>
                 <a href="alterarEstampaVIEW.php?id=<?php echo $row['codEstampaCamiseta']; ?>">

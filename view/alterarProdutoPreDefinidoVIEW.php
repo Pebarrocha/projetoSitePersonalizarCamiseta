@@ -31,7 +31,7 @@ if(isset($rs)){
 while ($row = mysqli_fetch_array($rs)) { 
 ?>
 <form action="#" name="form-alterar" id="form-alterar" method="post">
-<script> alert("Entrou PORRA");</script>
+<!--<script> alert("Entrou PORRA");</script>-->
 <label>Nome:</label> 
 <input type="text" name="nome" id="nome" placeholder="Nome da camiseta aqui!" value="<?php echo $row['nome']; ?>"> <br>
 <label>Descrição:</label> <br>
@@ -68,7 +68,7 @@ while ($row = mysqli_fetch_array($rs)) {
 <script type="text/javascript" src="../js/validacao.js"> </script>
 <script type="text/javascript">
 function submitForm(){	
-alert("VAI SE FODER");
+
 validaCadastro();			
 document.getElementById("btnalterar").value = "true";					
 document.getElementById("form-alterar").submit();
