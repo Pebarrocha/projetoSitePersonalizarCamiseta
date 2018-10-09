@@ -39,7 +39,7 @@
 
 </nav>
 
-<
+
 <div id="cadastro">
     <h1> CADASTRO DE FUNCIONÁRIO </h1>
     <form action="#" name="form" id="form" method="post">

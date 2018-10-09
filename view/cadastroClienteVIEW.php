@@ -53,16 +53,14 @@ Processo('incluir');
 	<nav class="navegacao">
 	<form id="formmain">
 <ul>
-<!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
-<li><a href="main.php">Início</a>
-<li><a id = "sexo" name="masculino" value="masculino" onclick="submitPesquisaMasculina()">Camisetas Masculinas
-<input type="hidden" id="btnconsultamasculina" name="btnconsultamasculina" ></a>
-<!-- FAZENDO A CONSULTA - CONSULTA POR BOTAO INCOMPLETA -->
-<li><a id = "sexo" name="feminino" value="feminino" onclick="submitPesquisaFeminina()">Camisetas Femininas
+
+<li><a href="main.php">INICIO</a>
+<li><a href="#">CAMISETAS MASCULINAS</a>
+<li><a href="#">CAMISETAS FEMININAS</a>
 <input type="hidden" id="btnconsultafeminina" name="btnconsultafeminina"></a>
 
-<li><a href="#">Contato</a>
-<li><a href="#">Sobre</a>
+<li><a href="#">CONTATO</a>
+<li><a href="#">SOBRE</a>
 </ul>
 </form>
 </nav>
