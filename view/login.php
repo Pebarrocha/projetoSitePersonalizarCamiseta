@@ -4,7 +4,7 @@ require_once ('../model/conexaomysql.php');
 
 session_start();
 
-if(isset($_POST['button'])):
+if(isset($_POST['btn_entrar'])):
 
 	$erros = array();
 	$email = mysqli_escape_string($conexao, $_POST['email']);
@@ -108,19 +108,16 @@ endif;
 			endif; 
 ?>
 <hr>
-				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="form" id="form" method="post"><br><br>
+				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST"><br><br>
 				<label>EMAIL:</label> 
 				<input type="text2" name="email" id="email" placeholder="Digite seu E-MAIL..."><br><br>
 
 				<label>SENHA:</label> 
 				<input type="password" name="senha" id="senha" placeholder="Senha"><br><br>
 
-				<div id=label> <p> <a href="recuperacao.php" style="color:white">ESQUECI MINHA SENHA</a>  | <a href="cadastroClienteVIEW.php" style="color:white">CADASTRAR-SE</a></p></div><br><br>
-
-				<input type="submit" name="button" id="button" value="ENTRAR" onclick="submitForm()">
-				<input type="hidden" name="ok" id="ok">	
-		
-		</form>					
+				<!--<div id=label> <p> <a href="recuperacao.php" style="color:white">ESQUECI MINHA SENHA</a>  | <a href="cadastroClienteVIEW.php" style="color:white">CADASTRAR-SE</a></p></div><br><br>-->
+				<button type="submit" name="button" id="btn-entrar"> ENTRAR</button> 
+				</form>					
 			</div>
 
 <footer>
