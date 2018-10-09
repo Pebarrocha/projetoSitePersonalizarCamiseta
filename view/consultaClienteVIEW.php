@@ -43,7 +43,7 @@ Processo('consultar');
 if (isset($rs)){
 
 echo
-"<table border=1>
+"<br><table border=1 bgcolor=white width=10% cellpadding=4>
 <tr>
 <th>Código</th>
 <th>Nome</th>

@@ -30,6 +30,7 @@ Class ClienteMODEL{
             $sql = 'update cliente set nome="' .$nome.  ' ", cpf="'. $cpf . '", rg = " '. $rg .' ", celular="'. $celular . '", fixo="'. $fixo . '", rua="'. $rua . '", numero="'. $numero . '", bairro="'. $bairro . '", cidade="'. $cidade . '", cep="'. $cep . '", descricao="'. $descricao . '", email="'. $email . '", senha="'. $senha . '" WHERE codCliente="' . $_GET["id"] . '"';
 
             $result = mysqli_query($conexao,$sql);
+            echo $result;
 
         }catch(Exception $e){
             echo 'Excecão capturada. MODEL: ', $e->getMessage(), "\n";

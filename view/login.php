@@ -22,7 +22,7 @@ $resultado = mysqli_query($conexao, $sql);
 	if(mysqli_num_rows($resultado) > 0):
 
 		$sql = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
-		echo $sql;
+		
 		$resultado = mysqli_query($conexao, $sql);
 
 		if(mysqli_num_rows($resultado)==1):
@@ -32,10 +32,10 @@ $resultado = mysqli_query($conexao, $sql);
 			$_SESSION['id_usuario'] = $dados['id'];
 			header('Location: admVIEW.php');
 		else:
-			$erros[] = "<li> Usuário e Senha não conferem </li>";
+			$erros[] = "<br><li> Usuário ou Senha não conferem </li>";
 		endif;
 		else:
-			$erros[] = "<li> Usuário inexistente </li>";
+			$erros[] = "<br><li> Usuário inexistente </li>";
 		endif;
 endif;
 endif;
@@ -83,15 +83,13 @@ endif;
 	<form id="formmain">
 <ul>
 
-<li><a href="main.php">Início</a>
-<li><a id = "sexo" name="masculino" value="masculino" onclick="submitPesquisaMasculina()">Camisetas Masculinas
-<input type="hidden" id="btnconsultamasculina" name="btnconsultamasculina" ></a>
-
-<li><a id = "sexo" name="feminino" value="feminino" onclick="submitPesquisaFeminina()">Camisetas Femininas
+<li><a href="main.php">INICIO</a>
+<li><a href="#">CAMISETAS MASCULINAS</a>
+<li><a href="#">CAMISETAS FEMININAS</a>
 <input type="hidden" id="btnconsultafeminina" name="btnconsultafeminina"></a>
 
-<li><a href="#">Contato</a>
-<li><a href="#">Sobre</a>
+<li><a href="#">CONTATO</a>
+<li><a href="#">SOBRE</a>
 </ul>
 </form>
 </nav> 
@@ -106,7 +104,7 @@ endif;
 				endforeach;
 			endif; 
 ?>
-<hr>
+<br><hr>
 				<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST"><br><br>
 				<label>EMAIL:</label> 
 				<input type="text2" name="email" id="email" placeholder="Digite seu E-MAIL..."><br><br>

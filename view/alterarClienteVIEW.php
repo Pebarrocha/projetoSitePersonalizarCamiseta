@@ -93,7 +93,6 @@ Processo('alterar');
 <script type="text/javascript">
     function submitForm(){
         validaCadastro();
-        alert("aqui");
         document.getElementById("btnalterar").value = "true";
         document.getElementById("form-alterar").submit();
     }
