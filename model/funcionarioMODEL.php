@@ -1,10 +1,3 @@
-<!--
- Autor: Pedro Barbosa Rocha
- Data da última modificação: 07/09/2018
-
-Descrição: Classe para incluir o produto pré definido no banco de dados.
-Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta no banco que será inserir os dados no banco.
--->
 
 <?php
 
@@ -25,7 +18,6 @@ Class FuncionarioMODEL{
 
     public function consultarFuncionario($sql){
         require_once 'conexaomysql.php';
-//        echo '<script> alert("ENTROU NO CONSULTAR! MODEL") </script>';
         $result = mysqli_query($conexao,$sql);
         return $result;
     }
@@ -34,7 +26,6 @@ Class FuncionarioMODEL{
         try{
             require 'conexaomysql.php';
             $sql = 'update funcionario set nome="' .$nome.  ' ", cpf="'. $cpf . '", senha = " '. $senha .' " WHERE codFuncionario="' . $_GET["id"] . '"';
-
             $result = mysqli_query($conexao,$sql);
 
         }catch(Exception $e){

@@ -1,11 +1,3 @@
-<!--
- ALTERAR PRODUTO PRE DEFINIDO VIEW
- Autor: Pedro Barbosa Rocha
- Data da última modificação: 07/09/2018
-
-Descrição: Formulário para alterar produtos pré definidos que estarão
-a disposição para venda no site. Essa formulário está na pasta VIEW. Ele controla apenas o visual.
--->
 
 <?php
 
@@ -19,9 +11,18 @@ Processo('alterar');
 <html>
 <head lang="pt-br">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/cadastroFuncinario.css">
+    <link rel="stylesheet" type="text/css" href="css/estampa.css">
     <title>Alteração de Funcionário</title>
-
+    <script>
+        function somenteNumeros(num) {
+            var er = /[^0-9.]/;
+            er.lastIndex = 0;
+            var campo = num;
+            if (er.test(campo.value)) {
+                campo.value = "";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -39,11 +40,10 @@ Processo('alterar');
     while ($row = mysqli_fetch_array($rs)) {
     ?>
     <form action="#" name="form-alterar" id="form-alterar" method="post">
-<!--       <script> alert("Entrou PORRA");</script>-->
         <label>Nome:</label>
         <input type="text" name="nome" id="nome" placeholder="Nome do Funcionario" value="<?php echo $row['nome']; ?>"> <br>
         <label>CPF:</label> <br>
-        <input type="text" name="cpf" id="cpf"  placeholder="CPF do Funcionario" value="<?php echo $row['cpf']; ?>"> <br>
+        <input type="text" name="cpf" id="cpf"  placeholder="CPF do Funcionario" onkeyup="somenteNumeros(this)" maxlength="11" size="11" value="<?php echo $row['cpf']; ?>"> <br>
 
         <label>senha:</label>
         <input type="text" name="senha" id="senha" placeholder="Senha" value="<?php echo $row['senha']; ?>"> <br>

@@ -1,7 +1,3 @@
-<!--
- Autor: Pedro Barbosa Rocha
- Data da última modificação: 07/09/2018
--->
 
 <?php
 
@@ -17,7 +13,7 @@ Processo('consultar');
 <head>
     <title> Consulta de Funcionário </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/cadastroFuncinario.css"/>
+    <link rel="stylesheet" type="text/css" href="css/estampa.css"/>
 </head>
 <body>
 
@@ -29,9 +25,12 @@ Processo('consultar');
 </nav>
 
 <div id="radio">
+    <h1> CONSULTA DE FUNCIONÁRIO </h1><BR><BR>
 <form name="form-consulta" action="#" id="form-consulta" method="post">
-    <input type="radio" name="tipo" value="nome">Nome
+    <input type="radio" name="tipo" value="nome" checked>Nome
     <input type="radio" name="tipo" value="cpf">CPF
+<!--    <input type="radio" name="tipo" value="todos" checked>Todos-->
+
 <!--    <input type="radio" name="tipo" value="tudo" checked>Todo o banco<br>-->
 </div>
 <div id="normal">
@@ -67,8 +66,9 @@ echo
         ?>
         <td><form>
                 <a href="alterarFuncionarioVIEW.php?id=<?php echo $row['codFuncionario']; ?>">
-                    <input type="button" name="button" value="Alterar"></a>
-                <a href="consultaFuncionarioVIEW.php?btnexcluir=true&id=<?php echo $row['codFuncionario']; ?>"><input type="button" name="button" value="Excluir"></a>
+                    <input type="button" name="button" value="Alterar"></a><br>
+                <a href="consultaFuncionarioVIEW.php?btnexcluir=true&id=<?php echo $row['codFuncionario']; ?>">
+                    <input type="button" name="button" value="Excluir"></a>
             </form></td>
         <?php
         echo "</tr>";

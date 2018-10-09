@@ -1,32 +1,21 @@
-<!--
- Autor: Pedro Barbosa Rocha
- Data da última modificação: 07/09/2018
 
-Descrição: Controller que receberá os inputs dos formulários e enviará para o model.
-
--->
 
 <?php
 
 
 require_once '../model/funcionarioMODEL.php';
-//require_once '../DAO/cadastroDeProdutoPreDefinidoDAO.php';
+
 
 function Processo($processo){
 
     switch ($processo){
 
         case 'incluir':
-//if(isset($_POST['delete_id']) && !empty($_POST['delete_id']))
 
-            /*
-            Se o botão hidden 'ok' for true ele entrara no if, e uma variavel receberá todas as informações
-            que estavam nas inputs dos formulários HTML. Depois irá criar um objeto da classe cadastroDeProdutoPreDefinidoDAO com todas as váriaveis, e irá ativar a função no MODEL
-             */
             if (isset($_POST['ok']) && !empty($_POST['ok'])){
                 foreach($_POST as $nome_campo => $valor){
                     $comando = "\$" . $nome_campo . "='" . $valor . "';";
-//echo $comando;
+
                     eval($comando);
                     $nome_campo = str_replace(",",".", $nome_campo);
                 }
@@ -50,13 +39,15 @@ function Processo($processo){
                 }
 
 
-                    if(isset($tipo) != null || $edconsulta != null){
-                    $sql = "SELECT * FROM funcionario WHERE $tipo = '$edconsulta' ";
-                    $cDAO = new FuncionarioMODEL();
-                    $rs = $cDAO->consultarFuncionario($sql);
-
-
-                }else{
+                    if(isset($tipo) == "nome"|| $edconsulta != null ) {
+                        $sql = "SELECT * FROM funcionario WHERE $tipo LIKE '%' '$edconsulta' '%' ";
+                        $cDAO = new FuncionarioMODEL();
+                        $rs = $cDAO->consultarFuncionario($sql);
+                    } elseif(isset($tipo) == "cpf"|| $edconsulta != null ){
+                            $sql = "SELECT * FROM funcionario WHERE $tipo LIKE '%' '$edconsulta' '%' ";
+                            $cDAO = new FuncionarioMODEL();
+                            $rs = $cDAO->consultarFuncionario($sql);
+                    }elseif (isset($tipo) == "todos"|| $edconsulta != null ){
                     $sql = "SELECT * FROM funcionario";
                     $cDAO = new FuncionarioMODEL();
                     $rs = $cDAO->consultarFuncionario($sql);
