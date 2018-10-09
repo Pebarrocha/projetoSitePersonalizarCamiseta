@@ -4,7 +4,7 @@ require_once ('../model/conexaomysql.php');
 
 session_start();
 
-if(isset($_POST['btn_entrar'])):
+if(isset($_POST['btn-entrar'])):
 
 	$erros = array();
 	$email = mysqli_escape_string($conexao, $_POST['email']);
@@ -18,7 +18,6 @@ else:
 $sql = "SELECT email FROM cliente WHERE email = '$email'";
 $resultado = mysqli_query($conexao, $sql);
 echo "entrou";
-
 
 	if(mysqli_num_rows($resultado) > 0):
 
