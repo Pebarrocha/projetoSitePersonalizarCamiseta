@@ -17,7 +17,6 @@ function validaCadastro(evt){
     var Resto;
 
     var numErros = 0;
-    alert("esta a qui");
     if(nome == ""){
         alert("digite um nome valido");
         numErros++;
