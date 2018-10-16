@@ -1,59 +1,182 @@
-html{
-    background-color: #8B0000;
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8e9eab;
 }
-
 h1{
     text-align: center;
 }
 
-body {
+.navegacao ul{
+text-align: center;
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+overflow: hidden;
+background-color: #333;
+}
 
-    width: auto;
-    margin-right: 400px;
-    margin-left: 400px;
-    padding: 10px; 
+.navegacao a{
+    float: left;
+    display: block;
+    color:white;
     text-align: center;
-    
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-input[type=text], select{
-
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #cecece;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-textarea{
-    resize:none;
+.navegacao a:hover{
+    background-color: #111; 
 }
 
 
-input[type=button] {
-    width: 100%;
-    background-color: #000000;
-    color: #cecece;
+
+.navegacao input{
+    padding: 6px;
+    border: solid 0px #f00;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+#cadastro {
+    font-family: "Lucida Console", Times, serif;
+    color: white;
+    border-radius: 5px;
+    background-color: #031634;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 30px;
+    text-align: justify;
+}
+
+#consulta{
+    display: block;
+    font-family: "Lucida Console", Times, serif;
+    color: white;
+    border-radius: 5px;
+    background-color: #8e9eab;
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 10px;
+    text-align: justify;
+         }
+
+#normal{
+    font-family: "Lucida Console", Times, serif;
+    color: white;
+    border-radius: 5px;
+    background-color: #031634;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 30px;
+    text-align: justify;
+}
+#radio {
+    font-family: "Lucida Console", Times, serif;
+    color: white;
+    border-radius: 5px;
+    background-color: #031634;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 30px;
+    text-align: justify;
+}
+#normal{
+    font-family: "Lucida Console", Times, serif;
+    color: white;
+    border-radius: 5px;
+    background-color: #031634;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 30px;
+    text-align: justify;
+}
+#normalc{
+    font-family: "Lucida Console", Times, serif;
+    color: white;
+    border-radius: 5px;
+    background-color: #031634;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 0px;
+    padding: 30px;
+    text-align: justify;
+}
+/* Estilo do cabeçalho*/
+
+
+input[type=submit] {
+    width: 30%;
+    background-color: #CC9933;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    
+    text-align: center;
 }
 
-input[type=button]:hover {
-    background-color: #0085FF;
-   
+input[type=button] {
+    width: auto;
+    background-color: #CC9933;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
 }
 
-div {
-    font-family: "Lucida Console", Times, serif;
-    border-radius: 5px;
-    background-color: #FF0000;
-    padding: 20px;
+
+input[type=file], select{
+
+    width: 40%;
+    padding: 10px;
+    margin: 8px 0px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
+input[type=text], select{
+
+    width: 100%;
+    padding: 15px;
+    margin: 2px 2px 2px -2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select{
+
+    width: 100%;
+    padding: 15px;
+    margin: 2px 2px 2px -2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+
 
