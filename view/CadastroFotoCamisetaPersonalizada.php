@@ -10,17 +10,55 @@ Processo('incluir');
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/CadastroFotoCamisetaPersonalizada.css">
     <title>Cadastro de Foto de Camiseta</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/adm.css">
 
 </head>
 <body>
+<div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CADASTRAR
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroDeEmpresa.php">CADASTRAR EMPRESA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeEstampa.php">CADASTRAR ESTAMPA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeFuncionario.php">CADASTRAR FUNCIONÁRIO</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizada.php">CADASTRAR FOTO CAMISETA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
+                   
+                  </div>
+                </li>
+                             <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    RELATÓRIO
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroDeEmpresa.php">RELATÓRIO DE PERFIL DE CLIENTE</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeEstampa.php">RELATÓRIO DE VENDAS</a>
+                  </div>
+                </li>
 
-<nav class="navegacao">
-    <ul>
-        <li><a href="CadastroFotoCamisetaPersonalizada.php">Cadastrar Imagem</a>
-        <li><a href="ConsultaFotoCamisetaVIEW.php">Pesquisar Imagem</a>
-    </ul>
-</nav>
+                    <li class="nav-item">
+                      <a class="nav-link" href="consulta.php">CONSULTAR</a>
+                    </li>
 
+                <li class="nav-item">
+                              <a class="nav-link" href="admVIEW.php">VOLTAR</a>
+                            </li>
+                <li class="nav-item">
+                              <a class="nav-link" href="#">SAIR</a>
+                            </li>
+              </ul> </div></nav></div></div>
 <div id="normalc">
     <h1> Cadastro de Foto Camiseta </h1>
     <form enctype="multipart/form-data" action="#" name="form" id="form" method="post">
@@ -47,5 +85,8 @@ Processo('incluir');
         document.getElementById("form").submit();
     }
 </script>
+   <script src="../jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

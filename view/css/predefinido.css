@@ -1,6 +1,7 @@
 html{
     
-    background-color: #FC9D9A;
+    background-color: #8e9eab;
+    color: white;
 
 }
 
@@ -52,6 +53,6 @@ input[type=button]:hover {
 div {
     font-family: "Lucida Console", Times, serif;
     border-radius: 5px;
-    background-color: #F9CDAD;
+    background-color: #031634;
     padding: 20px;
 }

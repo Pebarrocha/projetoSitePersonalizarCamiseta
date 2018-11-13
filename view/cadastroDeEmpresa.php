@@ -10,7 +10,10 @@
 <head lang="pt-br">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/estampa.css">
-    <title>Cadastro de Funcionário</title>
+    <title>Cadastro de Empresa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/adm.css">
 
     <style type="text/css">
     </style>
@@ -19,6 +22,50 @@
 
     </script>
 
+<div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CADASTRAR
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroDeEmpresa.php">CADASTRAR EMPRESA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeEstampa.php">CADASTRAR ESTAMPA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeFuncionario.php">CADASTRAR FUNCIONÁRIO</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizada.php">CADASTRAR FOTO CAMISETA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
+                   
+                  </div>
+                </li>
+                             <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    RELATÓRIO
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroDeEmpresa.php">RELATÓRIO DE PERFIL DE CLIENTE</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeEstampa.php">RELATÓRIO DE VENDAS</a>
+                  </div>
+                </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="consulta.php">CONSULTAR</a>
+                    </li>
+
+                <li class="nav-item">
+                              <a class="nav-link" href="admVIEW.php">VOLTAR</a>
+                            </li>
+                <li class="nav-item">
+                              <a class="nav-link" href="#">SAIR</a>
+                            </li>
+              </ul> </div></nav></div></div>
 </head>
 
 <body>
@@ -32,7 +79,7 @@
 
 </nav>
 
-<
+
 <div id="cadastro">
     <h1> CADASTRO DE EMPRESA </h1>
     <form action="#" name="form" id="form" method="post">
@@ -80,7 +127,9 @@
         document.getElementById("form").submit();
     }
 </script>
-
+    <script src="../jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
