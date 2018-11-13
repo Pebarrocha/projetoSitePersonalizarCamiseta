@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../controller/clienteController.php');
+require_once ('../controller/consultaController.php');
 Processo('consultar');
 
 
@@ -12,7 +12,7 @@ Processo('consultar');
 <head>
     <title>Consulta</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/cliente.css"/>
+    <link rel="stylesheet" type="text/css" href="css/consulta.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/adm.css">
 </head>
@@ -64,20 +64,22 @@ Processo('consultar');
                             </li>
               </ul> </div></nav></div></div>
 
-<div id="radio"><br><br>
+
+<br><br><p><b>&nbsp&nbsp&nbspESCOLHA O TIPO DE CONSULTA:</b></p>
+<div id="radio">
 <form name="form-consulta" action="#" id="form-consulta" method="post">
-    <input type="radio" name="tipo" value="empresa">Empresa
-    <input type="radio" name="tipo" value="estampa">Estampa
-    <input type="radio" name="tipo" value="funcionario">Funcionário
-    <input type="radio" name="tipo" value="fotoCamiseta">Foto de camiseta
-    <input type="radio" name="tipo" value="produtoPreDefinido">Produto Pré Definido
+    <input type="radio" name="tipo" value="empresa"> Empresa
+    <input type="radio" name="tipo" value="estampa"> Estampa
+    <input type="radio" name="tipo" value="funcionario"> Funcionário
+    <input type="radio" name="tipo" value="fotoCamiseta"> Foto de camiseta
+    <input type="radio" name="tipo" value="produtoPreDefinido"> Produto Pré Definido
 
 <!--    <input type="radio" name="tipo" value="tudo" checked>Todo o banco<br>-->
 </div>
 <div id="normal"><br>
     <input type="consulta" name="edconsulta" id="edconsulta" placeholder="Digite uma palavra para consultar">
 
-    <input type="button" name="button" id="button" value="Consultar" onclick="submitForm()">
+    <input type="button2" name="button" id="button" value="Consultar" onclick="submitForm()">
     <input type="hidden" name="btnconsulta" id="btnconsulta">
 </form>
 </div>
