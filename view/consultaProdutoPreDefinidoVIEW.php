@@ -51,13 +51,13 @@ echo
 </tr>";
 if (isset($rs)){
 while($row = mysqli_fetch_array($rs)){
-								
+    $varImg = $row['imagem'];
 echo "<tr>";
 echo "<td>" . $row['codCamisetaPreDefinida'] . "</td>";
 echo "<td>" . $row['nome'] . "</td>";
 echo "<td>" . $row['descricao'] . "</td>";
 echo "<td>" . $row['tamanho'] . "</td>";
-echo "<td>" . $row['imagem'] . "</td>";
+echo "<td>  <img border=0 height='63px' src='data:image/jpeg;base64,$varImg'> </td>";
 echo "<td>" . $row['sexo'] . "</td>";
 echo "<td>" . $row['modelo'] . "</td>";
 echo "<td>" . $row['FotoCamiseta_codFotoCamiseta'] . "</td>";

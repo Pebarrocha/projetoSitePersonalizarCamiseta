@@ -10,11 +10,22 @@ Primeiro é estabelecida a conexão com o banco, logo após é criada a consulta
 	
 Class produtoPreDefinidoMODEL{		
 
-public function incluirProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco){	
+public function incluirProdutoPreDefinido($nome,$descricao,$tamanho,$imagem,$sexo,$modelo,$preco){
+
+    header('Content-Type: text/html; charset=utf-8');
+    $nometemp = $_FILES['imagem']["tmp_name"];
+    $nomereal=$_FILES["imagem"]["name"];
+    copy($nometemp,$nomereal);
+    $data   = fopen($nomereal, 'r');
+    $size   = filesize($nomereal);
+    $contents= fread($data, $size);
+    fclose($data);
+    $imagestring =  base64_encode($contents);
 
 try{
 require_once 'conexaomysql.php';
-$sql = "insert into camisetapredefinida (nome,descricao,tamanho,imagem,sexo,modelo,preco) values ('$nome','$descricao','$tamanho','$imagem','$sexo',
+
+$sql = "insert into camisetapredefinida (nome,descricao,tamanho,imagem,sexo,modelo,preco) values ('$nome','$descricao','$tamanho','$imagestring','$sexo',
 '$modelo','$preco')";
 
 $result = mysqli_query($conexao, $sql);

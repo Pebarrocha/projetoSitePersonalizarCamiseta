@@ -92,7 +92,7 @@ O input do formulario (a entrada) é representada pelo seu "name", o valor do na
 <option value="G">G</option>
 <option value="GG">GG</option>
 </select><br>
-<label>Imagem: <input type="text" name="imagem" value="imagens/nomedaimagem.jpg">
+<label>Imagem: <input type="file" name="imagem" value="image">
 
 <br>
 <label>Sexo:</label> <select name="sexo" id="sexo">
