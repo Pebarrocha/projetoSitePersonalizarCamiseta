@@ -35,12 +35,6 @@ Processo('incluir');
 <input type="button" class="login" value="Carrinho de Compras">
 <input type="button" class="login" value="Minha Conta">
 <input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
-<div id="pesq">
-<form id="pesquisa" >
-<input type="button" class="botao" value="Pesquisar">
-<input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui!">
-</form>
-</div>
 </form>
 </ul>
 </nav>
@@ -91,8 +85,10 @@ Processo('incluir');
 
 		
 		<p style="display: inline;">
-				<div class=divisor><label>Nº:</label> 
-				<input type="text4" name="numero" id="numero" required>
+				<div class=divisor>
+
+				<label>Nº:</label> 
+				<input type="text4" name="num" id="num" required>
 
 				<label>BAIRRO:</label> 
 				<input type= "text4a" name="bairro" id="bairro" required></div><br>
@@ -131,7 +127,7 @@ Processo('incluir');
 
 				
 				function submitForm(){	
-					validaCadastro();	
+					//validaCadastro();	
 					alert("Teste view");		
 					document.getElementById("ok").value = "true";					
 					document.getElementById("form").submit();

@@ -17,7 +17,7 @@ function Processo($processo){
                 }
 
                 $pDAO = new ClienteMODEL();
-                $pDAO->incluirCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$numero,$bairro,$cidade,$cep,$descricao,$email,$senha);
+                $pDAO->incluirCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$num,$bairro,$cidade,$cep,$descricao,$email,$senha);
                 echo '<script>alert("Cadastrado com sucesso !");</script>';
                 echo '<script>window.location="../VIEW/cadastroClienteVIEW.php";</script>';
             }
@@ -75,7 +75,7 @@ function Processo($processo){
                     eval($comand);
                     $nome_campo = str_replace(",",".", $nome_campo);
                 }
-                $aDAO->alterarCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$numero,$bairro,$cidade,$cep,$descricao,$email,$senha);
+                $aDAO->alterarCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$num,$bairro,$cidade,$cep,$descricao,$email,$senha);
                 echo '<script>window.location="consultaClienteVIEW.php";</script>';
             }
             break;

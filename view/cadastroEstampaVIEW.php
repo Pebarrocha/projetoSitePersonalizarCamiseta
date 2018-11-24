@@ -78,7 +78,7 @@ Processo('incluir');
     </ul>
 </nav>-->
 
-<div id="normalc">
+<br><br><div id="normalc">
     <h1> Cadastro de Estampa </h1>
     <form enctype="multipart/form-data" action="#" name="form" id="form" method="post">
         <label>Nome:</label><br>
