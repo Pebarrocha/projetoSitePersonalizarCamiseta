@@ -60,15 +60,9 @@ endif;
 <nav class="navegacao" >
 <ul>
 <form class="pesquisa">
-<input type="button" class="login" value="Carrinho de Compras">
+<input type="button" class="login" value="Carrinho de Compras" onclick="location. href='carrinho.php'">
 <input type="button" class="login" value="Minha Conta">
 <input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
-<div id="pesq">
-<form id="pesquisa" >
-<input type="button" class="botao" value="Pesquisar">
-<input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui!">
-</form>
-</div>
 </form>
 </ul>
 </nav>

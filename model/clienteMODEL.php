@@ -2,11 +2,11 @@
 
 Class ClienteMODEL{
 
-    public function incluirCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$numero,$bairro,$cidade,$cep,$descricao,$email,$senha){
+    public function incluirCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$num,$bairro,$cidade,$cep,$descricao,$email,$senha){
 
         try{
             require_once 'conexaomysql.php';
-            $sql = "insert into cliente (nome,cpf,rg,celular,fixo,rua,numero,bairro,cidade,cep,descricao,email,senha) values ('$nome','$cpf','$rg','$celular','$fixo','$rua','$numero','$bairro','$cidade','$cep','$descricao','$email','$senha')";
+            $sql = "insert into cliente (nome,cpf,rg,celular,fixo,rua,numero,bairro,cidade,cep,descricao,email,senha) values ('$nome','$cpf','$rg','$celular','$fixo','$rua','$num','$bairro','$cidade','$cep','$descricao','$email','$senha')";
 
             $result = mysqli_query($conexao, $sql);
 
@@ -24,10 +24,10 @@ Class ClienteMODEL{
 
 
 
-    public function alterarCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$numero,$bairro,$cidade,$cep,$descricao,$email,$senha){
+    public function alterarCliente($nome,$cpf,$rg,$celular,$fixo,$rua,$num,$bairro,$cidade,$cep,$descricao,$email,$senha){
         try{
             require 'conexaomysql.php';
-            $sql = 'update cliente set nome="' .$nome.  ' ", cpf="'. $cpf . '", rg = " '. $rg .' ", celular="'. $celular . '", fixo="'. $fixo . '", rua="'. $rua . '", numero="'. $numero . '", bairro="'. $bairro . '", cidade="'. $cidade . '", cep="'. $cep . '", descricao="'. $descricao . '", email="'. $email . '", senha="'. $senha . '" WHERE codCliente="' . $_GET["id"] . '"';
+            $sql = 'update cliente set nome="' .$nome.  ' ", cpf="'. $cpf . '", rg = " '. $rg .' ", celular="'. $celular . '", fixo="'. $fixo . '", rua="'. $rua . '", numero="'. $num . '", bairro="'. $bairro . '", cidade="'. $cidade . '", cep="'. $cep . '", descricao="'. $descricao . '", email="'. $email . '", senha="'. $senha . '" WHERE codCliente="' . $_GET["id"] . '"';
 
             $result = mysqli_query($conexao,$sql);
             echo $result;
