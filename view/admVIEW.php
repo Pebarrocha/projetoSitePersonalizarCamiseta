@@ -26,7 +26,7 @@
 					          CADASTRAR
 					        </a>
 					        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="cadastroDeEmpresa.php">CADASTRAR EMPRESA</a>
+                              <a class="dropdown-item" href="cadastroEmpresaVIEW.php">CADASTRAR EMPRESA</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroEstampaVIEW.php">CADASTRAR ESTAMPA</a>
                               <div class="dropdown-divider"></div>
@@ -64,6 +64,6 @@
  	<script src="../jquery-3.3.1.slim.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-	</body>
+    </body>
 
 </html>
