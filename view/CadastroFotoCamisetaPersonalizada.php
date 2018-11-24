@@ -8,7 +8,7 @@ Processo('incluir');
 <html>
 <head lang="pt-br">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/CadastroFotoCamisetaPersonalizada.css">
+    <link rel="stylesheet" type="text/css" href="css/estampa.css">
     <title>Cadastro de Foto de Camiseta</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/adm.css">
@@ -27,9 +27,9 @@ Processo('incluir');
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                               <a class="dropdown-item" href="cadastroDeEmpresa.php">CADASTRAR EMPRESA</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroDeEstampa.php">CADASTRAR ESTAMPA</a>
+                              <a class="dropdown-item" href="cadastroEstampaVIEW.php">CADASTRAR ESTAMPA</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroDeFuncionario.php">CADASTRAR FUNCIONÁRIO</a>
+                              <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizada.php">CADASTRAR FOTO CAMISETA</a>
                               <div class="dropdown-divider"></div>
@@ -59,7 +59,10 @@ Processo('incluir');
                               <a class="nav-link" href="#">SAIR</a>
                             </li>
               </ul> </div></nav></div></div>
-<div id="normalc">
+
+
+
+<div >
     <h1> Cadastro de Foto Camiseta </h1>
     <form enctype="multipart/form-data" action="#" name="form" id="form" method="post">
         <label>Nome:</label><br>

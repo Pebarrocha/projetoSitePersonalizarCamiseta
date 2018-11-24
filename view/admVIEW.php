@@ -28,9 +28,9 @@
 					        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                               <a class="dropdown-item" href="cadastroDeEmpresa.php">CADASTRAR EMPRESA</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroDeEstampa.php">CADASTRAR ESTAMPA</a>
+                              <a class="dropdown-item" href="cadastroEstampaVIEW.php">CADASTRAR ESTAMPA</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroDeFuncionario.php">CADASTRAR FUNCIONÁRIO</a>
+                              <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizada.php">CADASTRAR FOTO CAMISETA</a>
                               <div class="dropdown-divider"></div>
