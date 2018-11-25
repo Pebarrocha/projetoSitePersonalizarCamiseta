@@ -33,7 +33,7 @@ Processo('incluir');
 <ul>
 <form class="pesquisa">
 <a href="loginPainel.php"><img src="ab.png"></a>
-<input type="button" class="login" value="Carrinho de Compras">
+<input type="button" class="login" value="Carrinho de Compras" onclick="location. href='carrinho.php'">
 <input type="button" class="login" value="Minha Conta">
 <input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
 </form>
@@ -44,7 +44,7 @@ Processo('incluir');
 
 <body>		
 
-	<img class="teste" src="a.jpg">
+	<img class="teste" src="banner.jpg">
 	<nav class="navegacao">
 	<form id="formmain">
 <ul>

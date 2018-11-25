@@ -75,7 +75,8 @@ endif;
 
 				<br><br>
 			
-				<button type="submit" name="btn-entrar" id="btn-entrar"> ENTRAR</button> 
+				<button type="submit" name="btn-entrar" id="btn-entrar">ENTRAR</button> 
+				<input type="button" class="login" value="SAIR" onclick="location. href='main.php'">
 				</form>					
 			</div>
 

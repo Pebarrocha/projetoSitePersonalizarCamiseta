@@ -45,10 +45,11 @@ if(isset($_GET['acao'])){
 <html>
     <head lang="pt-br">
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/carrinho.css">
+       
         <title>Cadastro de clientes</title>
-
-        <style type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/carrinho.css">
         
         </style>
 
@@ -59,7 +60,8 @@ if(isset($_GET['acao'])){
 <nav class="navegacao" >
 <ul>
 <form class="pesquisa">
-<input type="button" class="login" value="Carrinho de Compras">
+<a href="loginPainel.php"><img src="ab.png"></a>
+<input type="button" class="login" value="Carrinho de Compras" onclick="location. href='carrinho.php'">
 <input type="button" class="login" value="Minha Conta">
 <input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
 </form>
@@ -70,15 +72,14 @@ if(isset($_GET['acao'])){
 
 
 <body>
-    <img class="teste" src="a.jpg">
+    <img class="teste" src="banner.jpg">
     <nav class="navegacao">
     <form id="formmain">
 <ul>
 
 <li><a href="main.php">INICIO</a>
-<li><a href="#">CAMISETAS MASCULINAS</a>
-<li><a href="#">CAMISETAS FEMININAS</a>
-<input type="hidden" id="btnconsultafeminina" name="btnconsultafeminina"></a>
+<li><a href="masculino.php">CAMISETAS MASCULINAS</a>
+<li><a href="feminino.php">CAMISETAS FEMININAS</a>
 <li><a href="#">CONTATO</a>
 <li><a href="#">SOBRE</a>
 </ul>
@@ -86,30 +87,31 @@ if(isset($_GET['acao'])){
 </nav>
 
 <div id=corpo>
-<table border="1px">
-    <caption>CARRINHO DE COMPRAS</caption>
+
+    <h2><center>CARRINHO DE COMPRAS </center> </h2><br>
+<table border="1px" align="center">
     <thead>
-    <tr>
-        <th width="244">PRODUTO</th>
-        <th width="79">QUANTIDADE</th>
-        <th width="89">Pre&ccedil;o</th>
-        <th width="100">SUBTOTAL</th>
-        <th width="64"></th>
+    <tr align="center">
+        <th width="250" height="40" align="center">PRODUTO</th>
+        <th width="150" height="40" align="center">QUANTIDADE</th>
+        <th width="89" height="40" align="center">PRE&Ccedil;O</th>
+        <th width="100" height="40" align="center">SUBTOTAL</th>
+        <th width="100" height="40" align="center"></th>
     </tr>
     </thead>
     <form action="?acao=up" method="post">
         <tfoot>
         <tr>
-            <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
-        <tr>
-            <td colspan="5"><a href="main.php">Continuar Comprando</a> </td>
+            <td colspan="1" height="70" align="center"><a href="main.php"></a> </td>
+            <td colspan="2" height="70" align="center"><a href="finalizar.php"><button type="button" class="btn btn-warning">CONTINUAR COMPRANDO</button></a> </td>
+            <td colspan="2" height="70" align="center"><a href="finalizar.php"><button type="button" class="btn btn-warning">CONFIRMAR COMPRA</button></a> </td>
         </tfoot>
         <tbody>
         <?php
         if(count($_SESSION['carrinho']) == 0){
             echo '
         <tr>
-          <td colspan="5">Não há produto no carrinho</td>
+          <td colspan="5" height="200" align="center">Não há produto no carrinho</td>
         </tr>
       ';
         } else {
@@ -125,17 +127,17 @@ if(isset($_GET['acao'])){
                 $total += $ln['preco'] * $qtd;
                 echo '
               <tr>       
-                <td>'.$nome.'</td>
-                <td><input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'" /></td>
-                <td>R$ '.$preco.'</td>
-                <td>R$ '.$sub.'</td>
-                <td><a href="?acao=del&id='.$id.'">Remove</a></td>
+                <td align="center">'.$nome.'</td>
+                <td height="40" align="center"><input type="text" style="text-align: center;" size="3" name="prod['.$id.']" value="'.$qtd.'" /></td>
+                <td height="40" align="center">R$ '.$preco.'</td>
+                <td height="40" align="center">R$ '.$sub.'</td>
+                <td height="40" align="center"><a href="?acao=del&id='.$id.'">REMOVER</a></td>
                             </tr>';
             }
             $total = number_format($total, 2, ',', '.');
             echo '<tr>                         
-              <td colspan="4">Total</td>
-              <td>R$ '.$total.'</td>
+              <td colspan="4" align="right">TOTAL</td>
+              <td align="center">R$ '.$total.'</td>
                     </tr>';
         }
         ?>
@@ -143,5 +145,10 @@ if(isset($_GET['acao'])){
         </tbody>
     </form>
 </table>
+
+
+    <script src="../jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

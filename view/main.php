@@ -12,6 +12,10 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/cliente.css">
 		<title>Cadastro de clientes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/adm.css">
+
 
 		<style type="text/css">
 		
@@ -25,7 +29,7 @@
 <ul>
 <form class="pesquisa">
 <a href="loginPainel.php"><img src="ab.png"></a>
-<input type="button" class="login" value="Carrinho de Compras">
+<input type="button" class="login" value="Carrinho de Compras" onclick="location. href='carrinho.php'">
 <input type="button" class="login" value="Minha Conta">
 <input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
 </form>
@@ -36,7 +40,7 @@
 
 <body>		
 
-	<img class="teste" src="a.jpg">
+	<img class="teste" src="banner.jpg">
 	<nav class="navegacao">
 	<form id="formmain">
 <ul>
@@ -50,8 +54,24 @@
 </form>
 </nav>
 
-
-
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="1.jpg" alt="Primeiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="2.jpg" alt="Segundo Slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
 
 		
 			<script type="text/javascript" src="../js/validacaoCliente.js"> </script>
@@ -70,7 +90,9 @@
 					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
 			}		
 			</script>
-
+ 	<script src="../jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
 
 
