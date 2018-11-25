@@ -11,6 +11,9 @@ h1{
     text-align: center;
 }
 
+hr{
+ border-color: white; 
+}
 /*
 .navegacao li {
     float:left;

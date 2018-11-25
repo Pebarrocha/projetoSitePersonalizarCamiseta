@@ -63,7 +63,6 @@ if(isset($_GET['acao'])){
 <a href="loginPainel.php"><img src="ab.png"></a>
 <input type="button" class="login" value="Carrinho de Compras" onclick="location. href='carrinho.php'">
 <input type="button" class="login" value="Minha Conta" onclick="location. href='loginConta.php'">
-<input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
 </form>
 </ul>
 </nav>
@@ -141,7 +140,7 @@ if(isset($_GET['acao'])){
                     </tr>';
         }
 
-    
+   
 
        ?>
 </div>

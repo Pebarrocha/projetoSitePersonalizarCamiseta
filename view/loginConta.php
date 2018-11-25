@@ -29,7 +29,7 @@ $resultado = mysqli_query($conexao, $sql);
 
 			$dados = mysqli_fetch_array($resultado);
 			$_SESSION['logado'] = true;
-			$_SESSION['id_usuario'] = $dados['id'];
+			$_SESSION['email'] = $dados['email'];
 			header('Location: minhaConta.php');
 		else:
 			$erros[] = "<br><br><li> Usuário ou Senha não conferem </li>";
@@ -58,7 +58,6 @@ endif;
 <a href="loginPainel.php"><img src="ab.png"></a>
 <input type="button" class="login" value="Carrinho de Compras" onclick="location. href='carrinho.php'">
 <input type="button" class="login" value="Minha Conta" onclick="location. href='loginConta.php'">
-<input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
 </form>
 </ul>
 </nav>
@@ -81,7 +80,6 @@ endif;
 </ul>
 </form>
 </nav> 
-
 		<div id=corpo>
 				<h1> LOGIN</h1>
 				<?php
@@ -103,6 +101,7 @@ endif;
 				<div id=label> <p> <a href="recuperacao.php" style="color:white">ESQUECI MINHA SENHA</a>  | <a href="cadastroClienteVIEW.php" style="color:white">CADASTRAR-SE</a></p></div><br><br>
 				<button type="submit" name="btn-entrar" id="btn-entrar"> ENTRAR</button> 
 				</form>					
+
 			</div>
 
 <footer>
