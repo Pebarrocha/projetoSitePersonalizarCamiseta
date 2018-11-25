@@ -30,7 +30,7 @@ $resultado = mysqli_query($conexao, $sql);
 			$dados = mysqli_fetch_array($resultado);
 			$_SESSION['logado'] = true;
 			$_SESSION['id_usuario'] = $dados['id'];
-			header('Location: admVIEW.php');
+			header('Location: minhaConta.php');
 		else:
 			$erros[] = "<br><br><li> Usuário ou Senha não conferem </li>";
 		endif;
