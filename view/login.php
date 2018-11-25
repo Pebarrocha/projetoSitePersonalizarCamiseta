@@ -32,10 +32,10 @@ $resultado = mysqli_query($conexao, $sql);
 			$_SESSION['id_usuario'] = $dados['id'];
 			header('Location: admVIEW.php');
 		else:
-			$erros[] = "<br><li> Usuário ou Senha não conferem </li>";
+			$erros[] = "<br><br><li> Usuário ou Senha não conferem </li>";
 		endif;
 		else:
-			$erros[] = "<br><li> Usuário inexistente </li>";
+			$erros[] = "<br><br><li> Usuário inexistente </li>";
 		endif;
 endif;
 endif;
@@ -48,11 +48,6 @@ endif;
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 		<title>Login</title>
-
-		<style type="text/css">
-    </script>
-		
-		</style>
 	</head>
 
 <header>
@@ -60,7 +55,8 @@ endif;
 <nav class="navegacao" >
 <ul>
 <form class="pesquisa">
-<input type="button" class="login" value="Carrinho de Compras" onclick="location. href='carrinho.php'">
+<a href="loginPainel.php"><img src="ab.png"></a>
+<input type="button" class="login" value="Carrinho de Compras">
 <input type="button" class="login" value="Minha Conta">
 <input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
 </form>
@@ -78,10 +74,8 @@ endif;
 <ul>
 
 <li><a href="main.php">INICIO</a>
-<li><a href="#">CAMISETAS MASCULINAS</a>
-<li><a href="#">CAMISETAS FEMININAS</a>
-<input type="hidden" id="btnconsultafeminina" name="btnconsultafeminina"></a>
-
+<li><a href="masculino.php">CAMISETAS MASCULINAS</a>
+<li><a href="feminino.php">CAMISETAS FEMININAS</a>
 <li><a href="#">CONTATO</a>
 <li><a href="#">SOBRE</a>
 </ul>
