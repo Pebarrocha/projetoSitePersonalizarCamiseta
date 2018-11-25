@@ -20,7 +20,7 @@ function Processo($processo){
                 $pDAO->incluirVenda($horaVenda,$dataVenda,$precoTotal,$pagamento,$cliente);
 
                 echo '<script>alert("Cadastrado com sucesso !");</script>';
-                //echo '<script>window.location="../VIEW/main.php";</script>';
+                echo '<script>window.location="../VIEW/main.php";</script>';
             }
             break;
 

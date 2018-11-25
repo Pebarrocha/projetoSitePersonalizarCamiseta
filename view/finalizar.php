@@ -163,14 +163,17 @@ echo '</table>'
               <td colspan="4" align="right">TOTAL</td>
               <td align="center">R$ '.$total.'</td>
                     </tr></table>';
-        
+
+        date_default_timezone_set('America/Sao_Paulo');
+        $date = date('Y-m-d');
+        $time = date('H:i');
 
 ?>
 
         <form action="#" name="form" id="form" method="post"> 
-        <input type="hidden" name="horaVenda" id="horaVenda" value="104016">
-        <input type="hidden" name="dataVenda" id="dataVenda" value="20181111">
-        <input type="hidden" name="precoTotal" id="precoTotal" value="<?php echo $sub; ?>">
+        <input type="hidden" name="horaVenda" id="horaVenda" value="<?php echo $time; ?>">
+        <input type="hidden" name="dataVenda" id="dataVenda" value="<?php echo $date; ?>">
+        <input type="hidden" name="precoTotal" id="precoTotal" value="<?php echo $total; ?>">
         <br><label>Forma de pagamento:</label><br>
         <select name="pagamento" style="width:200px";>
               <option value="cartao">Cartão</option> 
@@ -178,11 +181,11 @@ echo '</table>'
         </select><br>
         <input type="hidden" name="cliente" id="cliente" value="<?php echo $codCliente; ?>">
 
-    <br><right><a href="main.php"><button type="button" class="btn btn-warning">VOLTAR</button></a>
-    <input type="button2" name="button" id="button" value="CADASTRAR" onclick="submitForm()">
-    <input type="hidden" name="ok" id="ok">
-</form></div>
-<script type="text/javascript">
+        <br><right><a href="main.php"><button type="button" class="btn btn-warning">VOLTAR</button></a>
+        <input type="button2" name="button" id="button" value="CADASTRAR" onclick="submitForm()">
+        <input type="hidden" name="ok" id="ok">
+    </form></div>
+    <script type="text/javascript">
 
                 
                 function submitForm(){  
