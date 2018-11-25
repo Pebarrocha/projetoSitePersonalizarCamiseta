@@ -24,7 +24,7 @@ function Processo($processo){
 
                 $pDAO->incluirImagem($nome,$_POST['$imagem']);
                 echo '<script>alert("Cadastrado com sucesso !");</script>';
-                echo '<script>window.location="../VIEW/CadastroFotoCamisetaPersonalizada.php";</script>';
+                echo '<script>window.location="../VIEW/cadastroFotoCamisetaPersonalizadaVIEW.php";</script>';
             }
             break;
 

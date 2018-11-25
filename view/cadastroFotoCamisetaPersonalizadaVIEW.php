@@ -1,7 +1,7 @@
 
 
 <?php
-require_once ('../controller/estampaController.php');
+require_once ('../controller/fotoCamisetaController.php');
 Processo('incluir');
 ?>
 
@@ -22,7 +22,7 @@ Processo('incluir');
 </head>
 <body>
 
-div class="row">
+<div class="row">
 <div class="col">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
@@ -38,7 +38,7 @@ div class="row">
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="CadastroFotoCamisetaPersonalizada.php">CADASTRAR FOTO CAMISETA</a>
+                        <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizadaVIEW.php">CADASTRAR FOTO CAMISETA</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
 
@@ -81,7 +81,7 @@ div class="row">
     <h1> Cadastro de Estampa </h1>
     <form enctype="multipart/form-data" action="#" name="form" id="form" method="post">
         <label>Nome:</label><br>
-        <input type="text" required name="nome" id="nome" placeholder="Nome da estampa"> <br><br>
+        <input type="text" required name="nome" id="nome" placeholder="Nome da Imagem"> <br><br>
 
         <label>Estampa:</label><br>
         <input type="file" required name="img" id="img"> <br><br>
