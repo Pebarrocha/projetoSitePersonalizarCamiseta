@@ -1,0 +1,382 @@
+
+
+* { margin: 0; padding: 0; }
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8e9eab;
+}
+h1{
+    text-align: center;
+}
+
+/*
+.navegacao li {
+    float:left;
+    text-align: center;
+    position: sticky;
+}
+*/
+#pesq{
+    position:relative;
+    left:-80%;
+    float: left;
+}
+
+.navegacao ul{
+text-align: center;
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+overflow: hidden;
+background-color: #333; 
+}
+
+.navegacao .pesquisa .login{
+  border-radius: 3px;
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navegacao .pesquisa .botao{
+  border-radius: 5px;
+  float: left;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;  
+}
+
+.navegacao {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    padding-bottom: 0px; 
+    font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    display: block;
+}
+
+.navegacao a{
+    float: left;
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navegacao a:hover{
+    background-color: #111; 
+}
+
+.navegacao .pesquisa{
+    float:right;
+
+}
+
+.navegacao input{
+    padding: 6px;
+    border: solid 0px #f00;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+
+/* Estilo do cabeçalho*/
+
+header{
+background-color: #666;
+ background-repeat: no-repeat;
+ background:url("../a.jpg");
+ width: 100%;
+ height: 100%;
+}
+
+
+.teste{
+    width: 100%;
+    height: 40%;
+    padding: 0px;
+    margin: 0px 0px -3px;
+}
+
+
+input[type=text2], select{
+
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=consulta], select{
+
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=text3], select{
+
+    width: 240px;
+    padding: 10px;
+    margin: 2px 2px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=preco], select{
+
+    width: 240px;
+    padding: 10px;
+    margin: 2px 2px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+input[type=alterar], select{
+
+    width: 30%;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 6px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text3a], select{
+
+    width: 30%;
+    padding: 10px;
+    margin: 2px 1px 2px -3px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text4], select{
+
+    width: 15%;
+    padding: 10px;
+    margin: 2px 15px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text4a], select{
+
+    width: 55%;
+    padding: 10px;
+    margin: 5px 2px 5px -3px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+textarea{
+    resize:none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px  0px 0px 0px;
+    border: none;
+}
+
+
+input[type=button2] {
+    width: 30%;
+    background-color: #CC9933;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=button76] {
+    width: 10%;
+    background-color: #CC9933;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0px 0px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=radio] {
+    
+    margin: 8px 0px 0px 10px;
+    
+}
+input[type=cpf], select{
+
+    width: 40%;
+    padding: 10px;
+    margin: 2px 2px 2px 5px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=rg], select{
+
+    width: 40%;
+    padding: 10px;
+    margin: 2px 2px 2px 2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select{
+
+    width: 40%;
+    padding: 10px;
+    margin: 2px 25px 2px 5px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select{
+
+    width: 30%;
+    padding: 10px;
+    margin: 2px 2px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=celular], select{
+
+    width: 120px;
+    padding: 10px ;
+    margin: 2px 25px 2px 5px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=fixo], select{
+
+    width: 25%;
+    padding: 10px;
+    margin: 2px 2px 2px -1px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=rua], select{
+
+    width: 80%;
+    padding: 10px;
+    margin: 2px 2px 2px -2px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+input[type=button2]:hover {
+    background-color: #CDB380;
+}
+
+#corpo{
+    font-family: "Lucida Console", Times, serif;
+    color: white;
+    border-radius: 5px;
+    background-color: #031634;
+    width: 600px;
+    margin-right: 30%;    
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 30px;
+    text-align: justify;
+}
+
+#fim{
+    
+    font-style: normal;
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+    height: 100px;
+}
+
+#Institucional{
+
+    color: red;
+    margin-left: 20px;
+
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+#pagamento{
+
+    color: red;
+    margin-left: 20px;
+    width: 100%;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.pagamentoImagem{
+    width: 300px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px; 
+}

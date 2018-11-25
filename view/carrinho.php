@@ -39,21 +39,62 @@ if(isset($_GET['acao'])){
 
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-</head>
+
+<!DOCTYPE html>
+
+<html>
+    <head lang="pt-br">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/carrinho.css">
+        <title>Cadastro de clientes</title>
+
+        <style type="text/css">
+        
+        </style>
+
+    </head>
+
+<header>
+
+<nav class="navegacao" >
+<ul>
+<form class="pesquisa">
+<input type="button" class="login" value="Carrinho de Compras">
+<input type="button" class="login" value="Minha Conta">
+<input type="button" class="login" value="Entrar" onclick="location. href='login.php'">
+</form>
+</ul>
+</nav>
+</header>
+
+
+
 <body>
-<table>
-    <caption>Carrinho de Compras</caption>
+    <img class="teste" src="a.jpg">
+    <nav class="navegacao">
+    <form id="formmain">
+<ul>
+
+<li><a href="main.php">INICIO</a>
+<li><a href="#">CAMISETAS MASCULINAS</a>
+<li><a href="#">CAMISETAS FEMININAS</a>
+<input type="hidden" id="btnconsultafeminina" name="btnconsultafeminina"></a>
+<li><a href="#">CONTATO</a>
+<li><a href="#">SOBRE</a>
+</ul>
+</form>
+</nav>
+
+<div id=corpo>
+<table border="1px">
+    <caption>CARRINHO DE COMPRAS</caption>
     <thead>
     <tr>
-        <th width="244">Produto</th>
-        <th width="79">Quantidade</th>
+        <th width="244">PRODUTO</th>
+        <th width="79">QUANTIDADE</th>
         <th width="89">Pre&ccedil;o</th>
-        <th width="100">SubTotal</th>
-        <th width="64">Remover</th>
+        <th width="100">SUBTOTAL</th>
+        <th width="64"></th>
     </tr>
     </thead>
     <form action="?acao=up" method="post">
@@ -61,7 +102,7 @@ if(isset($_GET['acao'])){
         <tr>
             <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
         <tr>
-            <td colspan="5"><a href="index.php">Continuar Comprando</a></td>
+            <td colspan="5"><a href="main.php">Continuar Comprando</a> </td>
         </tfoot>
         <tbody>
         <?php
@@ -98,7 +139,7 @@ if(isset($_GET['acao'])){
                     </tr>';
         }
         ?>
-
+</div>
         </tbody>
     </form>
 </table>
