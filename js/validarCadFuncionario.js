@@ -15,8 +15,8 @@ function validaCadastro(evt){
     var senha = document.getElementById('senha').value;
     var Soma;
     var Resto;
-
     var numErros = 0;
+    
     if(nome == ""){
         alert("digite um nome valido");
         numErros++;

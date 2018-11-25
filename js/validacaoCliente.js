@@ -1,19 +1,15 @@
 
-// Autor: Felipe Santiago Procópio
-// Data da última modificação: 18/08/2018
-//
-// Descriçao: Javascript para validação dos campos do formulário
-
 
 var form = document.getElementById("form");
 
 if(form.addEventListener){
-	form.addEventListener("submit", validaCadastro);
+    form.addEventListener("submit", validaCadastro);
 }else if(form.attachEvent){
-	dorm.addEventListener("onsubmit", validaCadastro);
+    dorm.addEventListener("onsubmit", validaCadastro);
 }
 
 function validaCadastro(evt){
+
 
 	var nome = document.getElementById('nome').value;
 	var cpf = document.getElementById('cpf').value;
@@ -21,7 +17,7 @@ function validaCadastro(evt){
 	var celular = document.getElementById('celular').value;
 	var fixo = document.getElementById('fixo').value;
 	var rua = document.getElementById('rua').value;
-	var numero = document.getElementById('numero').value;
+	var num = document.getElementById('num').value;
 	var bairro = document.getElementById('bairro').value;
 	var cidade = document.getElementById('cidade').value;
 	var cep = document.getElementById('cep').value;
@@ -30,18 +26,43 @@ function validaCadastro(evt){
 	var senha = document.getElementById('senha').value;
 	var senha2= document.getElementById('senha2').value;
 	var numErros=0;
-	
-
-
+	var Soma;
+    var Resto;
 	if(nome == ""){
-		alert('Campo NOME em branco!');
-		numErros++;
-	}
+        alert("digite um nome valido");
+        numErros++;
 
-	if (cpf ==  ""){
-		alert('Campo CPF em branco');
-		numErros++;
-	}
+    }
+    Soma = 0;
+    if (cpf ==  ""){
+        alert('Digite um cpf');
+        numErros++;
+    }else    if (cpf == "00000000000") {
+        alert("digite um CPF valido");
+        numErros++;
+    }else{
+    for (i = 1; i <= 9; i++) Soma = Soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
+    Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11)) Resto = 0;
+    if (Resto != parseInt(cpf.substring(9, 10))) {
+        alert("digite um CPF valido");
+        numErros++;
+    }else {
+
+    Soma = 0;
+    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(cpf.substring(i - 1, i)) * (12 - i);
+    Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11)) Resto = 0;
+    if (Resto != parseInt(cpf.substring(10, 11))) {
+        alert("digite um CPF valido");
+
+        numErros++;
+    }
+    }
+    }
+
 
 	if (rg == ""){
 		alert('Campo RG em branco');
@@ -63,7 +84,7 @@ function validaCadastro(evt){
 		numErros++;	
 	}
 	
-	if (numero == ""){
+	if (num == ""){
 		alert('Campo NUMERO em branco');
 		numErros++;	
 	}

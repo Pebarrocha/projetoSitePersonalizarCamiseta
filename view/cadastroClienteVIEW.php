@@ -20,6 +20,16 @@ Processo('incluir');
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/cliente.css">
 		<title>Cadastro de clientes</title>
+		    <script>
+      	    function somenteNumeros(num) {
+            var er = /[^0-9.]/;
+            er.lastIndex = 0;
+            var campo = num;
+            if (er.test(campo.value)) {
+                campo.value = "";
+            }
+        }
+    </script>
 
 		<style type="text/css">
 		
@@ -66,7 +76,7 @@ Processo('incluir');
 
 				<p style="display: inline;"><div class=dados>
 				<label>CPF:</label> 
-				<input type="cpf" name="cpf" id="cpf" maxlength="11" onkeyup="somenteNumeros(this)" required>
+				<input type="cpf" name="cpf" id="cpf" maxlength="11" onkeyup=" somenteNumeros(this)" size="11" required>
 
 				<label>RG:</label> 
 				<input type="rg" name="rg" id="rg" required><br><br>
@@ -110,35 +120,22 @@ Processo('incluir');
 				<label>CONFIRMAR SENHA:</label> 
 				<input type="password" name="senha2" id="senha2"><br><br>
 
-				<input type="button2" name="button" id="button" value="CADASTRAR" onclick="submitForm()">
-				<input type="hidden" name="ok" id="ok">	
+				<input type="button2" name="button" id="button" value="Cadastrar" onclick="submitForm()">
+            	<input type="hidden" name="ok" id="ok">
 		</form>
 			</div> 
 
 
-			<script type="text/javascript" src="../js/validacaoCliente.js"> </script>
+<script type="text/javascript" src="../js/validacaoCliente.js"> </script>
 
-				<!--Script (javascript) para submeter as informações resgatadas nos inputs 
-				Ele pega os ids 'ok' e 'form' e trabalha com eles. O elemento ok é passado a ser true, enquanto
-				o elemento de id 'form' é submetido-->
-			<script type="text/javascript">
-
-				
-				function submitForm(){	
-					//validaCadastro();	
-					alert("Teste view");		
-					document.getElementById("ok").value = "true";					
-					document.getElementById("form").submit();
-					//document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
-			}		
-			</script>
-
-
-<footer>
-	<div id=fim>
-</div>
-</footer>
-
+<script type="text/javascript">
+    function submitForm(){
+        validaCadastro();
+        
+        document.getElementById("ok").value = "true";
+        document.getElementById("form").submit();
+    }
+</script>
 
 	</body>
 </html>
