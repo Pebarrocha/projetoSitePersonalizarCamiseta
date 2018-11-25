@@ -34,6 +34,11 @@ if(isset($_GET['acao'])){
             }
         }
     }
+        $total = $_POST['total'];
+        $_SESSION['total'] = $total;
+
+        $qtd = $_POST['qtd'];
+        $_SESSION['qtd'] = $qtd;
 
 }
 
@@ -103,8 +108,8 @@ if(isset($_GET['acao'])){
         <tfoot>
         <tr>
             <td colspan="1" height="70" align="center"><a href="main.php"></a> </td>
-            <td colspan="2" height="70" align="center"><a href="finalizar.php"><button type="button" class="btn btn-warning">CONTINUAR COMPRANDO</button></a> </td>
-            <td colspan="2" height="70" align="center"><a href="finalizar.php"><button type="button" class="btn btn-warning">CONFIRMAR COMPRA</button></a> </td>
+            <td colspan="2" height="70" align="center"><a href="main.php"><button type="button" class="btn btn-warning">CONTINUAR COMPRANDO</button></a> </td>
+            <td colspan="2" height="70" align="center"><a href="login.php"><button type="button" class="btn btn-warning">CONFIRMAR COMPRA</button></a> </td>
         </tfoot>
         <tbody>
         <?php
@@ -140,7 +145,10 @@ if(isset($_GET['acao'])){
               <td align="center">R$ '.$total.'</td>
                     </tr>';
         }
-        ?>
+
+    
+
+       ?>
 </div>
         </tbody>
     </form>
