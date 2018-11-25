@@ -34,11 +34,6 @@ if(isset($_GET['acao'])){
             }
         }
     }
-        $total = $_POST['total'];
-        $_SESSION['total'] = $total;
-
-        $qtd = $_POST['qtd'];
-        $_SESSION['qtd'] = $qtd;
 
 }
 
