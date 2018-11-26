@@ -13,16 +13,68 @@ Processo('consultar');
 <head>
     <title> Consulta de Estampa </title>
     <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/adm.css">
     <link rel="stylesheet" type="text/css" href="css/estampa.css"/>
 </head>
 <body>
 
-<nav class="navegacao">
-    <ul>
-        <li><a href="cadastroEstampaVIEW.php">Cadastrar Estampa</a>
-        <li><a href="consultaEstampaVIEW.php">Pesquisar Estampa</a>
-    </ul>
-</nav>
+<div class="row">
+        <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              CADASTRAR
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroEmpresaVIEW.php">CADASTRAR EMPRESA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroEstampaVIEW.php">CADASTRAR ESTAMPA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizadaVIEW.php">CADASTRAR FOTO CAMISETA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
+                             
+                            </div>
+                          </li>
+                                       <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    RELATÓRIO
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroDeEmpresa.php">RELATÓRIO DE PERFIL DE CLIENTE</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeEstampa.php">RELATÓRIO DE VENDAS</a>
+                  </div>
+                </li>
+
+<li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CONSULTAR
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="consultaEmpresaVIEW.php">CONSULTA EMPRESA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaEstampaVIEW.php">CONSULTA ESTAMPA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaFuncionarioVIEW.php">CONSULTA FUNCIONÁRIO</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaFotoCamisetaVIEW.php">CONSULTA FOTO CAMISETA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaProdutoPreDefinidoVIEW.php">CONSULTA PRÉ-DEFINIDO</a>
+                   
+                  </div>
+                </li>
+
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">SAIR</a>
+                            </li>
+                        </ul> </div></nav></div></div>
 
 
 
@@ -84,7 +136,10 @@ echo
         document.getElementById("form-consulta").submit();
     }
 
-</script>
+</script>   
+    <script src="../jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
 

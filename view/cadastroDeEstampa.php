@@ -30,27 +30,27 @@
 
 <div class="row">
         <div class="col">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    CADASTRAR
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="cadastroDeEmpresa.php">CADASTRAR EMPRESA</a>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              CADASTRAR
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroEmpresaVIEW.php">CADASTRAR EMPRESA</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroDeEstampa.php">CADASTRAR ESTAMPA</a>
+                              <a class="dropdown-item" href="cadastroEstampaVIEW.php">CADASTRAR ESTAMPA</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroDeFuncionario.php">CADASTRAR FUNCIONÁRIO</a>
+                              <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizada.php">CADASTRAR FOTO CAMISETA</a>
+                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizadaVIEW.php">CADASTRAR FOTO CAMISETA</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
-                   
-                  </div>
-                </li>
-                             <li class="nav-item dropdown">
+                             
+                            </div>
+                          </li>
+                                       <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     RELATÓRIO
                   </a>
@@ -61,17 +61,28 @@
                   </div>
                 </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link" href="consulta.php">CONSULTAR</a>
-                    </li>
+<li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CONSULTAR
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="consultaEmpresaVIEW.php">CONSULTA EMPRESA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaEstampaVIEW.php">CONSULTA ESTAMPA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaFuncionarioVIEW.php">CONSULTA FUNCIONÁRIO</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaFotoCamisetaVIEW.php">CONSULTA FOTO CAMISETA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaProdutoPreDefinidoVIEW.php">CONSULTA PRÉ-DEFINIDO</a>
+                   
+                  </div>
+                </li>
 
-                <li class="nav-item">
-                              <a class="nav-link" href="admVIEW.php">VOLTAR</a>
-                            </li>
-                <li class="nav-item">
+                            <li class="nav-item">
                               <a class="nav-link" href="#">SAIR</a>
                             </li>
-              </ul> </div></nav></div></div>
+                        </ul> </div></nav></div></div>
 
 <div id="cadastro">
     <h1> CADASTRO DE ESTAMPA </h1>

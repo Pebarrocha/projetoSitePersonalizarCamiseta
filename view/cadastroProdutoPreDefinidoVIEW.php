@@ -29,47 +29,63 @@ Processo('incluir');
 </head>
 
 <body>
-<div class="row">
-<div class="col">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        CADASTRAR
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="cadastroEmpresaVIEW.php">CADASTRAR EMPRESA</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cadastroEstampaVIEW.php">CADASTRAR ESTAMPA</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizadaVIEW.php">CADASTRAR FOTO CAMISETA</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
-
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        RELATÓRIO
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="cadastroDeEmpresa.php">RELATÓRIO DE PERFIL DE CLIENTE</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="cadastroDeEstampa.php">RELATÓRIO DE VENDAS</a>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="consulta.php">CONSULTAR</a>
+	<div class="row">
+        <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              CADASTRAR
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroEmpresaVIEW.php">CADASTRAR EMPRESA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroEstampaVIEW.php">CADASTRAR ESTAMPA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizadaVIEW.php">CADASTRAR FOTO CAMISETA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
+                             
+                            </div>
+                          </li>
+                                       <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    RELATÓRIO
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="cadastroDeEmpresa.php">RELATÓRIO DE PERFIL DE CLIENTE</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="cadastroDeEstampa.php">RELATÓRIO DE VENDAS</a>
+                  </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">SAIR</a>
+<li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CONSULTAR
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="consultaEmpresaVIEW.php">CONSULTA EMPRESA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaEstampaVIEW.php">CONSULTA ESTAMPA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaFuncionarioVIEW.php">CONSULTA FUNCIONÁRIO</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaFotoCamisetaVIEW.php">CONSULTA FOTO CAMISETA</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="consultaProdutoPreDefinidoVIEW.php">CONSULTA PRÉ-DEFINIDO</a>
+                   
+                  </div>
                 </li>
-            </ul> </div></nav></div></div>
+
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">SAIR</a>
+                            </li>
+                        </ul> </div></nav></div></div>
+
+
 <!--
 Criação dos formularios para recebimento das informações digitadas pelo usuário
 O input do formulario (a entrada) é representada pelo seu "name", o valor do name do input será responsavel por enviar o valor do dado digitado pra o controller e depois para o banco de dados
@@ -106,7 +122,7 @@ O input do formulario (a entrada) é representada pelo seu "name", o valor do na
 </select><br>
 <label>Preço:</label>
 <input type="text" name="preco" id="preco" placeholder="Digite o preço da camiseta">
-<input type="button" value="Consultar" onclick="">
+
 <!--O primeiro button é visivel para o usuário. Quando ele é clicado ele aciona a função submitForm() do
 java script, que disparará os inputs dos forms para a página controller
 O segundo botão é invisivel, ele será ativado dentro da função, e o controller receberá ele para poder enfim liberar os inputs -->
@@ -127,11 +143,9 @@ document.getElementById("form").submit();
 //document.forms['form'].action = "../controller/produtoPreDefinidoController.php";
 }
 </script>
-
 <script src="../jquery-3.3.1.slim.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 
 </body>

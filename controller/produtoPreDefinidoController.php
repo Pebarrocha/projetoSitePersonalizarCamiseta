@@ -44,7 +44,6 @@ global $rs;
 if (isset($_POST['btnconsulta']) && !empty($_POST['btnconsulta'])){
 foreach($_POST as $nome_campo => $valor){ 
 $comando = "\$" . $nome_campo . "='" . $valor . "';"; 
-echo $comando;
 eval($comando); 
 $nome_campo = str_replace(",",".", $nome_campo);
 }		
@@ -63,7 +62,6 @@ $rs = $cDAO->consultarProdutoPreDefinido($sql);
 }
 			
 if(isset($_GET['btnexcluir']) && !empty($_GET['btnexcluir'])){
-echo '<script>alert("Entrou no botao excluir"); </script>';
 $id = $_GET['id'];
 $eDAO = new produtoPreDefinidoMODEL();
 $eDAO->deletarProdutoPreDefinido($id);
