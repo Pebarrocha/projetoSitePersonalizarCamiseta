@@ -88,14 +88,14 @@ O input do formulario (a entrada) é representada pelo seu "name", o valor do na
 <option value="M">M</option>
 <option value="G">G</option>
 <option value="GG">GG</option>
-</select><br>
-<label>Imagem: <input type="file" name="imagem" value="image">
+    </select><br><br>
+<label>Imagem: <input type="file" name="imagem" value="image"><br>
 
-<br>
+<br><br>
 <label>Sexo:</label> <select name="sexo" id="sexo">
 <option value="masculino">Masculino</option>
 <option value="feminino">Feminino</option>
-</select><br>
+</select><br><br>
 
 <label>Modelo:</label> <select name="modelo" id="modelo">
 <option value="tshirt">T-shirt</option>
@@ -103,10 +103,10 @@ O input do formulario (a entrada) é representada pelo seu "name", o valor do na
 <option value="polo">Polo Masculina</option>
 <option value="babylook">Baby Look</option>
 <option value="cropped">Cropped</option>
-</select><br>
+</select><br><br>
 <label>Preço:</label>
 <input type="text" name="preco" id="preco" placeholder="Digite o preço da camiseta">
-<input type="button" value="Consultar" onclick="">
+
 <!--O primeiro button é visivel para o usuário. Quando ele é clicado ele aciona a função submitForm() do
 java script, que disparará os inputs dos forms para a página controller
 O segundo botão é invisivel, ele será ativado dentro da função, e o controller receberá ele para poder enfim liberar os inputs -->
