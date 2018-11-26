@@ -38,8 +38,6 @@
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizadaVIEW.php">CADASTRAR FOTO CAMISETA</a>
-                              <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
                              
                             </div>

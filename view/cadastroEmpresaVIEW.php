@@ -28,7 +28,7 @@ Processo('incluir');
 </head>
 <body>
 
-<div class="row">
+  <div class="row">
         <div class="col">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                       <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
@@ -44,22 +44,10 @@ Processo('incluir');
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroFuncionarioVIEW.php">CADASTRAR FUNCIONÁRIO</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroFotoCamisetaPersonalizadaVIEW.php">CADASTRAR FOTO CAMISETA</a>
-                              <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="cadastroProdutoPreDefinidoVIEW.php">CADASTRAR PRODUTO PRÉ-DEFINIDO</a>
                              
                             </div>
                           </li>
-                                       <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    RELATÓRIO
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="cadastroDeEmpresa.php">RELATÓRIO DE PERFIL DE CLIENTE</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="cadastroDeEstampa.php">RELATÓRIO DE VENDAS</a>
-                  </div>
-                </li>
 
 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -80,7 +68,7 @@ Processo('incluir');
                 </li>
 
                             <li class="nav-item">
-                              <a class="nav-link" href="#">SAIR</a>
+                              <a class="nav-link" href="main.php">SAIR</a>
                             </li>
                         </ul> </div></nav></div></div>
 
