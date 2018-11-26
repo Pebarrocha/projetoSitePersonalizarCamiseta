@@ -127,7 +127,7 @@ input[type=text2], select{
 }
 input[type=consulta], select{
 
-    width: 50%;
+    width: 40%;
     padding: 10px;
     margin: 10px;
     display: block;
@@ -139,7 +139,7 @@ input[type=consulta], select{
 
 input[type=text3], select{
 
-    width: 240px;
+    width: 40%;
     padding: 10px;
     margin: 2px 2px 2px -2px;
     display: inline;
@@ -150,7 +150,7 @@ input[type=text3], select{
 
 input[type=preco], select{
 
-    width: 240px;
+    width: 40%;
     padding: 10px;
     margin: 2px 2px 2px -2px;
     display: inline;
@@ -163,7 +163,7 @@ input[type=preco], select{
 
 input[type=alterar], select{
 
-    width: 30%;
+    width: 40%;
     padding: 10px;
     margin-left: 20px;
     margin-bottom: 6px;
@@ -175,9 +175,9 @@ input[type=alterar], select{
 
 input[type=text3a], select{
 
-    width: 30%;
+    width: 40%;
     padding: 10px;
-    margin: 2px 1px 2px -3px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -188,7 +188,7 @@ input[type=text4], select{
 
     width: 15%;
     padding: 10px;
-    margin: 2px 15px 2px -2px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -197,9 +197,9 @@ input[type=text4], select{
 
 input[type=text4a], select{
 
-    width: 55%;
+    width: 40%;
     padding: 10px;
-    margin: 5px 2px 5px -3px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -210,7 +210,7 @@ input[type=text4a], select{
 
 textarea{
     resize:none;
-    width: 100%;
+    width: 98%;
     padding: 10px;
     border-radius: 5px;
     margin: 10px  0px 0px 0px;
@@ -251,7 +251,7 @@ input[type=cpf], select{
 
     width: 40%;
     padding: 10px;
-    margin: 2px 2px 2px 5px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -262,7 +262,7 @@ input[type=rg], select{
 
     width: 40%;
     padding: 10px;
-    margin: 2px 2px 2px 2px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -273,7 +273,7 @@ input[type=email], select{
 
     width: 40%;
     padding: 10px;
-    margin: 2px 25px 2px 5px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -282,9 +282,9 @@ input[type=email], select{
 
 input[type=password], select{
 
-    width: 30%;
+    width: 40%;
     padding: 10px;
-    margin: 2px 2px 2px -2px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -293,9 +293,9 @@ input[type=password], select{
 
 input[type=celular], select{
 
-    width: 120px;
+    width: 40%;
     padding: 10px ;
-    margin: 2px 25px 2px 5px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -304,9 +304,9 @@ input[type=celular], select{
 
 input[type=fixo], select{
 
-    width: 25%;
+    width: 40%;
     padding: 10px;
-    margin: 2px 2px 2px -1px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -316,9 +316,9 @@ input[type=fixo], select{
 
 input[type=rua], select{
 
-    width: 80%;
+    width: 40%;
     padding: 10px;
-    margin: 2px 2px 2px -2px;
+    margin: 2px 1px 2px 2px;
     display: inline;
     border: 1px solid #ccc;
     border-radius: 4px;
