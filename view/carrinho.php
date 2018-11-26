@@ -79,8 +79,6 @@ if(isset($_GET['acao'])){
 <li><a href="main.php">INICIO</a>
 <li><a href="masculino.php">CAMISETAS MASCULINAS</a>
 <li><a href="feminino.php">CAMISETAS FEMININAS</a>
-<li><a href="#">CONTATO</a>
-<li><a href="#">SOBRE</a>
 </ul>
 </form>
 </nav>
