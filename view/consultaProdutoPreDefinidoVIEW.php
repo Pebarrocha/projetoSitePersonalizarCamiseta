@@ -70,7 +70,7 @@ Processo('consultar');
 
 <div id="radio">
 <form name="form-consulta" action="#" id="form-consulta" method="post">
-<input type="radio" name="tipo" value="nome">Nome
+<input type="radio" name="tipo" value="nome" checked>Nome
 <input type="radio" name="tipo" value="descricao">Descricao
 <input type="radio" name="tipo" value="tamanho">Tamanho
 <input type="radio" name="tipo" value="sexo">Sexo

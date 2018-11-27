@@ -48,16 +48,35 @@ eval($comando);
 $nome_campo = str_replace(",",".", $nome_campo);
 }		
 
-if(isset($tipo) != null || $edconsulta != null){
-$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida WHERE $tipo = '$edconsulta' ";
+if(isset($tipo) == 'nome' || $edconsulta != null){
+$sql = "SELECT * FROM camisetapredefinida WHERE $tipo LIKE '%' '$edconsulta' '%'  ";
 $cDAO = new produtoPreDefinidoMODEL();
 $rs = $cDAO->consultarProdutoPreDefinido($sql);
 
-}else{
-$sql = "SELECT codCamisetaPreDefinida,nome,descricao,tamanho,imagem,sexo,modelo,FotoCamiseta_codFotoCamiseta,preco FROM camisetapredefinida";
-$cDAO = new produtoPreDefinidoMODEL();
-$rs = $cDAO->consultarProdutoPreDefinido($sql);
-
+}else if(isset($tipo) == 'descricao' || $edconsulta != null) {
+    $sql = "SELECT * FROM camisetapredefinida WHERE $tipo LIKE '%' '$edconsulta' '%'  ";
+    $cDAO = new produtoPreDefinidoMODEL();
+    $rs = $cDAO->consultarProdutoPreDefinido($sql);
+}
+else if(isset($tipo) == 'tamanho' || $edconsulta != null) {
+        $sql = "SELECT * FROM camisetapredefinida WHERE $tipo LIKE '%' '$edconsulta' '%'  ";
+        $cDAO = new produtoPreDefinidoMODEL();
+        $rs = $cDAO->consultarProdutoPreDefinido($sql);
+    }
+else if(isset($tipo) == 'sexo' || $edconsulta != null) {
+    $sql = "SELECT * FROM camisetapredefinida WHERE $tipo LIKE '%' '$edconsulta' '%'  ";
+    $cDAO = new produtoPreDefinidoMODEL();
+    $rs = $cDAO->consultarProdutoPreDefinido($sql);
+}
+else if(isset($tipo) == 'modelo' || $edconsulta != null) {
+    $sql = "SELECT * FROM camisetapredefinida WHERE $tipo LIKE '%' '$edconsulta' '%'  ";
+    $cDAO = new produtoPreDefinidoMODEL();
+    $rs = $cDAO->consultarProdutoPreDefinido($sql);
+}
+else if(isset($tipo) == 'preco' || $edconsulta != null) {
+    $sql = "SELECT * FROM camisetapredefinida WHERE $tipo LIKE '%' '$edconsulta' '%'  ";
+    $cDAO = new produtoPreDefinidoMODEL();
+    $rs = $cDAO->consultarProdutoPreDefinido($sql);
 }
 }
 			
